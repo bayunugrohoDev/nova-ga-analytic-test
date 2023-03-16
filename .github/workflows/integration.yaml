@@ -2,9 +2,9 @@ name: Integration Web
 on:
   workflow_dispatch:
     inputs:
-    commit:
-      description: 'commit / branch [5eb6c5e/main]'
-      required: false
+      commit:
+        description: 'commit / branch [5eb6c5e/main]'
+        required: false
 
   push:
     branches: 
