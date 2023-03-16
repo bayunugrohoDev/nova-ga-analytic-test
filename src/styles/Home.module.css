@@ -12,6 +12,11 @@
   align-items: center;
 }
 
+/* TODO: Find a better solution than this */
+.section > div {
+  margin: 0 16px;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(25%, auto));
