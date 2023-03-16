@@ -1,0 +1,27 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.section {
+  display: flex;
+  align-items: center;
+}
+
+.links {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  position: absolute;
+  right: 0;
+  padding: 20px 50px;
+}
+
+.link {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  padding: 0 12px;
+  font-family: var(--font-roboto);
+  font-style: normal;
+}
