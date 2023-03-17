@@ -1,0 +1,25 @@
+.swiper {
+  height: 520px;
+}
+
+.indicator {
+  width: 62px !important;
+  height: 4px !important;
+  background: #d5dde4 !important;
+  border-radius: 2px !important;
+}
+
+.indicatorActive {
+  width: 62px !important;
+  height: 4px !important;
+  background: #e66891 !important;
+  border-radius: 2px !important;
+}
+
+.indicators {
+  bottom: 80px;
+}
+
+:local .swiper :global(.swiper-pagination) {
+  bottom: 80px !important;
+}
