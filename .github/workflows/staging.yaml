@@ -1,9 +1,166 @@
 name: Staging Web
-on: workflow_dispatch
+on:
+  workflow_dispatch:
+    inputs:
+      commit:
+        description: 'commit / branch [5eb6c5e/main]'
+        required: false
+env:
+  SLACK_CHANNEL_ID: C04LVGWMDTL # builds
+  ECR_REPO: "novacircle/novacircle-web"
 
 jobs:
-  hello:
+  slack_report_start:
     runs-on: ubuntu-latest
+    outputs:
+      slack_message_id: ${{ steps.slack.outputs.message_id }}
     steps:
-      - name: hello-step
-        run: echo "Hello World!"
+      - name: Notify Slack of Starting
+        id: slack
+        uses: voxmedia/github-action-slack-notify-build@v1
+        with:
+          channel_id: ${{ env.SLACK_CHANNEL_ID }}
+          status: Starting...
+          color: 00FFFF
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_NOTIFICATIONS_BOT_TOKEN }}
+  build:
+    runs-on: ubuntu-latest
+    needs: [slack_report_start]
+    steps:
+      - name: Notify Slack of Build
+        uses: voxmedia/github-action-slack-notify-build@v1
+        with:
+          channel_id: ${{ env.SLACK_CHANNEL_ID }}
+          message_id: ${{ needs.slack_report_start.outputs.slack_message_id }}
+          status: Running ${{ github.job }}...
+          color: 00FFFF
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_NOTIFICATIONS_BOT_TOKEN }}
+
+      - name: Condition for commit if empty
+        if: "github.event.inputs.commit == ''"
+        run: |
+          echo "commit=main" >> $GITHUB_ENV
+
+      - name: Condition for commit if set
+        if: "github.event.inputs.commit != ''"
+        run: |
+          echo "commit=${{ github.event.inputs.commit }}" >> $GITHUB_ENV
+
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ env.commit }}
+          fetch-depth: 0
+
+      - name: Get short sha
+        uses: benjlevesque/short-sha@v2.1
+        id: short-sha
+        with:
+          length: 7
+
+      - name: Set env vars
+        run: |
+          echo "TAG=${{ steps.short-sha.outputs.sha }}" >> $GITHUB_ENV
+          echo $TAG
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
+
+      - name: Login to Amazon ECR
+        id: login-ecr
+        uses: aws-actions/amazon-ecr-login@v1
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+
+      - name: Build and push image
+        uses: docker/build-push-action@v3
+        with:
+          context: .
+          file: ./Dockerfile
+          push: true
+          tags: |
+            ${{ steps.login-ecr.outputs.registry }}/${{ env.ECR_REPO }}:stg-${{ env.TAG }}
+            ${{ steps.login-ecr.outputs.registry }}/${{ env.ECR_REPO }}:stg-latest
+    outputs:
+      TAG: ${{ env.TAG }}
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: [slack_report_start, build]
+    env:
+      TAG: ${{ needs.build.outputs.TAG }}
+    steps:
+      - name: Notify Slack of Deploy
+        uses: voxmedia/github-action-slack-notify-build@v1
+        with:
+          channel_id: ${{ env.SLACK_CHANNEL_ID }}
+          message_id: ${{ needs.slack_report_start.outputs.slack_message_id }}
+          status: Running ${{ github.job }}...
+          color: 00FFFF
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_NOTIFICATIONS_BOT_TOKEN }}
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
+
+      - name: Download Web Task definition
+        run: |
+          aws ecs describe-task-definition --task-definition stg-web-task --query taskDefinition > task-definition-web.json
+    
+      - name: Render Amazon ECS Task Definition for Web
+        id: render-web-container
+        uses: aws-actions/amazon-ecs-render-task-definition@v1
+        with:
+          task-definition: task-definition-web.json
+          container-name: stg-web-container
+          image: ${{ secrets.AWS_REGISTRY_URL }}/${{ env.ECR_REPO }}:stg-latest
+
+      - name: Deploy to Amazon ECS
+        uses: aws-actions/amazon-ecs-deploy-task-definition@v1
+        with:
+          task-definition: ${{ steps.render-web-container.outputs.task-definition }}
+          service: stg-web
+          cluster: stg-cluster
+          wait-for-service-stability: true
+
+  slack_report_success:
+    runs-on: ubuntu-latest
+    if: success()
+    needs: [slack_report_start, build, deploy]
+    steps:
+
+      - name: Notify Slack of Success
+        uses: voxmedia/github-action-slack-notify-build@v1
+        with:
+          channel_id: ${{ env.SLACK_CHANNEL_ID }}
+          message_id: ${{ needs.slack_report_start.outputs.slack_message_id }}
+          status: Success
+          color: good
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_NOTIFICATIONS_BOT_TOKEN }}
+
+  slack_report_fail:
+    runs-on: ubuntu-latest
+    needs: [slack_report_start, build, deploy]
+    if: failure()
+    steps:
+      - name: Notify Slack of Failure
+        uses: voxmedia/github-action-slack-notify-build@v1
+        with:
+          channel_id: ${{ env.SLACK_CHANNEL_ID }}
+          message_id: ${{ needs.slack_report_start.outputs.slack_message_id }}
+          status: Failure
+          color: danger
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_NOTIFICATIONS_BOT_TOKEN }}
