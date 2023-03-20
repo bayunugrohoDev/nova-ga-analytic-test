@@ -20,6 +20,6 @@
   bottom: 80px;
 }
 
-:local .swiper :global(.swiper-pagination) {
+.swiper :global(.swiper-pagination) {
   bottom: 80px !important;
 }
