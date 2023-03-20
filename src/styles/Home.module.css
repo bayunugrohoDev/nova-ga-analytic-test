@@ -42,12 +42,28 @@
   max-width: 100%;
 }
 
+.bubbleContainer {
+  position: relative;
+}
+
+.bubbleContainer > div {
+  position: absolute;
+  right: -244px;
+  bottom: -30px;
+}
+
 /* Mobile */
 @media (max-width: 700px) {
+  .bubbleContainer > div {
+    display: none;
+  }
 }
 
 /* Tablet and Smaller Desktop */
 @media (min-width: 701px) and (max-width: 1120px) {
+  .bubbleContainer > div {
+    display: none;
+  }
 }
 
 /* Desktop */

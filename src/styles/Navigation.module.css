@@ -22,7 +22,7 @@
 }
 
 .linkActive {
-  color: #404b59;
+  color: var(--textDark);
 }
 
 .linkActive::after {

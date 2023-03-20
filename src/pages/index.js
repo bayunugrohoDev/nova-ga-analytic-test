@@ -4,6 +4,7 @@ import Image from "next/image";
 import Article from "@/components/Article";
 import Button from "@/components/Button";
 import Testimonials from "@/components/Testimonials";
+import MessageBubble from "@/components/MessageBubble";
 import styles from "@/styles/Home.module.css";
 
 import firstSectionImage from "../../public/section1.png";
@@ -32,7 +33,14 @@ export default function Home() {
               from all around the globe. Explore new destinations, indulge in local 
               cultures, and create memories that will last a lifetime."
           >
-            <Button href="#join">Join waitlist</Button>
+            <div className={styles.bubbleContainer}>
+              <Button href="#join">Join waitlist</Button>
+              <MessageBubble
+                message="Can’t miss this hotel if you are at Holbox!"
+                userName="Gustaf Haraldsson"
+                avatar="/person.png"
+              />
+            </div>
           </Article>
           <Image
             src={firstSectionImage}
