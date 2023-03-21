@@ -1,6 +1,7 @@
 # Install dependencies only when needed
 FROM node:18-alpine AS deps
 
+ARG ENV_NAME=DEVELOPMENT
 WORKDIR /app
 RUN apk add --no-cache libc6-compat && \
     chown -R node:node /app
@@ -14,13 +15,13 @@ RUN \
 
 
 FROM node:18-alpine AS builder
-
+ARG ENV_NAME=DEVELOPMENT
 ENV NEXT_TELEMETRY_DISABLED 1
 
 WORKDIR /app
 COPY . .
 COPY --from=deps /app/node_modules ./node_modules
-RUN yarn build
+RUN yarn build-${ENV_NAME}
 
 
 # Production image, copy all the files and run next
