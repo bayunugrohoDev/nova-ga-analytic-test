@@ -3,11 +3,20 @@
 
   --text-dark: #404b59;
   --text-light: #6e7a89;
+  --text-lighter: #aebecc;
 
   --button-bg: #e66891;
   --button-text: #ffffff;
 
+  --error: #e66891;
+  --success: #008000;
+
+  --indicator: #d5dde4;
+  --indicator-active: #e66891;
+
   --background: #ffffff;
+  --input-background: #ffffff;
+  --input-border: #d5dde4;
 
   --border: #f8f9fa;
 }
@@ -33,4 +42,20 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: var(--text-lighter);
+  opacity: 1; /* Firefox */
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: var(--text-lighter);
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: var(--text-lighter);
 }

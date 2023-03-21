@@ -5,14 +5,14 @@
 .indicator {
   width: 62px !important;
   height: 4px !important;
-  background: #d5dde4 !important;
+  background: var(--indicator) !important;
   border-radius: 2px !important;
 }
 
 .indicatorActive {
   width: 62px !important;
   height: 4px !important;
-  background: #e66891 !important;
+  background: var(--indicator-active) !important;
   border-radius: 2px !important;
 }
 

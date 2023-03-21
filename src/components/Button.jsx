@@ -1,9 +1,19 @@
 import styles from "@/styles/Button.module.css";
 
-export default function Button({ href = "#", onClick = () => {}, children }) {
+export default function Button({
+  type = "button",
+  disabled = false,
+  onClick = () => {},
+  children,
+}) {
   return (
-    <a href={href} className={styles.button} onClick={onClick}>
+    <button
+      type={type}
+      className={styles.button}
+      disabled={disabled}
+      onClick={onClick}
+    >
       {children}
-    </a>
+    </button>
   );
 }

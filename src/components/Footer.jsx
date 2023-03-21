@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import Article from "./Article";
-import Button from "./Button";
+import WaitlistForm from "./WaitlistForm";
 
 import footerImage from "../../public/footer.png";
 import instagramImage from "../../public/instagram.svg";
@@ -19,7 +19,7 @@ export default function Footer() {
           title="Convinced yet?"
           description="Fill the form to reserve your username and get the early access to our app."
         >
-          <Button>Join waitlist</Button>
+          <WaitlistForm />
         </Article>
       </section>
       <div className={styles.links}>
@@ -38,7 +38,7 @@ export default function Footer() {
           Contact
         </a>
         <a
-          href="https://instagram.com"
+          href="https://www.instagram.com/novacircleofficial"
           className={styles.link}
           target="_blank"
           rel="noopener noreferrer"
@@ -46,7 +46,7 @@ export default function Footer() {
           <Image src={instagramImage} alt="Instagram handle" />
         </a>
         <a
-          href="https://tiktok.com"
+          href="https://www.tiktok.com/@novacircleofficial"
           className={styles.link}
           target="_blank"
           rel="noopener noreferrer"
@@ -54,7 +54,7 @@ export default function Footer() {
           <Image src={tiktokImage} alt="TikTok handle" />
         </a>
         <a
-          href="https://twitter.com"
+          href="https://twitter.com/NovaCircleapp"
           className={styles.link}
           target="_blank"
           rel="noopener noreferrer"

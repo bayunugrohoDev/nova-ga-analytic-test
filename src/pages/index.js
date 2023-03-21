@@ -11,6 +11,14 @@ import firstSectionImage from "../../public/section1.png";
 import secondSectionImage from "../../public/section2.png";
 import thirdSectionImage from "../../public/section3.png";
 
+const scrollToForm = () => {
+  document.getElementById("join").scrollIntoView({
+    behavior: "smooth",
+    block: "end",
+    inline: "nearest",
+  });
+};
+
 export default function Home() {
   return (
     <>
@@ -34,7 +42,7 @@ export default function Home() {
               cultures, and create memories that will last a lifetime."
           >
             <div className={styles.bubbleContainer}>
-              <Button href="#join">Join waitlist</Button>
+              <Button onClick={scrollToForm}>Join waitlist</Button>
               <MessageBubble
                 message="Can’t miss this hotel if you are at Holbox!"
                 userName="Gustaf Haraldsson"

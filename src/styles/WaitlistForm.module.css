@@ -1,0 +1,118 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.formContainer {
+  display: grid;
+  row-gap: 2.5rem;
+  column-gap: 1.3rem;
+  grid-template-columns: repeat(6, 1fr);
+  max-width: 750px;
+  align-items: flex-end;
+}
+
+.formContainer :nth-child(n) {
+  grid-column: span 2;
+}
+
+.formContainer :nth-child(n + 4) {
+  grid-column: span 3;
+}
+
+.formContainer :last-child {
+  max-width: unset;
+}
+
+.formContainer input,
+.formContainer select {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex: 1;
+  padding: 12px 16px;
+
+  gap: 12px;
+
+  background: var(--input-background);
+  border-radius: 16px;
+
+  border: 1.5px solid var(--input-border);
+
+  font-family: var(--font-roboto);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.formContainer select {
+  appearance: none;
+}
+
+.formContainer select::-ms-expand {
+  display: none;
+}
+
+.formContainer > button {
+  margin-top: 15px;
+}
+
+.formContainer p {
+  color: var(--error);
+  font-family: var(--font-roboto);
+  font-style: normal;
+  font-size: 14px;
+  position: absolute;
+  top: 48px;
+  left: 4px;
+}
+
+.dropdownHolder {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+}
+
+.inputHolder {
+  display: flex;
+  flex: 1;
+  position: relative;
+}
+
+.inputHolder .errorInput,
+.dropdownHolder .errorInput {
+  border: 1.5px solid var(--error);
+}
+
+.notSelected {
+  color: var(--text-lighter);
+}
+
+.arrow {
+  position: absolute;
+  display: inline-block;
+  border: solid var(--text-lighter);
+  border-width: 0 2px 2px 0;
+  padding: 4px;
+  transform: rotate(45deg);
+  right: 17px;
+  top: 16px;
+}
+
+.successMessage {
+  font-family: var(--font-roboto);
+  font-style: normal;
+  font-size: 16px;
+  color: var(--success);
+  margin-bottom: 20px;
+}
+
+.errorMessage {
+  font-family: var(--font-roboto);
+  font-style: normal;
+  font-size: 16px;
+  color: var(--error);
+  margin-bottom: 20px;
+}
