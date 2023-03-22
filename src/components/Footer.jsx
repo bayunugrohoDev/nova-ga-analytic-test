@@ -6,8 +6,10 @@ import WaitlistForm from "./WaitlistForm";
 
 import footerImage from "../../public/footer.png";
 import instagramImage from "../../public/instagram.svg";
+import facebookImage from "../../public/facebook.svg";
 import tiktokImage from "../../public/tiktok.svg";
 import twitterImage from "../../public/twitter.svg";
+import youtubeImage from "../../public/youtube.svg";
 import styles from "@/styles/Footer.module.css";
 
 export default function Footer() {
@@ -46,6 +48,14 @@ export default function Footer() {
           <Image src={instagramImage} alt="Instagram handle" />
         </a>
         <a
+          href="https://www.facebook.com/profile.php?id=100090644082832"
+          className={styles.link}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Image src={facebookImage} alt="Facebook handle" />
+        </a>
+        <a
           href="https://www.tiktok.com/@novacircleofficial"
           className={styles.link}
           target="_blank"
@@ -60,6 +70,14 @@ export default function Footer() {
           rel="noopener noreferrer"
         >
           <Image src={twitterImage} alt="Twitter handle" />
+        </a>
+        <a
+          href="https://www.youtube.com/channel/UCeYlsxCxJwsjGB3aaj3OjrA"
+          className={styles.link}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Image src={youtubeImage} alt="Youtube handle" />
         </a>
       </div>
     </footer>

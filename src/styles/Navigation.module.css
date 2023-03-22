@@ -18,11 +18,11 @@
   font-size: 16px;
   line-height: 20px;
   padding: 0.5rem 0;
-  color: #aebecc;
+  color: var(--text-lighter);
 }
 
 .linkActive {
-  color: var(--textDark);
+  color: var(--text-dark);
 }
 
 .linkActive::after {
@@ -31,7 +31,7 @@
   width: 4px;
   height: 20px;
   right: 0;
-  background: var(--indicator);
+  background: var(--indicator-active);
   border-radius: 2px;
 }
 

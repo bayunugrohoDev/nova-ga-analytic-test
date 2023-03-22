@@ -2,7 +2,9 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 0 2rem;
+  padding: 2rem 2rem 0;
+  max-width: var(--max-width);
+  margin: 0 auto;
 }
 
 .section {
@@ -11,6 +13,7 @@
   column-gap: 4rem;
   align-items: center;
   justify-content: space-between;
+  padding-bottom: 2rem;
 }
 
 .section img {
@@ -19,7 +22,7 @@
 
 .links {
   display: grid;
-  grid-template-columns: auto auto auto auto auto;
+  grid-template-columns: auto auto auto auto auto auto auto;
   padding: 20px 0;
   justify-content: flex-end;
 }
@@ -32,4 +35,15 @@
   font-family: var(--font-roboto);
   font-style: normal;
   color: var(--text-dark);
+}
+
+.links > .link:last-of-type {
+  padding-right: 0;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .section {
+    grid-template-columns: 1fr;
+  }
 }

@@ -2,10 +2,19 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 
 import Button from "./Button";
+import Snackbar from "./Snackbar";
 import styles from "@/styles/WaitlistForm.module.css";
 
 const GENDERS = [
   { id: "", name: "Gender" },
+  { id: 1, name: "Male" },
+  { id: 2, name: "Female" },
+  { id: 3, name: "Other" },
+  { id: 4, name: "Prefer not to say" },
+];
+
+const AGES = [
+  { id: "", name: "Age" },
   { id: 1, name: "< 18" },
   { id: 2, name: "19 - 25" },
   { id: 3, name: "26 - 35" },
@@ -13,26 +22,6 @@ const GENDERS = [
   { id: 5, name: "46 - 55" },
   { id: 6, name: "> 56" },
 ];
-
-const AGES = [
-  { id: "", name: "Age" },
-  { id: 1, name: "Male" },
-  { id: 2, name: "Female" },
-  { id: 3, name: "Other" },
-  { id: 4, name: "Prefer not to say" },
-];
-
-const renderFormMessage = (successMessage, errorMessage) => {
-  return (
-    (successMessage || errorMessage) && (
-      <div
-        className={successMessage ? styles.successMessage : styles.errorMessage}
-      >
-        {successMessage || errorMessage}
-      </div>
-    )
-  );
-};
 
 export default function WaitlistForm() {
   const [age, setAge] = useState("");
@@ -71,29 +60,36 @@ export default function WaitlistForm() {
         }
       );
 
+      if (response.status === 429) {
+        setErrorMessage("You've reached the daily application quota");
+        return;
+      }
+
       const jsonResponse = await response.json();
 
       if (jsonResponse.success) {
         reset();
         setAge("");
         setGender("");
-        setSuccessMessage("You've successfully joined the waiting list");
-        setTimeout(() => {
-          setSuccessMessage(null);
-        }, 5000);
+        setSuccessMessage(
+          "Congratulations! You have successfully reserved your unique username and have been added to our waiting list."
+        );
       } else {
         const error =
           jsonResponse?.errors[0]?.message || "An unexpected error occurred";
-        setErrorMessage(`Error: ${error}`);
+        setErrorMessage(error);
       }
     } catch (error) {
-      setErrorMessage(`Error: ${error.message}`);
+      setErrorMessage(error.message);
     }
   };
 
   return (
     <div className={styles.container}>
-      {renderFormMessage(successMessage, errorMessage)}
+      <Snackbar
+        message={successMessage || errorMessage}
+        type={successMessage ? "success" : errorMessage ? "error" : null}
+      />
       <form className={styles.formContainer} onSubmit={handleSubmit(onSubmit)}>
         <div className={styles.inputHolder}>
           <input
