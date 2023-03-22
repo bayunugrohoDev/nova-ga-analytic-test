@@ -1,7 +1,7 @@
 # Install dependencies only when needed
 FROM node:18-alpine AS deps
 
-ARG ENV_NAME=DEVELOPMENT
+ARG ENV_NAME=dev
 WORKDIR /app
 RUN apk add --no-cache libc6-compat && \
     chown -R node:node /app
@@ -15,7 +15,7 @@ RUN \
 
 
 FROM node:18-alpine AS builder
-ARG ENV_NAME=DEVELOPMENT
+ARG ENV_NAME=dev
 ENV NEXT_TELEMETRY_DISABLED 1
 
 WORKDIR /app

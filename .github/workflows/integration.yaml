@@ -90,7 +90,7 @@ jobs:
           file: ./Dockerfile
           push: true
           build-args: |
-            ENV_NAME=DEVELOPMENT
+            ENV_NAME=dev
           tags: |
             ${{ steps.login-ecr.outputs.registry }}/${{ env.ECR_REPO }}:${{ env.TAG }}
             ${{ steps.login-ecr.outputs.registry }}/${{ env.ECR_REPO }}:latest

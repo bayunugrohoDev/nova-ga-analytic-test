@@ -5,9 +5,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "build-DEVELOPMENT": "DEVELOPMENT=1 next build",
-    "build-STAGING": "STAGING=1 next build",
-    "build-PRODUCTION": "PRODUCTION=1 next build",
+    "build-dev": "DEVELOPMENT=1 next build",
+    "build-stg": "STAGING=1 next build",
+    "build-prod": "PRODUCTION=1 next build",
     "start": "next start",
     "lint": "next lint"
   },
