@@ -20,11 +20,15 @@
   grid-column: span 3;
 }
 
+.formContainer :nth-child(6) {
+  grid-column: span 6;
+}
+
 .formContainer :last-child {
   max-width: unset;
 }
 
-.formContainer input,
+.formContainer input[type="text"],
 .formContainer select {
   display: flex;
   flex-direction: row;
@@ -81,8 +85,79 @@
   position: relative;
 }
 
-.inputHolder .errorInput,
-.dropdownHolder .errorInput {
+.checkboxHolder {
+  display: inline-block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  user-select: none;
+}
+
+.checkboxHolder input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkboxHolder a {
+  color: var(--button-bg);
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #ffffff;
+  border: 1px solid var(--input-border);
+  border-radius: 6px;
+}
+
+.checkboxHolder:hover input ~ .checkmark {
+  background-color: #f3f3f3;
+}
+
+.checkboxHolder input:checked ~ .checkmark {
+  background-color: #2196f3;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkboxHolder input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.checkboxHolder .checkmark:after {
+  left: 6px;
+  top: 2px;
+  width: 4px;
+  height: 8px;
+  border: solid #ffffff;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+.formContainer label {
+  font-family: var(--font-roboto);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  color: var(--text-dark);
+}
+
+.inputHolder input.errorInput,
+.dropdownHolder select.errorInput,
+.checkboxHolder span.errorInput {
   border: 1.5px solid var(--error);
 }
 
@@ -131,6 +206,7 @@
 
   .formContainer > div:last-of-type {
     row-gap: 0;
+    display: none;
   }
 
   .formContainer :nth-child(n + 4) {

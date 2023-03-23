@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import Link from "next/link";
 
 import Button from "./Button";
 import Snackbar from "./Snackbar";
@@ -26,6 +27,8 @@ const AGES = [
 export default function WaitlistForm() {
   const [age, setAge] = useState("");
   const [gender, setGender] = useState("");
+  const [termsAccepted, setTermsAccepted] = useState(false);
+  const [emailsAccepted, setEmailsAccepted] = useState(false);
   const [successMessage, setSuccessMessage] = useState(null);
   const [errorMessage, setErrorMessage] = useState(null);
 
@@ -71,6 +74,8 @@ export default function WaitlistForm() {
         reset();
         setAge("");
         setGender("");
+        setTermsAccepted(false);
+        setEmailsAccepted(false);
         setSuccessMessage(
           "Congratulations! You have successfully reserved your unique username and have been added to our waiting list."
         );
@@ -93,6 +98,7 @@ export default function WaitlistForm() {
       <form className={styles.formContainer} onSubmit={handleSubmit(onSubmit)}>
         <div className={styles.inputHolder}>
           <input
+            type="text"
             className={errors?.username?.message ? styles.errorInput : ""}
             placeholder="Enter unique username"
             {...register("username", {
@@ -156,6 +162,7 @@ export default function WaitlistForm() {
         </div>
         <div className={styles.inputHolder}>
           <input
+            type="text"
             placeholder="Email address"
             className={errors?.email?.message ? styles.errorInput : ""}
             {...register("email", {
@@ -175,6 +182,7 @@ export default function WaitlistForm() {
 
         <div className={styles.inputHolder}>
           <input
+            type="text"
             placeholder="Phone number"
             className={errors?.phoneNumber?.message ? styles.errorInput : ""}
             {...register("phoneNumber", {
@@ -187,6 +195,59 @@ export default function WaitlistForm() {
             })}
           />
           {errors?.phoneNumber?.message && <p>{errors.phoneNumber.message}</p>}
+        </div>
+        <div>
+          <label className={styles.checkboxHolder}>
+            By joining the waitlist, I confirm that I have read and understand
+            the{" "}
+            <Link
+              href="/terms-and-conditions"
+              onClick={(e) => e.stopPropagation()}
+            >
+              Terms and Conditions
+            </Link>{" "}
+            and{" "}
+            <Link href="/privacy" onClick={(e) => e.stopPropagation()}>
+              Privacy Policy
+            </Link>
+            , including the use of cookies and storing of my personal
+            information.
+            <input
+              type="checkbox"
+              {...register("termsAccepted", {
+                required: {
+                  value: true,
+                  message: "You need to accept terms and conditions",
+                },
+                value: termsAccepted,
+                onChange: (e) => setTermsAccepted(e.target.value),
+              })}
+            />
+            <span
+              className={`${styles.checkmark} ${
+                errors?.termsAccepted?.message ? styles.errorInput : ""
+              }`}
+            />
+          </label>
+          <label className={styles.checkboxHolder}>
+            Yes, I agree to receive emails from Nova Circle.
+            <input
+              type="checkbox"
+              {...register("emailsAccepted", {
+                required: {
+                  value: true,
+                  message: "You need to accept email receival",
+                },
+                value: emailsAccepted,
+                onChange: (e) => setEmailsAccepted(e.target.value),
+              })}
+            />
+            <span
+              className={`${styles.checkmark} ${
+                errors?.emailsAccepted?.message ? styles.errorInput : ""
+              }`}
+            />
+          </label>
         </div>
         <div />
         <Button type="submit" disabled={isSubmitting}>

@@ -61,11 +61,7 @@ export default function Testimonials() {
         modules={[Autoplay, Pagination]}
       >
         {TESTIMONIAL_PERSONS.map((person) => (
-          <SwiperSlide
-            key={person.name}
-            className={styles.swiperSlide}
-            // style={{ maxWidth: "auto", width: "800px" }}
-          >
+          <SwiperSlide key={person.name} className={styles.swiperSlide}>
             {({ isActive }) => (
               <Card
                 avatar={person.avatar}
