@@ -1,3 +1,5 @@
+import Head from "next/head";
+
 import Navigation from "@/components/Navigation";
 import Bulletin from "@/components/Bulletin";
 import styles from "@/styles/Faq.module.css";
@@ -69,6 +71,15 @@ const FAQ_ITEMS = [
 export default function FAQ() {
   return (
     <div className={styles.container}>
+      <Head>
+        <title>Nova Circle | FAQ</title>
+        <meta
+          name="description"
+          content="Frequently asked questions about Nova Circle."
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <Navigation />
       <main className={styles.main}>
         <h1 className={styles.title}>Frequently Asked Questions</h1>

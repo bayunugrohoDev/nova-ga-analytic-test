@@ -10,6 +10,7 @@ import styles from "@/styles/Home.module.css";
 import firstSectionImage from "../../public/section1.png";
 import secondSectionImage from "../../public/section2.png";
 import thirdSectionImage from "../../public/section3.png";
+import firstSectionMobileImage from "../../public/section1.mobile.png";
 
 const scrollToForm = () => {
   document.getElementById("join").scrollIntoView({
@@ -34,7 +35,13 @@ export default function Home() {
       <main className={styles.main}>
         <section className={styles.section}>
           <Article
-            title="Let’s see the world. Let’s share the world."
+            title={
+              <>
+                Let’s see the world.
+                <br />
+                Let’s share the world.
+              </>
+            }
             description="Embrace the beauty of the world and share your 
               experiences with others. With Nova Circle, you can effortlessly 
               plan your next adventure and connect with like-minded travelers 
@@ -54,6 +61,17 @@ export default function Home() {
             src={firstSectionImage}
             alt="First section image"
             className={styles.firstSectionImage}
+            priority
+            width={674}
+            height={990}
+            sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw"
+          />
+          <Image
+            src={firstSectionMobileImage}
+            alt="First section image"
+            className={styles.firstSectionMobileImage}
             priority
             width={674}
             height={990}

@@ -39,3 +39,10 @@
     padding: 2rem 0;
   }
 }
+
+/* Tablet and Smaller Desktop */
+@media (min-width: 701px) and (max-width: 1120px) {
+  .main {
+    padding: 2rem 0 2rem 2rem;
+  }
+}

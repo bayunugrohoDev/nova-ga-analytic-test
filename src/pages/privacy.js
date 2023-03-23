@@ -1,3 +1,5 @@
+import Head from "next/head";
+
 import Bulletin from "@/components/Bulletin";
 import Navigation from "@/components/Navigation";
 import styles from "@/styles/Privacy.module.css";
@@ -62,8 +64,8 @@ const PRIVACY_ITEMS = [
       <span key={0}>
         If you have any questions or concerns about this Privacy Statement or
         our processing of your personal data, please contact us at{` `}
-        <a href="mailto:contact@novacircle.com">
-          <strong>contact@novacircle.com</strong>
+        <a href="mailto:privacy@novacircle.com">
+          <strong>privacy@novacircle.com</strong>
         </a>
         .
       </span>,
@@ -79,6 +81,15 @@ const PRIVACY_ITEMS = [
 export default function Privacy() {
   return (
     <div className={styles.container}>
+      <Head>
+        <title>Nova Circle | Privacy</title>
+        <meta
+          name="description"
+          content="Privacy statement that explains how we collect, use, and share your personal data when you use our mobile application"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <Navigation />
       <main className={styles.main}>
         <h1 className={styles.title}>Privacy</h1>

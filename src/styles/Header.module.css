@@ -5,3 +5,14 @@
   max-width: var(--max-width);
   margin: 0 auto;
 }
+
+/* Mobile */
+@media (max-width: 700px) {
+  .header {
+    padding: 2rem;
+  }
+  .header img {
+    width: 133px;
+    height: 64px;
+  }
+}
