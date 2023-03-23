@@ -16,15 +16,17 @@
   --indicator: #d5dde4;
   --indicator-active: #e66891;
 
-  --background: #ffffff;
+  --bubble-background: #ffffff;
   --input-background: #ffffff;
   --input-border: #d5dde4;
 
   --border: #f8f9fa;
+
+  --background: #ffffff;
 }
 
 /* Large Desktop */
-@media (min-width: 1440px) {
+@media (min-width: 1440px) and (orientation: portrait) {
   :root {
     --max-width: 1600px;
   }
@@ -46,6 +48,9 @@ body {
   background-image: url("/background.svg");
   background-position: center;
   background-size: cover;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-size-adjust: none;
 }
 
 a {

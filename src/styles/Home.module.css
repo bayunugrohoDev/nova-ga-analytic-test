@@ -37,9 +37,9 @@
 .firstSectionMobileImage {
   display: none;
   position: absolute;
-  object-fit: scale-down;
-  top: -2rem;
-  right: -215px;
+  object-fit: contain;
+  top: 5rem;
+  right: 0;
   z-index: -1;
 }
 

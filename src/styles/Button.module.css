@@ -18,18 +18,18 @@
 
 .button:hover,
 .button:focus {
-  opacity: 0.9;
+  filter: brightness(98%);
   cursor: pointer;
 }
 
 .button:active {
-  opacity: 1;
+  filter: brightness(95%);
 }
 
 .button:disabled,
 .button:disabled:hover,
 .button:disabled:focus {
-  opacity: 0.5;
+  filter: brightness(110%);
   cursor: not-allowed;
 }
 

@@ -73,8 +73,8 @@ export default function Home() {
             alt="First section image"
             className={styles.firstSectionMobileImage}
             priority
-            width={674}
-            height={990}
+            width={163}
+            height={477}
             sizes="(max-width: 768px) 100vw,
               (max-width: 1200px) 50vw,
               33vw"
