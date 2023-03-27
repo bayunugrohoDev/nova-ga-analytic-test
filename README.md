@@ -4,6 +4,8 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
+Make sure to have Node `18.14.0` or greater installed.
+
 First, run the development server:
 
 ```bash
@@ -24,11 +26,27 @@ The `pages/api` directory is mapped to `/api/*`. Files in this directory are tre
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
+## Build and Deploy
+
+Github Actions Workflows are being used for deploying code changes to specific environment. We have 3 environments:
+
+- DEV - the deployment is being triggered after each commit to the `main` branch.
+- STGAGING - the deployment is being triggered manually through GHA UI.
+- PRODUCTION - the deployment is being triggered manually through GHA UI.
+
+You can create and test builds for different environments locally by running following commands (e.g. by using `yarn`):
+
+```bash
+yarn run build-dev
+# or
+yarn run build-stg
+# or
+yarn run build-prod
+```
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
 
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
