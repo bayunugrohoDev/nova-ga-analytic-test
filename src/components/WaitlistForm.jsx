@@ -35,7 +35,9 @@ export default function WaitlistForm() {
   const {
     register,
     handleSubmit,
+    setError,
     reset,
+    trigger,
     formState: { errors, isSubmitting },
   } = useForm();
 
@@ -89,6 +91,41 @@ export default function WaitlistForm() {
     }
   };
 
+  const handleUsernameValidation = async (event) => {
+    const value = event.target.value;
+    const payload = { username: value };
+
+    try {
+      const response = await fetch(
+        `${process.env.API_URL}/public/check_username`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(payload),
+        }
+      );
+
+      const jsonResponse = await response.json();
+
+      if (jsonResponse.success) {
+        if (jsonResponse?.data?.usernameExists) {
+          setError("username", {
+            type: "manual",
+            message: "Username already exists.",
+          });
+        } else {
+          setError("username", undefined);
+        }
+      }
+      // if username doesn't already exist but /public/check_username returns error then manually trigger other username validation rules
+      else {
+        await trigger("username");
+      }
+    } catch {}
+  };
+
   return (
     <div className={styles.container}>
       <Snackbar
@@ -103,19 +140,16 @@ export default function WaitlistForm() {
             placeholder="Enter unique username"
             {...register("username", {
               required: { value: true, message: "Username is required" },
-              minLength: {
-                value: 6,
-                message: "Username must be at least 6 characters long",
-              },
               maxLength: {
                 value: 23,
                 message: "Username must not exceed a lengh of 23 characters",
               },
               pattern: {
-                value: /(?!^[0-9]*$)^[A-Za-z]+((([.]|[-]|[_]|)[a-zA-Z0-9]+)?)$/,
+                value: /^@?([A-Za-z]+((([.]|[-]|[_]|)[a-zA-Z0-9]+)?)|[0-9]+)$/,
                 message:
                   "English letters, numbers or a . _ - in the middle are allowed",
               },
+              onBlur: handleUsernameValidation,
             })}
           />
           {errors?.username?.message && <p>{errors.username.message}</p>}
