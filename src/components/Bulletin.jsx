@@ -13,6 +13,10 @@ function getItemNumber(bulletin, groupIndex, itemIndex) {
   return null;
 }
 
+function getSubitemNumber(index, itemIndex, subitemIndex) {
+  return `${index + 1}.${itemIndex + 1}.${subitemIndex + 1}.`;
+}
+
 export default function Bulletin({ bulletin, index }) {
   return (
     <Fragment>
@@ -21,11 +25,32 @@ export default function Bulletin({ bulletin, index }) {
           {index + 1}. {bulletin.title}
         </h2>
       )}
-      {bulletin?.items?.map((item, itemIndex) => (
-        <p key={itemIndex} className={styles.description}>
-          {getItemNumber(bulletin, index, itemIndex)} {item}
-        </p>
-      ))}
+      {bulletin?.items?.map((item, itemIndex) =>
+        item?.subtitle ? (
+          <>
+            <h2 className={styles.subtitle}>
+              {index + 1}.{itemIndex + 1} {item.subtitle}
+            </h2>
+            {item.subitems.map((subitem, subitemIndex) => (
+              <div
+                key={`${itemIndex}-${subitemIndex}`}
+                className={styles.description}
+              >
+                <span>
+                  {getSubitemNumber(index, itemIndex, subitemIndex)} {subitem}
+                </span>
+              </div>
+            ))}
+          </>
+        ) : (
+          <div key={itemIndex} className={styles.description}>
+            <span>
+              {getItemNumber(bulletin, index, itemIndex)}
+              {item}
+            </span>
+          </div>
+        )
+      )}
     </Fragment>
   );
 }
