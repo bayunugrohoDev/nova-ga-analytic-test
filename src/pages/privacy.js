@@ -6,74 +6,87 @@ import styles from "@/styles/Privacy.module.css";
 
 const PRIVACY_ITEMS = [
   {
+    title: "Introduction",
     items: [
-      "At Nova Circle, we are committed to protecting your privacy and ensuring the security of your personal data. This Privacy Statement explains how we collect, use, and share your personal data when you use our mobile app.",
+      "When you use (the “User” or “you”) Nova Circle AB’s (“Nova”) Platform and the Services (as defined in Nova’s general terms and conditions (the ” Terms and Conditions”), you trust your personal data with Nova. In this privacy policy (the “Privacy Policy”), it is explained what types of personal data Nova collects, why Nova collects such data, and what Nova uses the personal data for – all in order for you to be able to exercise your rights.",
+      "Nova processes and handles personal data in accordance with the Swedish Personal Data Act (SFS 1998:204) (Sw. personuppgiftslagen), regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 on the protection of natural persons with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (General Data Protection Regulation) and other applicable legislation for the protection of the personal integrity.",
     ],
   },
   {
-    title: "Data controller",
+    title: "Personal data which Nova collects ",
     items: [
-      "The data controller for the processing of your personal data is Nova Circle.",
+      "Personal data is data or information which may be used to identify a specific individual (a natural person). The personal data which may be processed consists primarily of such data which you, directly or indirectly, provide Nova with, e.g., in connection with your application for registration of an account with Nova, and when using the mobile phone application (the ”Application”), the Nova website (the “Website”) or other services provided by Nova from time to time, or when you are in contact with Nova (the ” Services”). Such personal data is collected by Nova in order for Nova to be able to provide the abovementioned Services, and consists of, e.g., the information set forth below.",
+      "Contact information etc.: When you choose to apply for registration of an account with Nova and/or when you use the Services, Nova will collect personal data such as your name, address, email address, mobile phone number, and other information you decide to provide due to the Services you intend to buy from Nova.",
+      "Location information: When using certain Services, Nova collects information about your mobile phone’s geographic location, if you have allowed the Application to get access to location services.",
+      "Payment details: When you are making a purchase in the Application or on the Website, you are asked to provide payment details, e.g., payment card information or other information relevant for the payment method you have selected.",
+      "Technical information: In connection with you downloading the Application and/or using the Services, certain technical information or codes, such as your mobile phone’s unique device-ID or the model of the mobile phone, may be collected.",
     ],
   },
   {
-    title: "Personal data we collect",
+    title: "Purposes of the processing of personal data",
     items: [
-      "We collect personal data that you provide to us when you use the app, such as your name, email address, phone number, and payment information. We also collect data about your device and usage of the app, including your IP address, location, and device information.",
+      "Nova registers and processes personal data primarily in order to provide, maintain and improve the Platform and the Services, to administrate the Platform and the Services, and to provide relevant customer service.",
+      "Nova also processes personal data in order to discharge its duties under applicable laws, regulations and public authority decisions.",
+      "Furthermore, personal data is processed in order to make possible offerings of certain other services and products, and to inform about offers and news from Nova and other partners of Nova.",
+      "Processing of personal data is also carried out for statistics purposes and assessments, in order to develop and improve the Platform and the Services.",
+      "Nova may also process your personal data in order to assist you when you are applying for registration of an account with Nova, and to provide further information about the Services, e.g., in case your application has been discontinued and the application process therefore has not been completed.",
     ],
   },
   {
-    title: "How we use your personal data",
+    title: "Access to registered personal data",
     items: [
-      "We use your personal data to provide and improve our services, including processing your bookings and reservations, providing personalized recommendations, and delivering marketing communications. We may also use your personal data for legal and regulatory compliance, fraud prevention, and to protect our rights and property.",
+      "You have the right to receive information, free of charge at one occasion per calendar year, regarding your personal data which Nova has registered and is processing, in which way the registered and processed personal data has been collected, for what purposes the personal data has been processed and to which third parties the personal data may have been transferred (“Register Extract”). A request for a Register Extract must be in writing and signed by you. The request shall be sent to Valhallavägen 60, 114 27 Stockholm, Sweden or by email to Nova’s customer service (with a scanned copy of your written request attached).",
     ],
   },
   {
-    title: "Legal basis for processing",
+    title: "Right to rectification etc.",
     items: [
-      "We process your personal data based on your consent, as necessary for the performance of a contract with you, for our legitimate interests, or as required by law.",
+      "If you notice that personal data registered by Nova is inaccurate, inadequate or is processed in violation of the abovementioned purposes (see section 3 above), the Swedish Personal Data Act or any other relevant legislation, you may request that Nova corrects, blocks or deletes such registered personal data. A request regarding such correction, blocking or deleting shall be made via email to Nova’s customer service.",
     ],
   },
   {
-    title: "Sharing of personal data",
+    title: "Direct marketing",
     items: [
-      "We may share your personal data with third-party service providers, such as airlines, hotels, and activity providers, to process your bookings and reservations. We may also share your personal data with law enforcement agencies or regulatory bodies as required by law.",
+      "Nova and its partners may direct offers to you via, e.g., the Application, email and SMS. Marketing directly targeting you shall comply with applicable laws, regulations, codes of conduct and ethical guidelines. If you do not wish to receive marketing from Nova, you may contact Nova’s customer service or file such a request by sending a letter to Nova at Valhallavägen 60, 114 27 Stockholm, Sweden.",
     ],
   },
   {
-    title: "International transfers",
+    title: "Protection of personal data",
     items: [
-      "Your personal data may be transferred to and processed in countries outside of the European Economic Area (EEA). We take steps to ensure that any transfers of your personal data comply with applicable data protection laws.",
+      "Nova takes the issue of personal data security very seriously. To the extent Nova processes and stores your personal data, this is made on servers located within the EU. When your personal data is stored, Nova takes all necessary and reasonable technical and organisational measures to protect your personal data from unauthorised access, alteration or destruction. Access to information is strictly limited in various ways (e.g., by user authorisation and passwords being required and only assigned to employees who need access to such information to be able to perform their work duties). Other security measures include encryption, firewalls and physical limitations and restrictions when accessing buildings and files.",
     ],
   },
   {
-    title: "Data retention",
+    title: "Transfer of personal data to third parties etc.",
     items: [
-      "We retain your personal data for as long as necessary to provide our services to you, to comply with our legal and regulatory obligations, or as otherwise required by law.",
+      "Nova may share collected personal data in accordance with the Privacy Policy. Nova may share your personal data with companies within the same group of companies as Nova or with other companies which Nova co-operates with, for the abovementioned purposes (see section 3 above) both within and outside of the EU. If, and to the extent, Nova stores your personal data, such data is always stored at Nova or at companies within the same group of companies as Nova.",
     ],
   },
   {
-    title: "Your data protection rights",
+    title: "Location information",
     items: [
-      "You have the right to access, rectify, or erase your personal data, as well as the right to object to or restrict processing of your personal data. You may also have the right to data portability and the right to withdraw your consent at any time. To exercise your data protection rights, please contact us using the information provided below.",
+      "Nova may collect, process and share your mobile phone’s exact geographic location in real time in order to provide certain of the Services. In order for such location-based information to be collected, you need to have enabled the function “allow location access” on your mobile phone. You may at any time revoke your consent to Nova collecting, processing and sharing such location-based information, by ceasing to use Services provided by Nova which require location- based information to function properly, and by switching off the function “allow location access” on your mobile phone.",
     ],
   },
   {
-    title: "Contact us",
+    title: "Cookies",
     items: [
-      <span key={0}>
-        If you have any questions or concerns about this Privacy Statement or
-        our processing of your personal data, please contact us at{` `}
-        <a href="mailto:privacy@novacircle.com">
-          <strong>privacy@novacircle.com</strong>
-        </a>
-        .
-      </span>,
+      "Nova uses cookies to optimise the Services, to perform statistic evaluations, for analyses, and for marketing. A cookie is a text file stored on, e.g., your computer or mobile phone, which enables identification of your computer or mobile phone. Cookies help Nova to adjust, e.g., the Application and the Website to your demands as a user of the Services.",
+      "There are two types of cookies; session cookies and permanent cookies. A session cookie is deleted automatically when a website or an application is shut down. A permanent cookie is stored on a computer or mobile phone during a certain time period. These two types of cookies may be placed on a website or in an application by different operators (first or third party) to be stored on your storage media (such as your computer’s hard drive or mobile phone’s memory). A first party cookie is placed by the operator of the website or application you visit or use. A third party cookie is placed by an operator who does not operate the website or the application you visit or use.",
+      "If you do not accept that cookies are being stored on your computer or mobile phone, you can configure this in the web browser or in the application settings on your computer or mobile phone, and you can delete cookies which are stored on your storage media. Most web browsers and applications accept cookies by default, but there is also the option to not accept cookies or choose to display a warning before they are stored. If you do not accept cookies, this may impair the functionality of the Application, Website or other Services.",
     ],
   },
   {
+    title: "Amendments to the Privacy Policy",
     items: [
-      "We may update this Privacy Statement from time to time. Any updates will be posted on our website and the updated version will be effective as of the date of posting.",
+      "Nova reserves the right to amend the Privacy Policy from time to time. If any amendments are made to the Privacy Policy which imply any amendment to the way Nova processes your personal data, Nova will inform you of such amendments via, e.g., the Website, the Application or by email. Should you continue to use the Services after having been informed of such amendments, you are deemed to have accepted the amendments. Nova recommends that you regularly read the Privacy Policy, for the most recent information on how Nova processes your personal data.",
+    ],
+  },
+  {
+    title: "Contact information",
+    items: [
+      "Should you have questions or comments regarding the Privacy Policy, please contact Nova’s customer service.\nEmail address: privacy@novacircle.com",
+      "Questions will be dealt with promptly and will normally be answered within 3 days.",
     ],
   },
 ];
