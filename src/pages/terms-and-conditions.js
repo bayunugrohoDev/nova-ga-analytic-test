@@ -18,8 +18,8 @@ const TERMS_CONDITIONS = [
   {
     title: "Definitions",
     items: [
-      <>
-        <span key="definitions-1">
+      <span key="definitions-1">
+        <span>
           In these Terms and Conditions, capitalized terms shall have the
           meanings set out below unless otherwise stated.
         </span>
@@ -105,7 +105,7 @@ const TERMS_CONDITIONS = [
             </tr>
           </tbody>
         </table>
-      </>,
+      </span>,
       "Definitions may also be found elsewhere in these General Terms and Conditions.",
     ],
   },
@@ -137,8 +137,8 @@ const TERMS_CONDITIONS = [
           "The User is responsible for procuring that accurate information regarding the User is registered with Nova at any time. Following registration, the User shall check the settings in the App to verify that the registered information is accurate. Nova is not liable for erroneous registered information, regardless of registration method, unless otherwise provided in section 7.",
           "The User is responsible for ensuring that the selected payment method, as applicable, is valid, not blocked and that the associated account, if any, has sufficient balance/spending limit.",
           "The User is responsible for procuring that the Login Credentials are kept and used in a safe manner, and not disclosed or otherwise made available to any unauthorised person.",
-          <>
-            <span key="responsibility-1">
+          <span key="responsibility-1">
+            <span>
               The User shall without delay inform Nova, as instructed from time
               to time on the Website (e.g., through update in the App or on My
               Pages, or by notifying Nova’s customer service), if:
@@ -163,12 +163,12 @@ const TERMS_CONDITIONS = [
               the Login Credentials and/or the User’s user account or update the
               User’s registered information.
             </span>
-          </>,
+          </span>,
           "The User shall also keep Nova notified of any other circumstances of importance to the Agreement and/or the provision of the Services.",
           "In addition to what is set out in the Agreement, the User shall comply with any instructions given by Nova from time to time in relation to the Services.",
           "The Nova is responsible for procuring that the (a) telephone, (b) Mobile phone, or (c) other technical equipment used by the User in relation to the Services functions properly and is compatible at all times with (i) the Platform, and (ii) the Services. The User is also responsible for procuring that the App is duly updated. The performance requirements applicable from time to time in relation to the Platform and the Services are available on the Website.",
-          <>
-            <span key="responsibility-2">
+          <span key="responsibility-2">
+            <span>
               You understand and agree that you are solely responsible for
               compliance with any and all applicable statutes, regulations and
               industry standards in regard to the usage of the Platform, the
@@ -235,7 +235,7 @@ const TERMS_CONDITIONS = [
                 the foregoing.
               </li>
             </ol>
-          </>,
+          </span>,
           "Nova has the right to take such action as Nova deems necessary or desirable to conduct an inquiry into, or prevent, a breach of any of the above or of these Terms and Conditions, including but not limited to, suspension or cancellation of a User (including causing thereby the immediate cessation of any such User’s ongoing transactions under the Platform and the Services).",
           "Nova has the right to undertake such precautionary measures as it deems fit to ensure Nova’s compliance with these Terms and Conditions and general good conduct therein, including without limitation, (i) monitoring and moderating a User’s activities on the Platform and the Services, and (ii) providing functionality for Users to flag activity as inappropriate or in breach with these Terms and Conditions. This provision shall not limit Nova from undertaking any such action or making any such claims as it deems necessary and appropriate. Nova retains the right to claim for damages caused to Nova by way of a User’s breach of these Terms and Conditions or any other action undertaken by User to cause harm to Nova, other Users or the Platform and the Services as such.",
         ],
@@ -286,7 +286,7 @@ const TERMS_CONDITIONS = [
       "Nothing in these General Terms and Conditions shall exclude liability of Nova for gross negligence and wilful misconduct, or death and personal injury caused by Nova’s negligence, or any other type of liability which cannot be excluded or limited under applicable law.",
       "Nova’s aggregate liability shall in no event exceed an amount equivalent to one price base amount in accordance with Chapter 2 Section 7 of the Swedish Social Insurance Code (SFS 2010:110) (Sw. socialförsäkringsbalken), except if Nova has acted wilfully or grossly negligent.",
       "Nova is not liable for indirect or consequential damages such as, e.g., loss of profits or for any damages in relation to the User’s relationships with any third party.",
-      <>
+      <span key="liability-1">
         <span>
           Further, Nova is not liable for any damage or loss incurred by the
           User caused by:
@@ -335,7 +335,7 @@ const TERMS_CONDITIONS = [
           </li>
           <li>Force majeure (see section 11).</li>
         </ol>
-      </>,
+      </span>,
       "Provided that Nova has not acted with neglect or intent, Nova is not liable for indirect or consequential damages such as, e.g., loss of profits, or for any damages in relation to the User’s relationships with any third party.",
     ],
   },
@@ -351,7 +351,7 @@ const TERMS_CONDITIONS = [
     title: "Term, early termination, etc.",
     items: [
       "The Agreement is valid from registration by the User (see section 1.2) until it is terminated in accordance with the terms of the Agreement, or as otherwise agreed in writing.",
-      <>
+      <span key="Term-1">
         <span>
           Nova has the right to immediately suspend the User’s access to the
           Services, cancel the User’s user account and/or terminate the
@@ -386,7 +386,7 @@ const TERMS_CONDITIONS = [
             User may be involved in, or linked to, criminal activity.
           </li>
         </ol>
-      </>,
+      </span>,
       "Nova may terminate the Agreement or stop providing the Services, as a whole or in parts, subject to two months prior notice.",
       "Termination of the Agreement by the User shall be made in writing.",
       "Termination of the Agreement (for whatever reason) shall not affect any rights and/or obligations incurred by a Party prior to the date the Agreement is terminated.",

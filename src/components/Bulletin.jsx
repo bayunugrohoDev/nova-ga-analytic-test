@@ -27,7 +27,7 @@ export default function Bulletin({ bulletin, index }) {
       )}
       {bulletin?.items?.map((item, itemIndex) =>
         item?.subtitle ? (
-          <>
+          <Fragment key={`subtitle-${itemIndex}`}>
             <h2 className={styles.subtitle}>
               {index + 1}.{itemIndex + 1} {item.subtitle}
             </h2>
@@ -41,7 +41,7 @@ export default function Bulletin({ bulletin, index }) {
                 </span>
               </div>
             ))}
-          </>
+          </Fragment>
         ) : (
           <div key={itemIndex} className={styles.description}>
             <span>
