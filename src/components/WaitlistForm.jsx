@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import Link from "next/link";
 
+import { COUNTRIES } from "@/constants";
 import Button from "./Button";
 import Snackbar from "./Snackbar";
 import styles from "@/styles/WaitlistForm.module.css";
@@ -24,9 +25,12 @@ const AGES = [
   { id: 6, name: "> 56" },
 ];
 
+const COUNTRY_LIST = [{ code: "", name: "Country" }, ...COUNTRIES];
+
 export default function WaitlistForm() {
   const [age, setAge] = useState("");
   const [gender, setGender] = useState("");
+  const [country, setCountry] = useState("");
   const [termsAccepted, setTermsAccepted] = useState(false);
   const [emailsAccepted, setEmailsAccepted] = useState(false);
   const [successMessage, setSuccessMessage] = useState(null);
@@ -42,12 +46,19 @@ export default function WaitlistForm() {
   } = useForm();
 
   const onSubmit = async (data) => {
+    const selectedCountry = COUNTRIES.find(
+      (country) => country.code === data.country
+    );
+
     const payload = {
       username: data.username,
       email: data.email,
       phone_number: data.phoneNumber,
       age_range_id: Number(data.age),
       gender_id: Number(data.gender),
+      city: data.city,
+      country: selectedCountry.name,
+      country_code: selectedCountry.code,
     };
 
     setSuccessMessage(null);
@@ -76,6 +87,7 @@ export default function WaitlistForm() {
         reset();
         setAge("");
         setGender("");
+        setCountry("");
         setTermsAccepted(false);
         setEmailsAccepted(false);
         setSuccessMessage(
@@ -229,6 +241,37 @@ export default function WaitlistForm() {
             })}
           />
           {errors?.phoneNumber?.message && <p>{errors.phoneNumber.message}</p>}
+        </div>
+        <div className={styles.dropdownHolder}>
+          <i className={styles.arrow} />
+          <select
+            className={`${country === "" ? styles.notSelected : ""} ${
+              errors?.country?.message ? styles.errorInput : ""
+            }`}
+            {...register("country", {
+              required: { value: true, message: "Country is required" },
+              value: country,
+              onChange: (e) => setCountry(e.target.value),
+            })}
+          >
+            {COUNTRY_LIST.map((country) => (
+              <option key={country.code} value={country.code}>
+                {country.name}
+              </option>
+            ))}
+          </select>
+          {errors?.country?.message && <p>{errors.country.message}</p>}
+        </div>
+        <div className={styles.inputHolder}>
+          <input
+            type="text"
+            className={errors?.city?.message ? styles.errorInput : ""}
+            placeholder="City"
+            {...register("city", {
+              required: { value: true, message: "City is required" },
+            })}
+          />
+          {errors?.city?.message && <p>{errors.city.message}</p>}
         </div>
         <div>
           <label className={styles.checkboxHolder}>
