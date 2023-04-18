@@ -21,7 +21,7 @@ const TESTIMONIAL_PERSONS = [
   },
   {
     avatar: johnImage,
-    name: "John Doe",
+    name: "Liam Garcia",
     testimonial: `"I'm so impressed with this travel app! Its great features, such as the ability to create custom lists and find personalized recommendations, have made my travel experiences so much better. I especially love the networking aspect, which has allowed me to connect with like-minded travelers and make new friends. I highly recommend this app to anyone who wants to travel with ease."`,
   },
   {
