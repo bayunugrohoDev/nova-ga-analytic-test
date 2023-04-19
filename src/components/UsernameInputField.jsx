@@ -1,9 +1,7 @@
 import { useDebouncedEffect } from "@react-hookz/web";
 import { useFormContext, useWatch } from "react-hook-form";
 
-import styles from "@/styles/WaitlistForm.module.css";
-
-export default function UsernameInputField() {
+export default function UsernameInputField({ inputHolderStyles }) {
   const {
     register,
     setError,
@@ -55,7 +53,7 @@ export default function UsernameInputField() {
   useDebouncedEffect(handleUsernameValidation, [usernameValue], 500);
 
   return (
-    <div className={styles.inputHolder}>
+    <div className={inputHolderStyles}>
       <input
         type="text"
         className={errors?.username?.message ? styles.errorInput : ""}

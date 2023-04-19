@@ -114,7 +114,7 @@ export default function WaitlistForm() {
           className={styles.formContainer}
           onSubmit={handleSubmit(onSubmit)}
         >
-          <UsernameInputField />
+          <UsernameInputField inputHolderStyles={styles.inputHolder} />
           <div className={styles.dropdownHolder}>
             <i className={styles.arrow} />
             <select
