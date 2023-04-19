@@ -156,6 +156,10 @@ export default function WaitlistForm() {
                 value: 23,
                 message: "Username must not exceed a lengh of 23 characters",
               },
+              minLength: {
+                value: 3,
+                message: "Username must be at least 3 characters long",
+              },
               pattern: {
                 value: /^@?([A-Za-z]+((([.]|[-]|[_]|)[a-zA-Z0-9]+)?)|[0-9]+)$/,
                 message:
