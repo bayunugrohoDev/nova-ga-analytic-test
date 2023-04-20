@@ -114,7 +114,10 @@ export default function WaitlistForm() {
           className={styles.formContainer}
           onSubmit={handleSubmit(onSubmit)}
         >
-          <UsernameInputField inputHolderStyles={styles.inputHolder} />
+          <UsernameInputField
+            errorInputStyles={styles.errorInput}
+            inputHolderStyles={styles.inputHolder}
+          />
           <div className={styles.dropdownHolder}>
             <i className={styles.arrow} />
             <select
@@ -183,8 +186,7 @@ export default function WaitlistForm() {
               {...register("phoneNumber", {
                 required: { value: true, message: "Phone number is required" },
                 pattern: {
-                  value:
-                    /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/,
+                  value: /^\+[0-9]+$/,
                   message: "Please enter a valid phone number",
                 },
               })}

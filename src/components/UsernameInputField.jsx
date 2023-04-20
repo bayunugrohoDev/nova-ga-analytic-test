@@ -1,7 +1,10 @@
 import { useDebouncedEffect } from "@react-hookz/web";
 import { useFormContext, useWatch } from "react-hook-form";
 
-export default function UsernameInputField({ inputHolderStyles }) {
+export default function UsernameInputField({
+  inputHolderStyles,
+  errorInputStyles,
+}) {
   const {
     register,
     setError,
@@ -56,7 +59,7 @@ export default function UsernameInputField({ inputHolderStyles }) {
     <div className={inputHolderStyles}>
       <input
         type="text"
-        className={errors?.username?.message ? styles.errorInput : ""}
+        className={errors?.username?.message ? errorInputStyles : ""}
         placeholder="Enter unique username"
         {...register("username", {
           required: { value: true, message: "Username is required" },
