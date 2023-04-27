@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+import { useRouter } from "next/router";
 import Head from "next/head";
 import Image from "next/image";
 
@@ -21,6 +23,40 @@ const scrollToForm = () => {
 };
 
 export default function Home() {
+  const router = useRouter();
+
+  // set scroll restoration to manual
+  useEffect(() => {
+    if (window.history.scrollRestoration !== "manual") {
+      window.history.scrollRestoration = "manual";
+    }
+  }, []);
+
+  // handle and store scroll position
+  useEffect(() => {
+    const handleRouteChange = () => {
+      window.sessionStorage.setItem(
+        "scrollPosition",
+        window.scrollY.toString()
+      );
+    };
+    router.events.on("routeChangeStart", handleRouteChange);
+    return () => {
+      router.events.off("routeChangeStart", handleRouteChange);
+    };
+  }, [router.events]);
+
+  // restore scroll position
+  useEffect(() => {
+    if (window.sessionStorage.scrollPosition) {
+      window.scrollTo(
+        0,
+        Number(window.sessionStorage.getItem("scrollPosition"))
+      );
+      window.sessionStorage.removeItem("scrollPosition");
+    }
+  }, []);
+
   return (
     <>
       <Head>
