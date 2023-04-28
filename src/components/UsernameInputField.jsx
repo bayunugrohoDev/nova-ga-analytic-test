@@ -20,7 +20,7 @@ export default function UsernameInputField({
       return;
     }
 
-    const payload = { username: usernameValue };
+    const payload = { username: usernameValue.trim() };
 
     try {
       const response = await fetch(
@@ -72,7 +72,8 @@ export default function UsernameInputField({
             message: "Username must be at least 3 characters long",
           },
           pattern: {
-            value: /^@?([A-Za-z]+((([.]|[-]|[_]|)[a-zA-Z0-9]+)?)|[0-9]+)$/,
+            value:
+              /^\s*@?([A-Za-z]+((([.]|[-]|[_]|)[a-zA-Z0-9]+)?)|[0-9]+)\s*$/,
             message:
               "English letters, numbers or a . _ - in the middle are allowed",
           },
