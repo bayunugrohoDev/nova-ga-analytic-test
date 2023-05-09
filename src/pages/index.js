@@ -78,10 +78,10 @@ export default function Home() {
                 Let’s share the world.
               </>
             }
-            description="Embrace the beauty of the world and share your 
-              experiences with others. With Nova Circle, you can effortlessly 
-              plan your next adventure and connect with like-minded travelers 
-              from all around the globe. Explore new destinations, indulge in local 
+            description="Embrace the beauty of the world and share your
+              experiences with others. With Nova Circle, you can effortlessly
+              plan your next adventure and connect with like-minded travelers
+              from all around the globe. Explore new destinations, indulge in local
               cultures, and create memories that will last a lifetime."
           >
             <div className={styles.bubbleContainer}>
@@ -137,8 +137,8 @@ export default function Home() {
                 circle of friends.
               </>
             }
-            description="Whether you're a seasoned traveler or just looking to 
-              explore your hometown, with Nova Circle you'll experience the moments of 
+            description="Whether you're a seasoned traveler or just looking to
+              explore your hometown, with Nova Circle you'll experience the moments of
               a diverse, yet likeminded, community of explorers."
           />
         </section>
@@ -165,7 +165,7 @@ export default function Home() {
           />
         </section>
       </main>
-      <Testimonials />
+      {/* <Testimonials /> */}
     </>
   );
 }
