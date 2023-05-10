@@ -5,7 +5,6 @@ import Image from "next/image";
 
 import Article from "@/components/Article";
 import Button from "@/components/Button";
-import Testimonials from "@/components/Testimonials";
 import MessageBubble from "@/components/MessageBubble";
 import styles from "@/styles/Home.module.css";
 
@@ -86,11 +85,6 @@ export default function Home() {
           >
             <div className={styles.bubbleContainer}>
               <Button onClick={scrollToForm}>Join waitlist</Button>
-              <MessageBubble
-                message="Can’t miss this hotel if you are at Holbox!"
-                userName="Gustaf Haraldsson"
-                avatar="/person.png"
-              />
             </div>
           </Article>
           <Image
@@ -165,7 +159,6 @@ export default function Home() {
           />
         </section>
       </main>
-      <Testimonials />
     </>
   );
 }
