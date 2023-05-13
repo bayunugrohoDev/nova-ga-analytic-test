@@ -187,7 +187,7 @@ export default function WaitlistForm() {
                 required: { value: true, message: "Phone number is required" },
                 pattern: {
                   value: /^\+[0-9]+$/,
-                  message: "Please enter a valid phone number",
+                  message: "Only + and numbers are allowed. Example: +4670xxxxxxxxx",
                 },
               })}
             />
