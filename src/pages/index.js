@@ -5,7 +5,6 @@ import Image from "next/image";
 
 import Article from "@/components/Article";
 import Button from "@/components/Button";
-import Testimonials from "@/components/Testimonials";
 import MessageBubble from "@/components/MessageBubble";
 import styles from "@/styles/Home.module.css";
 
@@ -78,19 +77,14 @@ export default function Home() {
                 Let’s share the world.
               </>
             }
-            description="Embrace the beauty of the world and share your
-              experiences with others. With Nova Circle, you can effortlessly
-              plan your next adventure and connect with like-minded travelers
-              from all around the globe. Explore new destinations, indulge in local
+            description="Embrace the beauty of the world and share your 
+              experiences with others. With Nova Circle, you can effortlessly 
+              plan your next adventure and connect with like-minded travelers 
+              from all around the globe. Explore new destinations, indulge in local 
               cultures, and create memories that will last a lifetime."
           >
             <div className={styles.bubbleContainer}>
               <Button onClick={scrollToForm}>Join waitlist</Button>
-              <MessageBubble
-                message="Can’t miss this hotel if you are at Holbox!"
-                userName="Gustaf Haraldsson"
-                avatar="/person.png"
-              />
             </div>
           </Article>
           <Image
@@ -137,8 +131,8 @@ export default function Home() {
                 circle of friends.
               </>
             }
-            description="Whether you're a seasoned traveler or just looking to
-              explore your hometown, with Nova Circle you'll experience the moments of
+            description="Whether you're a seasoned traveler or just looking to 
+              explore your hometown, with Nova Circle you'll experience the moments of 
               a diverse, yet likeminded, community of explorers."
           />
         </section>
@@ -165,7 +159,6 @@ export default function Home() {
           />
         </section>
       </main>
-      {/* <Testimonials /> */}
     </>
   );
 }
