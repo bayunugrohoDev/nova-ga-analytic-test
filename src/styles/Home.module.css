@@ -14,24 +14,20 @@
 }
 
 .firstSectionImage {
+  position: relative;
+  top: -8%;
   width: 100%;
   height: auto;
-  max-width: 674px;
-  max-height: 990px;
 }
 
 .secondSectionImage {
   width: 100%;
   height: auto;
-  max-width: 679px;
-  max-height: 922px;
 }
 
 .thirdSectionImage {
   width: 100%;
   height: auto;
-  max-width: 673px;
-  max-height: 990px;
 }
 
 .firstSectionMobileImage {

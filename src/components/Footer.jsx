@@ -48,7 +48,7 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Image src={instagramImage} alt="Instagram handle" />
+            <Image src={instagramImage} alt="Instagram logotype" />
           </a>
           <a
             href="https://www.facebook.com/profile.php?id=100090644082832"
@@ -56,7 +56,7 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Image src={facebookImage} alt="Facebook handle" />
+            <Image src={facebookImage} alt="Facebook logotype" />
           </a>
           <a
             href="https://www.tiktok.com/@novacircleofficial"
@@ -64,7 +64,7 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Image src={tiktokImage} alt="TikTok handle" />
+            <Image src={tiktokImage} alt="TikTok logotype" />
           </a>
           <a
             href="https://twitter.com/NovaCircleapp"
@@ -72,7 +72,7 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Image src={twitterImage} alt="Twitter handle" />
+            <Image src={twitterImage} alt="Twitter logotype" />
           </a>
           <a
             href="https://www.youtube.com/channel/UCeYlsxCxJwsjGB3aaj3OjrA"
@@ -80,7 +80,7 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Image src={youtubeImage} alt="Youtube handle" />
+            <Image src={youtubeImage} alt="Youtube logotype" />
           </a>
         </div>
       </div>

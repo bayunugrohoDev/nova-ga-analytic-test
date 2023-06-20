@@ -8,9 +8,9 @@ export default function Header() {
     <header className={styles.header}>
       <Link href="/">
         <Image
-          src="/logo.png"
-          width={150}
-          height={72}
+          src="/logo.svg"
+          width={84}
+          height={50}
           alt="Nova Circle"
           priority
         />

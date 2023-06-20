@@ -1,25 +1,37 @@
-import { Roboto, Lora } from "next/font/google";
+import { Inter } from "next/font/google";
+import localFont from "next/font/local";
 
 import Header from "./Header";
 import Footer from "./Footer";
 
-const roboto = Roboto({
-  subsets: ["latin"],
-  variable: "--font-roboto",
-  weight: ["300", "400", "500", "700"],
-  display: "swap",
+const areainktrap = localFont({
+  src: [
+    {
+      path: "../../public/fonts/AreaInktrap-Regular.woff2",
+      weight: "400",
+    },
+    {
+      path: "../../public/fonts/AreaInktrap-Semibold.woff2",
+      weight: "600",
+    },
+    {
+      path: "../../public/fonts/AreaInktrap-Bold.woff2",
+      weight: "700",
+    },
+  ],
+  variable: "--font-areainktrap",
 });
 
-const lora = Lora({
+const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-lora",
-  weight: ["400"],
+  variable: "--font-inter",
+  weight: ["400", "600", "700"],
   display: "swap",
 });
 
 export default function Layout({ children }) {
   return (
-    <div className={`${roboto.variable} ${lora.variable}`}>
+    <div className={`${inter.variable} ${areainktrap.variable}`}>
       <Header />
       {children}
       <Footer />

@@ -12,13 +12,13 @@
 
 .link {
   position: relative;
-  font-family: var(--font-roboto);
+  font-family: var(--font-inter);
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
   line-height: 20px;
   padding: 0.5rem 0;
-  color: var(--text-lighter);
+  color: var(--text-dark);
 }
 
 .linkActive {

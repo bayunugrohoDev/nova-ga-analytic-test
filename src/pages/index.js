@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import Head from "next/head";
 import Image from "next/image";
 
+import Hero from "@/components/Hero";
 import Article from "@/components/Article";
 import Button from "@/components/Button";
 import MessageBubble from "@/components/MessageBubble";
@@ -60,40 +61,38 @@ export default function Home() {
     <>
       <Head>
         <title>Nova Circle</title>
-        <meta
-          name="description"
-          content="Let’s see the world. Let’s share the world."
-        />
+        <meta name="description" content="The world from a friendly place." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
         <section className={styles.section}>
-          <Article
+          <Hero
             title={
               <>
-                Let’s see the world.
-                <br />
-                Let’s share the world.
+                <strong>
+                  The world from <br />a
+                </strong>{" "}
+                friendly <strong>place</strong>
               </>
             }
-            description="Embrace the beauty of the world and share your 
-              experiences with others. With Nova Circle, you can effortlessly 
-              plan your next adventure and connect with like-minded travelers 
-              from all around the globe. Explore new destinations, indulge in local 
+            description="Embrace the beauty of the world and share your
+              experiences with others. With Nova Circle, you can effortlessly
+              plan your next adventure and connect with like-minded travelers
+              from all around the globe. Explore new destinations, indulge in local
               cultures, and create memories that will last a lifetime."
           >
             <div className={styles.bubbleContainer}>
               <Button onClick={scrollToForm}>Join waitlist</Button>
             </div>
-          </Article>
+          </Hero>
           <Image
             src={firstSectionImage}
             alt="First section image"
             className={styles.firstSectionImage}
             priority
-            width={674}
-            height={990}
+            width={620}
+            height={911}
             sizes="(max-width: 768px) 100vw,
               (max-width: 1200px) 50vw,
               33vw"
@@ -114,11 +113,11 @@ export default function Home() {
         <section className={styles.section}>
           <Image
             src={secondSectionImage}
-            alt="Second section image"
+            alt="Nova Circle app views"
             className={styles.secondSectionImage}
             priority
-            width={679}
-            height={922}
+            width={1023}
+            height={875}
             sizes="(max-width: 768px) 100vw,
               (max-width: 1200px) 50vw,
               33vw"
@@ -131,8 +130,8 @@ export default function Home() {
                 circle of friends.
               </>
             }
-            description="Whether you're a seasoned traveler or just looking to 
-              explore your hometown, with Nova Circle you'll experience the moments of 
+            description="Whether you're a seasoned traveler or just looking to
+              explore your hometown, with Nova Circle you'll experience the moments of
               a diverse, yet likeminded, community of explorers."
           />
         </section>
@@ -151,8 +150,8 @@ export default function Home() {
             src={thirdSectionImage}
             alt="Third section image"
             className={styles.thirdSectionImage}
-            width={673}
-            height={990}
+            width={831}
+            height={1024}
             sizes="(max-width: 768px) 100vw,
             (max-width: 1200px) 50vw,
             33vw"

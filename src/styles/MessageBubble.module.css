@@ -12,7 +12,7 @@
 .message {
   display: flex;
   align-items: center;
-  font-family: var(--font-roboto);
+  font-family: var(--font-inter);
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
@@ -33,7 +33,7 @@
 }
 
 .username {
-  font-family: var(--font-roboto);
+  font-family: var(--font-inter);
   font-style: normal;
   font-weight: 500;
   font-size: 16px;

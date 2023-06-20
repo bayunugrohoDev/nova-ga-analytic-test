@@ -96,7 +96,7 @@ const TERMS_CONDITIONS = [
               <td>”Website”</td>
               <td>
                 means Nova’s website
-                <a href="www.novacircle.com."> www.novacircle.com.</a>
+                <a href="https://novacircle.com."> novacircle.com.</a>
               </td>
             </tr>
             <tr>

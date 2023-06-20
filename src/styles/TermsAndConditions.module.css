@@ -19,7 +19,7 @@
 }
 
 .title {
-  font-family: var(--font-lora);
+  font-family: var(--font-areainktrap);
   font-style: normal;
   font-weight: 400;
   font-size: 40px;
@@ -30,7 +30,7 @@
 }
 
 .description {
-  font-family: var(--font-roboto);
+  font-family: var(--font-inter);
   font-style: normal;
   font-weight: 400;
   font-size: 16px;

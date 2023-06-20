@@ -1,28 +1,30 @@
 :root {
   --max-width: 1400px;
 
-  --text-dark: #404b59;
-  --text-light: #6e7a89;
+  --text-dark: #0c0c0c;
+  --text-light: #00496d;
   --text-lighter: #aebecc;
 
-  --button-bg: #e66891;
+  --text-link: #fa7328;
+
+  --button-bg: #00496d;
   --button-text: #ffffff;
 
-  --error: #e66891;
+  --error: #d32323;
   --success: #28b328;
 
   --error-toast: #d32323;
 
   --indicator: #d5dde4;
-  --indicator-active: #e66891;
+  --indicator-active: #fa7328;
 
   --bubble-background: #ffffff;
   --input-background: #ffffff;
-  --input-border: #d5dde4;
+  --input-border: #aebecc;
 
   --border: #f8f9fa;
 
-  --background: #ffffff;
+  --background: #f2f2f2;
 }
 
 /* Large Desktop */
@@ -45,16 +47,17 @@ body {
 }
 
 body {
-  background-image: url("/background.svg");
+  background-image: url("/bg.svg");
   background-position: center;
   background-size: cover;
+  background-color: var(--background);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-size-adjust: none;
 }
 
 a {
-  color: inherit;
+  color: var(--text-link);
   text-decoration: none;
 }
 
