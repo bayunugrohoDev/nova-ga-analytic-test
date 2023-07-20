@@ -2,11 +2,11 @@ import { useEffect } from "react";
 import { useRouter } from "next/router";
 import Head from "next/head";
 import Image from "next/image";
+import { Mixpanel } from "../core/services/mixpanel"
 
 import Hero from "@/components/Hero";
 import Article from "@/components/Article";
 import Button from "@/components/Button";
-import MessageBubble from "@/components/MessageBubble";
 import styles from "@/styles/Home.module.css";
 
 import firstSectionImage from "../../public/section1.png";
@@ -20,6 +20,8 @@ const scrollToForm = () => {
     block: "end",
     inline: "nearest",
   });
+
+  Mixpanel.track('Join Waitlist CTA Clicked');
 };
 
 export default function Home() {
@@ -30,6 +32,13 @@ export default function Home() {
     if (window.history.scrollRestoration !== "manual") {
       window.history.scrollRestoration = "manual";
     }
+  }, []);
+
+  useEffect(() => {
+    Mixpanel.track('Page View', { 
+      'Page Title': "Home", 
+      'Page URL': window.location.href
+    });
   }, []);
 
   // handle and store scroll position
