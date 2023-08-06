@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import Link from "next/link";
+import { Mixpanel } from "../core/services/mixpanel";
 
-import { COUNTRIES } from "@/constants";
+import { COUNTRIES } from "@/core/constants/countries";
 import Button from "./Button";
 import Snackbar from "./Snackbar";
 import UsernameInputField from "./UsernameInputField";
@@ -63,6 +64,8 @@ export default function WaitlistForm() {
 
     setSuccessMessage(null);
     setErrorMessage(null);
+
+    Mixpanel.track("Waitlist Form Submitted", payload);
 
     try {
       const response = await fetch(

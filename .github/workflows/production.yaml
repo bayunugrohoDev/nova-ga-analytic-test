@@ -6,6 +6,7 @@ on:
 env:
   SLACK_CHANNEL_ID: C04LVGWMDTL # builds
   ECR_REPO: "novacircle/novacircle-web"
+  ENV_FILE_CONTENTS: ${{ secrets.ENV_FILE_CONTENTS_PROD }}
 
 jobs:
   slack_report_start:
@@ -46,6 +47,7 @@ jobs:
         run: |
           echo "TAG=${{ github.ref_name }}" >> $GITHUB_ENV
           echo $TAG
+          echo ${{ env.ENV_FILE_CONTENTS }} >> .env 
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
