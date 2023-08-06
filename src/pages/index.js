@@ -76,11 +76,7 @@ export default function Home() {
                 friendly <strong>place</strong>
               </>
             }
-            description="Embrace the beauty of the world and share your
-              experiences with others. With Nova Circle, you can effortlessly
-              plan your next adventure and connect with like-minded travelers
-              from all around the globe. Explore new destinations, indulge in local
-              cultures, and create memories that will last a lifetime."
+            description="Nova Circle is a unique way to inspire and get inspired to find new adventures by bringing together like-minded hotspot hunters from around the world. If you have ever felt the disappointment of a fantastic trip with your friends ending in an endless search for that one perfect restaurant, Nova Circle's feed of inspiration from like-minded people will be a like a dream. It is the new way to effortlessly make the most of every moment and every trip!"
           >
             <div className={styles.bubbleContainer}>
               <Button onClick={scrollToForm}>Join waitlist</Button>
@@ -125,26 +121,24 @@ export default function Home() {
           <Article
             title={
               <>
-                Expand your
-                <br />
-                circle of friends.
+                <strong>Find new</strong> hotspots{" "}
+                <strong>and share your</strong> own{" "}
+                <strong>hidden gems!</strong>
               </>
             }
-            description="Whether you're a seasoned traveler or just looking to
-              explore your hometown, with Nova Circle you'll experience the moments of
-              a diverse, yet likeminded, community of explorers."
+            description="Find unique and off-the-beaten-path hangouts, save your favorite spots, and see the world through other explorer’s eyes. Share your own discoveries and inspire others to find new places. Together, we can make the most of every moment and create a unique archive of amazing experiences."
           />
         </section>
 
         <section className={styles.section}>
           <Article
-            title="Find, save, see and share hidden gems."
-            description="Find unique and off-the-beaten-path destinations, save your
-              favorite spots, and see the world through the eyes of other
-              travelers. Share your own discoveries and inspire others to
-              explore new places. Whether you're a seasoned traveler or just
-              starting out, Nova Circle makes it easy to find, save, see and
-              share the spots that make travel so special."
+            title={
+              <>
+                <strong>Be</strong> part{" "}
+                <strong>of a diverse community of</strong> like-minded people.
+              </>
+            }
+            description="Whether you’re a seasoned traveler or just want to be up-to-date with the hot spots in your home town, with Nova Circle, you can fashion your own community of explorers who inspire you. Find people who enjoy the same spots as you do, and grow your circle as you go!"
           />
           <Image
             src={thirdSectionImage}

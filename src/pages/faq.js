@@ -8,62 +8,56 @@ const FAQ_ITEMS = [
   {
     title: "What is Nova Circle and how does it work?",
     items: [
-      "Nova Circle is a mobile app that helps you plan and organize your travel itinerary. It offers features such as flight booking, hotel reservations, and local activity suggestions, all in one convenient location.",
+      "Nova Circle is a social platform offering a new way of getting inspired and sharing recommendations on experiences, ranging from restaurants and hotels to historical monuments. Nova Circle is a compilation of all the best spots at home and out of town curated by you, your friends, creators, and like-minded individuals globally.",
     ],
   },
   {
-    title: "Is Nova Circle free to use?",
+    title: "Can I provide feedback?",
     items: [
-      "Yes, Nova Circle is free to download and use. However, some premium features may require a paid subscription.",
-    ],
-  },
-  {
-    title: "Can I book flights and hotels through Nova Circle?",
-    items: [
-      "Yes, you can book flights and hotels through the app. Nova Circle offers a variety of travel options and helps you find the best deals.",
-    ],
-  },
-  {
-    title: "Does Nova Circle provide travel insurance?",
-    items: [
-      "No, Nova Circle does not offer travel insurance. However, we recommend that you purchase travel insurance separately for your trip.",
-    ],
-  },
-  {
-    title: "Can I customize my travel itinerary on Nova Circle?",
-    items: [
-      "Yes, you can customize your travel itinerary on Nova Circle. You can add or remove activities, change your flight or hotel reservations, and make other adjustments to your itinerary.",
-    ],
-  },
-  {
-    title: "Can I share my travel itinerary with others?",
-    items: [
-      "Yes, you can share your travel itinerary with others through the app. You can invite friends or family members to join your trip and share your plans with them.",
-    ],
-  },
-  {
-    title: "How does Nova Circle suggest local activities?",
-    items: [
-      "Nova Circle suggests local activities based on your location, interests, and other factors. It uses data and machine learning to provide personalized recommendations.",
-    ],
-  },
-  {
-    title: "Does Nova Circle offer customer support?",
-    items: [
-      "Yes, Nova Circle offers customer support through the app. You can contact our support team with any questions or issues you may have.",
+      "We would love to hear from you on how we can improve. Our product is built for you as a valued member of the Nova Circle community. We strive to make your experience on our platform as enjoyable as possible. Please send any feedback to hello@novacircle.com.",
     ],
   },
   {
     title:
-      "What is the cancellation policy for bookings made through Nova Circle?",
+      "Are there any costs associated with having an account at Nova Circle?",
     items: [
-      "The cancellation policy for bookings made through Nova Circle may vary depending on the provider. You can view the cancellation policy for each booking before you confirm your reservation.",
+      "Nova Circle is free to use. In the future, access to certain premium features may require a one-time purchase or paid subscription.",
     ],
   },
   {
-    title: "Is Nova Circle available in multiple languages?",
+    title: "Who can access my content?",
     items: [
-      "Yes, Nova Circle is available in multiple languages, including English, Spanish, French, German, and more. You can select your preferred language in the app settings.",
+      "You decide what you share and with who. When uploading content, you choose whether you would like to publicly share your content, only with your circle or if you want to keep it completely private. This applies to each of your lists and recommendations.",
+    ],
+  },
+  {
+    title: "How does Nova Circle suggest spots?",
+    items: [
+      "Nova Circle is built to suggest the most relevant spots based on your personal preferences. By building out your circle with friends and creators that share your taste, Nova Circle can provide you with recommendations that are nearly perfectly aligned with your preferences. By leveraging data and artificial intelligence Nova Circle can also pair you with users that share similar interests, thereby providing suggestions from users that are not yet part of your circle.",
+    ],
+  },
+  {
+    title: "Who do I contact for support matters?",
+    items: [
+      "For support matters, please contact us at support@novacircle.com.",
+    ],
+  },
+  {
+    title: "How do I request data erasure?",
+    items: [
+      "If you would like to request erasure of data, please contact us at support@novacircle.com.",
+    ],
+  },
+  {
+    title: "What are the terms of usage?",
+    items: [
+      "You can find our Terms and Conditions at https://novacircle.com/terms-and-conditions.",
+    ],
+  },
+  {
+    title: "Do you have a Privacy Policy?",
+    items: [
+      "You can find our Privacy Policy at https://novacircle.com/privacy.",
     ],
   },
 ];
