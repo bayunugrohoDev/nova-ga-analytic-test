@@ -65,7 +65,7 @@ jobs:
         run: |
           echo "TAG=${{ steps.short-sha.outputs.sha }}" >> $GITHUB_ENV
           echo $TAG
-          echo ${{ env.ENV_FILE_CONTENTS }} >> .env 
+          echo "${{ env.ENV_FILE_CONTENTS }}" >> .env 
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
