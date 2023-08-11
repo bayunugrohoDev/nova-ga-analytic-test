@@ -89,6 +89,7 @@ jobs:
           push: true
           build-args: |
             ENV_NAME=stg
+            APP_ENV=staging
           tags: |
             ${{ steps.login-ecr.outputs.registry }}/${{ env.ECR_REPO }}:stg-${{ env.TAG }}
             ${{ steps.login-ecr.outputs.registry }}/${{ env.ECR_REPO }}:stg-latest

@@ -2,6 +2,8 @@
 FROM node:18-alpine AS deps
 
 ARG ENV_NAME=dev
+ARG APP_ENV=development
+
 WORKDIR /app
 RUN apk add --no-cache libc6-compat && \
     chown -R node:node /app
@@ -16,6 +18,7 @@ RUN \
 
 FROM node:18-alpine AS builder
 ARG ENV_NAME=dev
+ARG APP_ENV=development
 ENV NEXT_TELEMETRY_DISABLED 1
 
 WORKDIR /app

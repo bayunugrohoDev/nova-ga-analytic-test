@@ -71,6 +71,7 @@ jobs:
           push: true
           build-args: |
             ENV_NAME=prod
+            APP_ENV=production
           tags: |
             ${{ steps.login-ecr.outputs.registry }}/${{ env.ECR_REPO }}:prod-${{ env.TAG }}
             ${{ steps.login-ecr.outputs.registry }}/${{ env.ECR_REPO }}:prod-latest

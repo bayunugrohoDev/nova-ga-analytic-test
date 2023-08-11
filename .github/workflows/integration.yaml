@@ -93,6 +93,7 @@ jobs:
           push: true
           build-args: |
             ENV_NAME=dev
+            APP_ENV=development
           tags: |
             ${{ steps.login-ecr.outputs.registry }}/${{ env.ECR_REPO }}:${{ env.TAG }}
             ${{ steps.login-ecr.outputs.registry }}/${{ env.ECR_REPO }}:latest

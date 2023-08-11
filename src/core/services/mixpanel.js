@@ -1,7 +1,7 @@
 import mixpanel from 'mixpanel-browser';
 import { config } from '../constants/config';
 
-let env_check = process.env.NODE_ENV === 'production' || process.env.NODE_ENV === 'staging';
+let env_check = process.env.APP_ENV === 'production' || process.env.APP_ENV === 'staging';
 
 env_check && mixpanel.init(config.mixpanel.project_token);
 
