@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useRouter } from "next/router";
 import Head from "next/head";
 import Image from "next/image";
-import { Mixpanel } from "../core/services/mixpanel"
+import { Mixpanel } from "../core/services/mixpanel";
 
 import Hero from "@/components/Hero";
 import Article from "@/components/Article";
@@ -21,7 +21,7 @@ const scrollToForm = () => {
     inline: "nearest",
   });
 
-  Mixpanel.track('Join Waitlist CTA Clicked');
+  Mixpanel.track("Join Waitlist CTA Clicked");
 };
 
 export default function Home() {
@@ -35,9 +35,9 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    Mixpanel.track('Page View', { 
-      'Page Title': "Home", 
-      'Page URL': window.location.href
+    Mixpanel.track("Page View", {
+      "Page Title": "Home",
+      "Page URL": window.location.href,
     });
   }, []);
 
@@ -79,10 +79,7 @@ export default function Home() {
           <Hero
             title={
               <>
-                <strong>
-                  The world from <br />a
-                </strong>{" "}
-                friendly <strong>place</strong>
+                The world from <br />a <strong>friendly</strong> place
               </>
             }
             description="Nova Circle is a unique way to inspire and get inspired to find new adventures by bringing together like-minded hotspot hunters from around the world. If you have ever felt the disappointment of a fantastic trip with your friends ending in an endless search for that one perfect restaurant, Nova Circle's feed of inspiration from like-minded people will be a like a dream. It is the new way to effortlessly make the most of every moment and every trip!"
@@ -130,9 +127,8 @@ export default function Home() {
           <Article
             title={
               <>
-                <strong>Find new</strong> hotspots{" "}
-                <strong>and share your</strong> own{" "}
-                <strong>hidden gems!</strong>
+                Find new hotspots and share your <strong>own</strong> hidden
+                gems!
               </>
             }
             description="Find unique and off-the-beaten-path hangouts, save your favorite spots, and see the world through other explorer’s eyes. Share your own discoveries and inspire others to find new places. Together, we can make the most of every moment and create a unique archive of amazing experiences."
@@ -143,8 +139,8 @@ export default function Home() {
           <Article
             title={
               <>
-                <strong>Be</strong> part{" "}
-                <strong>of a diverse community of</strong> like-minded people.
+                Be part of a <strong>diverse community</strong> of like-minded
+                people.
               </>
             }
             description="Whether you’re a seasoned traveler or just want to be up-to-date with the hot spots in your home town, with Nova Circle, you can fashion your own community of explorers who inspire you. Find people who enjoy the same spots as you do, and grow your circle as you go!"
