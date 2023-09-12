@@ -82,7 +82,7 @@ export default function Home() {
                 Discover a World, From a <strong>Friendly</strong> Place
               </>
             }
-            description="Nova Circle is your world of inspiration, connecting friends and likeminded individuals to uncover new experiences and hotspots. Say goodbye to endless searches for the perfect spot for cocktails, a romantic dinner, or a top-notch yoga studio. Our feed is packed with curated content from your network, making every moment and adventure effortless and enjoyable. Discover what you're looking for, even if you don't realize it yet."
+            description="Nova Circle is your world of inspiration, connecting friends and likeminded individuals to uncover new experiences and hotspots. Say goodbye to endlessly searching for the perfect spot for cocktails, a romantic dinner, or yoga studio. Our feed is packed with curated content from your network, inspiring you in an effortless and enjoyable way."
           ></Hero>
           <Image
             src={firstSectionImage}
@@ -105,11 +105,11 @@ export default function Home() {
           <Article
             title={
               <>
-                Find new Hotspots and Share Your <strong> own </strong> Hidden
-                Gems Find new
+                Find new Hotspots and Share Your <strong>own</strong> Hidden
+                Gems
               </>
             }
-            description="Find unique and off-the-beaten-path hangouts, save your favorite spots, and see the world through other explorers’ eyes. Join us in crafting a vault of experiences that inspire you, your friends, and others to create a unique archive of amazing experiences - whether it’s a local restaurant, boutique hotel, secluded running trail, coffee shop, or the best playground for your pooch."
+            description="Discover unique and off-the-beaten-path hangouts, save your favorite spots, and see the world through other explorers’ eyes. Join us in crafting a unique archive of amazing experiences that inspire you, your friends, and others - whether it’s a local restaurant, boutique hotel, running trail, coffee shop, or playground for your pooch."
           />
         </section>
 
@@ -120,7 +120,7 @@ export default function Home() {
                 Be Part of a <strong>Vibrant Community</strong>
               </>
             }
-            description="Nova Circle isn't just an app; it's a community fueling your passion for discovering new places and experiences. Nova Circle lets you explore destinations and spots based on recommendations by those you trust. Connect with friends and like-minded members who share your interests, whether you’re an avid traveler seeking fresh horizons or looking to uncover hidden gems in your hometown. Join Nova Circle today to begin your journey of friendship, inspiration, and unforgettable adventures."
+            description="Nova Circle is your social app for discovering the places to go and things to do, built on recommendations by those you trust. Connect with friends and likeminded members who share your interests, whether you’re seeking fresh horizons or looking to uncover hidden gems in your hometown. Join us today to begin your journey of friendship and inspiration."
           />
           <Image
             src={thirdSectionImage}
