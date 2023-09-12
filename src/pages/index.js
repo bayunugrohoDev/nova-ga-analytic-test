@@ -79,36 +79,20 @@ export default function Home() {
           <Hero
             title={
               <>
-                The world from <br />a <strong>friendly</strong> place
+                Discover a World, From a <strong>Friendly</strong> Place
               </>
             }
-            description="Nova Circle is a unique way to inspire and get inspired to find new adventures by bringing together like-minded hotspot hunters from around the world. If you have ever felt the disappointment of a fantastic trip with your friends ending in an endless search for that one perfect restaurant, Nova Circle's feed of inspiration from like-minded people will be a like a dream. It is the new way to effortlessly make the most of every moment and every trip!"
-          >
-            <div className={styles.bubbleContainer}>
-              <Button onClick={scrollToForm}>Join waitlist</Button>
-            </div>
-          </Hero>
+            description="Nova Circle is your world of inspiration, connecting friends and likeminded individuals to uncover new experiences and hotspots. Say goodbye to endless searches for the perfect spot for cocktails, a romantic dinner, or a top-notch yoga studio. Our feed is packed with curated content from your network, making every moment and adventure effortless and enjoyable. Discover what you're looking for, even if you don't realize it yet."
+          ></Hero>
           <Image
             src={firstSectionImage}
             alt="First section image"
             className={styles.firstSectionImage}
-            priority
-            width={620}
-            height={911}
-            sizes="(max-width: 768px) 100vw,
-              (max-width: 1200px) 50vw,
-              33vw"
           />
           <Image
             src={firstSectionMobileImage}
             alt="First section image"
             className={styles.firstSectionMobileImage}
-            priority
-            width={163}
-            height={477}
-            sizes="(max-width: 768px) 100vw,
-              (max-width: 1200px) 50vw,
-              33vw"
           />
         </section>
 
@@ -117,21 +101,15 @@ export default function Home() {
             src={secondSectionImage}
             alt="Nova Circle app views"
             className={styles.secondSectionImage}
-            priority
-            width={1023}
-            height={875}
-            sizes="(max-width: 768px) 100vw,
-              (max-width: 1200px) 50vw,
-              33vw"
           />
           <Article
             title={
               <>
-                Find new hotspots and share your <strong>own</strong> hidden
-                gems!
+                Find new Hotspots and Share Your <strong> own </strong> Hidden
+                Gems Find new
               </>
             }
-            description="Find unique and off-the-beaten-path hangouts, save your favorite spots, and see the world through other explorer’s eyes. Share your own discoveries and inspire others to find new places. Together, we can make the most of every moment and create a unique archive of amazing experiences."
+            description="Find unique and off-the-beaten-path hangouts, save your favorite spots, and see the world through other explorers’ eyes. Join us in crafting a vault of experiences that inspire you, your friends, and others to create a unique archive of amazing experiences - whether it’s a local restaurant, boutique hotel, secluded running trail, coffee shop, or the best playground for your pooch."
           />
         </section>
 
@@ -139,21 +117,15 @@ export default function Home() {
           <Article
             title={
               <>
-                Be part of a <strong>diverse community</strong> of like-minded
-                people.
+                Be Part of a <strong>Vibrant Community</strong>
               </>
             }
-            description="Whether you’re a seasoned traveler or just want to be up-to-date with the hot spots in your home town, with Nova Circle, you can fashion your own community of explorers who inspire you. Find people who enjoy the same spots as you do, and grow your circle as you go!"
+            description="Nova Circle isn't just an app; it's a community fueling your passion for discovering new places and experiences. Nova Circle lets you explore destinations and spots based on recommendations by those you trust. Connect with friends and like-minded members who share your interests, whether you’re an avid traveler seeking fresh horizons or looking to uncover hidden gems in your hometown. Join Nova Circle today to begin your journey of friendship, inspiration, and unforgettable adventures."
           />
           <Image
             src={thirdSectionImage}
             alt="Third section image"
             className={styles.thirdSectionImage}
-            width={831}
-            height={1024}
-            sizes="(max-width: 768px) 100vw,
-            (max-width: 1200px) 50vw,
-            33vw"
           />
         </section>
       </main>
