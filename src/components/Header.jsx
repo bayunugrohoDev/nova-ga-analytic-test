@@ -7,13 +7,7 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <Link href="/">
-        <Image
-          src="/logo.svg"
-          width={84}
-          height={50}
-          alt="Nova Circle"
-          priority
-        />
+        <Image src="/logo.svg" width={120} height={86} alt="Nova Circle" />
       </Link>
     </header>
   );
