@@ -25,12 +25,12 @@
   color: var(--text-dark);
 }
 
-.linkActive::after {
+.linkActive::before {
   position: absolute;
   content: "";
   width: 4px;
   height: 20px;
-  right: 0;
+  left: -20px;
   background: var(--indicator-active);
   border-radius: 2px;
 }

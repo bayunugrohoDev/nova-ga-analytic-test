@@ -16,10 +16,8 @@
 
 .title {
   font-family: var(--font-areainktrap);
-  font-style: normal;
-  font-weight: 400;
+  font-weight: 700;
   font-size: 40px;
-  line-height: 51px;
   letter-spacing: -0.03em;
   color: var(--text-dark);
   margin-bottom: 10px;

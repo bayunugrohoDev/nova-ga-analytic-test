@@ -51,7 +51,7 @@ export default function Footer() {
             <Image src={instagramImage} alt="Instagram logotype" />
           </a>
           <a
-            href="https://www.facebook.com/profile.php?id=100090644082832"
+            href="https://www.facebook.com/novacircleofficial"
             className={styles.link}
             target="_blank"
             rel="noopener noreferrer"
@@ -67,7 +67,7 @@ export default function Footer() {
             <Image src={tiktokImage} alt="TikTok logotype" />
           </a>
           <a
-            href="https://twitter.com/NovaCircleapp"
+            href="https://x.com/NovaCircleapp"
             className={styles.link}
             target="_blank"
             rel="noopener noreferrer"

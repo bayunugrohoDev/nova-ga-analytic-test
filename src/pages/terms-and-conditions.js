@@ -99,8 +99,8 @@ const TERMS_CONDITIONS = [
             <tr>
               <td>”Website”</td>
               <td>
-                means Nova’s website
-                <a href="https://novacircle.com."> novacircle.com.</a>
+                means Nova’s website&nbsp;
+                <a href="https://novacircle.com.">novacircle.com.</a>
               </td>
             </tr>
             <tr>
@@ -231,7 +231,8 @@ const TERMS_CONDITIONS = [
               </li>
               <li>
                 not use hateful, obscene, offensive, racist, sexual, or violent
-                language or words or content when using the Platform and the Services;
+                language or words or content when using the Platform and the
+                Services;
               </li>
               <li>not abuse the Platform or the Services; or</li>
               <li>
@@ -256,7 +257,7 @@ const TERMS_CONDITIONS = [
           "Nova may modify or update the functionality and features of the Content Moderation system without notice. You agree that Nova is not obligated to notify you of such changes, and your continued use of the Platform constitutes acceptance of these modifications.",
           "You agree not to share, post, upload, or transmit any content that violates Nova’s content guidelines and policies. This includes refraining from sharing content that may trigger the system’s moderation process.",
           "You acknowledge that the Content Moderation system’s determinations are based on automated processes and may occasionally lead to both false positives and false negatives. You agree that Nova is not responsible for any such inaccuracies and that you will not hold it liable for actions taken as a result of the Recognition Tool’s findings.",
-          "If your content is flagged for moderation by the Content Moderation system, you have the right to request a manual review by contacting our support team. However, Nova retains the discretion to determine the final outcome of the review."
+          "If your content is flagged for moderation by the Content Moderation system, you have the right to request a manual review by contacting our support team. However, Nova retains the discretion to determine the final outcome of the review.",
         ],
       },
       {

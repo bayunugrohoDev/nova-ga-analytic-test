@@ -9,7 +9,7 @@ export default function Navigation({}) {
   return (
     <nav className={styles.navigation}>
       <Link href="/" className={styles.link}>
-        « Back to Start page
+        Home
       </Link>
       <div className={styles.linksContainer}>
         <Link
