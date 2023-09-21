@@ -8,7 +8,7 @@ import footerImage from "../../public/footer.png";
 import instagramImage from "../../public/instagram.svg";
 import facebookImage from "../../public/facebook.svg";
 import tiktokImage from "../../public/tiktok.svg";
-import twitterImage from "../../public/twitter.svg";
+import xImage from "../../public/x.svg";
 import youtubeImage from "../../public/youtube.svg";
 import styles from "@/styles/Footer.module.css";
 
@@ -37,6 +37,14 @@ export default function Footer() {
               Privacy
             </Link>
           </nav>
+          <a
+            href="https://novacircle.teamtailor.com/"
+            className={styles.link}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Career
+          </a>
           <a href="mailto:hello@novacircle.com" className={styles.link}>
             Contact
           </a>
@@ -72,7 +80,7 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Image src={twitterImage} alt="Twitter logotype" />
+            <Image src={xImage} alt="X logotype" />
           </a>
           <a
             href="https://www.youtube.com/channel/UCeYlsxCxJwsjGB3aaj3OjrA"
