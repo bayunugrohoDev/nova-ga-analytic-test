@@ -4,7 +4,7 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <link
+        {/* <link
           rel="preload"
           href="/fonts/AreaInktrap-Regular.woff2"
           as="font"
@@ -24,7 +24,7 @@ export default function Document() {
           as="font"
           type="font/woff2"
           crossOrigin="anonymous"
-        />
+        /> */}
       </Head>
       <body>
         <Main />

@@ -8,7 +8,7 @@
 /* Mobile */
 @media (max-width: 700px) {
   .header {
-    padding: 2rem;
+    padding: 2rem 1rem 2rem 1rem;
   }
   .header img {
     width: 84px;

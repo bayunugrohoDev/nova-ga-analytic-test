@@ -128,6 +128,7 @@ export default function Home() {
           <Image
             src={firstSectionImage}
             alt="First section image"
+            priority
             className={styles.firstSectionImage}
           />
           <Image

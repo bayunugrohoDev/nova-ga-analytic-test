@@ -64,6 +64,10 @@
 
 /* Mobile */
 @media (max-width: 700px) {
+  .footer {
+    padding: 2rem 1rem 0;
+  }
+
   .section {
     display: flex;
     flex-direction: column-reverse;
@@ -78,7 +82,7 @@
 
   .link {
     font-size: 12px;
-    line-height: 24px;
+    line-height: inherit;
   }
 
   .links > div:last-of-type {

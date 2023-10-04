@@ -79,7 +79,7 @@ export default function Footer() {
         <div>
           <nav>
             <Link href="/terms-and-conditions" className={styles.link}>
-              Terms and Conditions
+              Terms & Conditions
             </Link>
             <Link href="/faq" className={styles.link}>
               FAQ
