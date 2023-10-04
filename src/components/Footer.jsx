@@ -3,8 +3,10 @@ import Link from "next/link";
 
 import Article from "./Article";
 import WaitlistForm from "./WaitlistForm";
-
+import { Mixpanel } from "../core/services/mixpanel";
 import footerImage from "../../public/footer.png";
+import badgeAppleStore from "../../public/badge-apple-store-download.svg";
+import badgeGooglePlay from "../../public/badge-google-play-download.svg";
 import instagramImage from "../../public/instagram.svg";
 import facebookImage from "../../public/facebook.svg";
 import tiktokImage from "../../public/tiktok.svg";
@@ -13,15 +15,64 @@ import youtubeImage from "../../public/youtube.svg";
 import styles from "@/styles/Footer.module.css";
 
 export default function Footer() {
+  // Mixpanel.track_links("#nav #app-store a", "Clicked download on App Store", {
+  //   referrer: document.referrer,
+  // });
+
+  // Mixpanel.track_links(
+  //   "#nav #google-play a",
+  //   "Clicked download on Google Play",
+  //   {
+  //     referrer: document.referrer,
+  //   }
+  // );
+
   return (
     <footer className={styles.footer}>
       <section id="join" className={styles.section}>
-        <Image src={footerImage} alt="Footer image" />
+        <Image src={footerImage} width={358} height="auto" alt="Footer image" />
         <Article
-          title="Convinced yet?"
-          description="Fill the form to reserve your username and get the early access to our app."
+          title="Get our app"
+          description={
+            <>
+              Nova Circle is in beta phase. Based on feedback from our
+              community, we will improve on the things you already enjoy, build
+              missing functionalities, and alleviate pain points. If you have
+              any feedback or suggestions for improvements, shoot us an email at{" "}
+              <a href="mailto:hello@novacircle.com">hello@novacircle.com</a>.
+              <div className={styles.badges}>
+                <p className={styles.header}>
+                  <strong>Download our apps</strong>
+                </p>
+                <a
+                  href="https://apps.apple.com/us/app/nova-circle/id6467128541"
+                  id="app-store"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Image
+                    src={badgeAppleStore}
+                    alt="Download on the App Store"
+                    className={styles.badge}
+                  />
+                </a>
+                <a
+                  href="#"
+                  target="_blank"
+                  id="google-play"
+                  rel="noopener noreferrer"
+                >
+                  <Image
+                    src={badgeGooglePlay}
+                    alt="Get it on Google Play"
+                    className={styles.badge}
+                  />
+                </a>
+              </div>
+            </>
+          }
         >
-          <WaitlistForm />
+          {/* <WaitlistForm /> */}
         </Article>
       </section>
       <div className={styles.links}>
@@ -36,18 +87,18 @@ export default function Footer() {
             <Link href="/privacy" className={styles.link}>
               Privacy
             </Link>
+            <a
+              href="https://novacircle.teamtailor.com/"
+              className={styles.link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Career
+            </a>
+            <a href="mailto:hello@novacircle.com" className={styles.link}>
+              Contact
+            </a>
           </nav>
-          <a
-            href="https://novacircle.teamtailor.com/"
-            className={styles.link}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Career
-          </a>
-          <a href="mailto:hello@novacircle.com" className={styles.link}>
-            Contact
-          </a>
         </div>
         <div>
           <a

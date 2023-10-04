@@ -9,6 +9,9 @@ import Article from "@/components/Article";
 import Button from "@/components/Button";
 import styles from "@/styles/Home.module.css";
 
+import badgeAppleStore from "../../public/badge-apple-store-download.svg";
+import badgeGooglePlay from "../../public/badge-google-play-download.svg";
+
 import firstSectionImage from "../../public/section1.png";
 import secondSectionImage from "../../public/section2.png";
 import thirdSectionImage from "../../public/section3.png";
@@ -86,7 +89,41 @@ export default function Home() {
                 <strong> Place</strong>
               </>
             }
-            description="Nova Circle is your world of inspiration, connecting friends and likeminded individuals to uncover new experiences and hotspots. Say goodbye to endlessly searching for the perfect spot for cocktails, a romantic dinner, or yoga studio. Our feed is packed with curated content from your network, inspiring you in an effortless and enjoyable way."
+            description={
+              <>
+                <p>
+                  Nova Circle is your world of inspiration, connecting friends
+                  and likeminded individuals to uncover new experiences and
+                  hotspots. Say goodbye to endlessly searching for the perfect
+                  spot for cocktails, a romantic dinner, or yoga studio. Our
+                  feed is packed with curated content from your network,
+                  inspiring you in an effortless and enjoyable way.
+                </p>
+                <div className={styles.badges}>
+                  <p className={styles.header}>
+                    <strong>Download our apps</strong>
+                  </p>
+                  <a
+                    href="https://apps.apple.com/us/app/nova-circle/id6467128541"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image
+                      src={badgeAppleStore}
+                      alt="Download on the App Store"
+                      className={styles.badge}
+                    />
+                  </a>
+                  <a href="#" target="_blank" rel="noopener noreferrer">
+                    <Image
+                      src={badgeGooglePlay}
+                      alt="Get it on Google Play"
+                      className={styles.badge}
+                    />
+                  </a>
+                </div>
+              </>
+            }
           ></Hero>
           <Image
             src={firstSectionImage}
