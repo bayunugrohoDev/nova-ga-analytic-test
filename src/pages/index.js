@@ -93,7 +93,7 @@ export default function Home() {
               <>
                 <p>
                   Nova Circle is your world of inspiration, connecting friends
-                  and likeminded individuals to uncover new experiences and
+                  and like-minded individuals to uncover new experiences and
                   hotspots. Say goodbye to endlessly searching for the perfect
                   spot for cocktails, a romantic dinner, or yoga studio. Our
                   feed is packed with curated content from your network,
@@ -101,7 +101,7 @@ export default function Home() {
                 </p>
                 <div className={styles.badges}>
                   <p className={styles.header}>
-                    <strong>Download our apps</strong>
+                    <strong>Download our app</strong>
                   </p>
                   <a
                     href="https://apps.apple.com/us/app/nova-circle/id6467128541"
@@ -114,7 +114,11 @@ export default function Home() {
                       className={styles.badge}
                     />
                   </a>
-                  <a href="#" target="_blank" rel="noopener noreferrer">
+                  <a
+                    href="https://play.google.com/store/apps/details?id=se.abersoft.novacircle"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <Image
                       src={badgeGooglePlay}
                       alt="Get it on Google Play"

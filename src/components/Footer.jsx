@@ -42,7 +42,7 @@ export default function Footer() {
               <a href="mailto:hello@novacircle.com">hello@novacircle.com</a>.
               <div className={styles.badges}>
                 <p className={styles.header}>
-                  <strong>Download our apps</strong>
+                  <strong>Download our app</strong>
                 </p>
                 <a
                   href="https://apps.apple.com/us/app/nova-circle/id6467128541"
@@ -57,7 +57,7 @@ export default function Footer() {
                   />
                 </a>
                 <a
-                  href="#"
+                  href="https://play.google.com/store/apps/details?id=se.abersoft.novacircle"
                   target="_blank"
                   id="google-play"
                   rel="noopener noreferrer"
