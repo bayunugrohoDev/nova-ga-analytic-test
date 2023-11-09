@@ -1,9 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import {
+  trackClickAppStore,
+  trackClickPlayStore,
+} from "@/core/services/googleAnalytics";
+
 import Article from "./Article";
-import WaitlistForm from "./WaitlistForm";
-import { Mixpanel } from "../core/services/mixpanel";
+
 import footerImage from "../../public/footer.png";
 import badgeAppleStore from "../../public/badge-apple-store-download.svg";
 import badgeGooglePlay from "../../public/badge-google-play-download.svg";
@@ -12,21 +16,10 @@ import facebookImage from "../../public/facebook.svg";
 import tiktokImage from "../../public/tiktok.svg";
 import xImage from "../../public/x.svg";
 import youtubeImage from "../../public/youtube.svg";
+
 import styles from "@/styles/Footer.module.css";
 
 export default function Footer() {
-  // Mixpanel.track_links("#nav #app-store a", "Clicked download on App Store", {
-  //   referrer: document.referrer,
-  // });
-
-  // Mixpanel.track_links(
-  //   "#nav #google-play a",
-  //   "Clicked download on Google Play",
-  //   {
-  //     referrer: document.referrer,
-  //   }
-  // );
-
   return (
     <footer className={styles.footer}>
       <section id="join" className={styles.section}>
@@ -45,10 +38,11 @@ export default function Footer() {
                   <strong>Download our app</strong>
                 </p>
                 <a
-                  href="https://apps.apple.com/us/app/nova-circle/id6467128541"
+                  href="#"
                   id="app-store"
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => trackClickAppStore()}
                 >
                   <Image
                     src={badgeAppleStore}
@@ -57,7 +51,7 @@ export default function Footer() {
                   />
                 </a>
                 <a
-                  href="https://play.google.com/store/apps/details?id=se.abersoft.novacircle"
+                  href="#"
                   target="_blank"
                   id="google-play"
                   rel="noopener noreferrer"
@@ -66,6 +60,7 @@ export default function Footer() {
                     src={badgeGooglePlay}
                     alt="Get it on Google Play"
                     className={styles.badge}
+                    onClick={() => trackClickPlayStore()}
                   />
                 </a>
               </div>

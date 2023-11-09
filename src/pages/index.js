@@ -2,11 +2,11 @@ import { useEffect } from "react";
 import { useRouter } from "next/router";
 import Head from "next/head";
 import Image from "next/image";
-import { Mixpanel } from "../core/services/mixpanel";
+
+import { initReactGA, trackClickAppStore, trackClickPlayStore } from "@/core/services/googleAnalytics";
 
 import Hero from "@/components/Hero";
 import Article from "@/components/Article";
-import Button from "@/components/Button";
 import styles from "@/styles/Home.module.css";
 
 import badgeAppleStore from "../../public/badge-apple-store-download.svg";
@@ -17,17 +17,10 @@ import secondSectionImage from "../../public/section2.png";
 import thirdSectionImage from "../../public/section3.png";
 import firstSectionMobileImage from "../../public/section1.mobile.png";
 
-const scrollToForm = () => {
-  document.getElementById("join").scrollIntoView({
-    behavior: "smooth",
-    block: "end",
-    inline: "nearest",
-  });
-
-  Mixpanel.track("Join Waitlist CTA Clicked");
-};
-
 export default function Home() {
+  
+  initReactGA();
+ 
   const router = useRouter();
 
   // set scroll restoration to manual
@@ -35,13 +28,6 @@ export default function Home() {
     if (window.history.scrollRestoration !== "manual") {
       window.history.scrollRestoration = "manual";
     }
-  }, []);
-
-  useEffect(() => {
-    Mixpanel.track("Page View", {
-      "Page Title": "Home",
-      "Page URL": window.location.href,
-    });
   }, []);
 
   // handle and store scroll position
@@ -104,9 +90,10 @@ export default function Home() {
                     <strong>Download our app</strong>
                   </p>
                   <a
-                    href="https://apps.apple.com/us/app/nova-circle/id6467128541"
+                    href="#"
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={()=> trackClickAppStore()}
                   >
                     <Image
                       src={badgeAppleStore}
@@ -115,9 +102,10 @@ export default function Home() {
                     />
                   </a>
                   <a
-                    href="https://play.google.com/store/apps/details?id=se.abersoft.novacircle"
+                    href="#"
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={()=> trackClickPlayStore()}
                   >
                     <Image
                       src={badgeGooglePlay}
