@@ -1,7 +1,9 @@
 import Router from 'next/router';
 import ReactGA from 'react-ga4';
 
-const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
+import { config } from '../constants/config';
+
+const GA_MEASUREMENT_ID = config.googleAnalytics.MEASUREMENT_ID;
 
 export const initReactGA = () => {
   ReactGA.initialize(GA_MEASUREMENT_ID);
