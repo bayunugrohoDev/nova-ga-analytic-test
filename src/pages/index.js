@@ -2,6 +2,8 @@ import { useEffect } from "react";
 import { useRouter } from "next/router";
 import Head from "next/head";
 import Image from "next/image";
+import ReactGA from 'react-ga4';
+
 import { Mixpanel } from "../core/services/mixpanel";
 
 import Hero from "@/components/Hero";
@@ -27,8 +29,34 @@ const scrollToForm = () => {
   Mixpanel.track("Join Waitlist CTA Clicked");
 };
 
+const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
+
 export default function Home() {
+  
+  ReactGA.initialize(GA_MEASUREMENT_ID);
+ 
   const router = useRouter();
+
+  // Track the download link click using Google Analytics
+  const trackClickAppStore = (e) => {
+    ReactGA.event({
+      category: 'Downloads',
+      action: 'Click',
+      label: 'Click App Store Download Link',
+    });
+
+    router.push('https://apps.apple.com/us/app/nova-circle/id6467128541')
+  };
+
+  // Track the download link click using Google Analytics
+  const trackClickPlayStore = (e) => {
+    ReactGA.event({
+      category: 'Downloads',
+      action: 'Click',
+      label: 'Click Google Play Download Link',
+    });
+    router.push('https://play.google.com/store/apps/details?id=se.abersoft.novacircle')
+  };
 
   // set scroll restoration to manual
   useEffect(() => {
@@ -104,9 +132,10 @@ export default function Home() {
                     <strong>Download our app</strong>
                   </p>
                   <a
-                    href="https://apps.apple.com/us/app/nova-circle/id6467128541"
+                    href="#"
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={()=> trackClickAppStore()}
                   >
                     <Image
                       src={badgeAppleStore}
@@ -115,9 +144,10 @@ export default function Home() {
                     />
                   </a>
                   <a
-                    href="https://play.google.com/store/apps/details?id=se.abersoft.novacircle"
+                    href="#"
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={()=> trackClickPlayStore()}
                   >
                     <Image
                       src={badgeGooglePlay}
