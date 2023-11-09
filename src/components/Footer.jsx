@@ -1,6 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import {
+  trackClickAppStore,
+  trackClickPlayStore,
+} from "@/core/services/googleAnalytics";
+
 import Article from "./Article";
 import footerImage from "../../public/footer.png";
 import badgeAppleStore from "../../public/badge-apple-store-download.svg";
@@ -10,6 +15,7 @@ import facebookImage from "../../public/facebook.svg";
 import tiktokImage from "../../public/tiktok.svg";
 import xImage from "../../public/x.svg";
 import youtubeImage from "../../public/youtube.svg";
+
 import styles from "@/styles/Footer.module.css";
 import {
   trackClickAppStore,
