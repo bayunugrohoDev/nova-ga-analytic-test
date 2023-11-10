@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import Head from "next/head";
 import Image from "next/image";
 
-import { initReactGA, trackClickAppStore, trackClickPlayStore } from "@/core/services/googleAnalytics";
+import googleAnalyticsService from "@/core/services/googleAnalyticsService";
 
 import Hero from "@/components/Hero";
 import Article from "@/components/Article";
@@ -18,9 +18,6 @@ import thirdSectionImage from "../../public/section3.png";
 import firstSectionMobileImage from "../../public/section1.mobile.png";
 
 export default function Home() {
-  
-  initReactGA();
- 
   const router = useRouter();
 
   // set scroll restoration to manual
@@ -93,7 +90,7 @@ export default function Home() {
                     href="#"
                     target="_blank"
                     rel="noopener noreferrer"
-                    onClick={()=> trackClickAppStore()}
+                    onClick={() => googleAnalyticsService.trackClickAppStore()}
                   >
                     <Image
                       src={badgeAppleStore}
@@ -105,7 +102,7 @@ export default function Home() {
                     href="#"
                     target="_blank"
                     rel="noopener noreferrer"
-                    onClick={()=> trackClickPlayStore()}
+                    onClick={() => googleAnalyticsService.trackClickPlayStore()}
                   >
                     <Image
                       src={badgeGooglePlay}

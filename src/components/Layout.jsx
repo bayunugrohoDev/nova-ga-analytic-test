@@ -3,6 +3,8 @@ import localFont from "next/font/local";
 
 import Header from "./Header";
 import Footer from "./Footer";
+import googleAnalyticsService from "@/core/services/googleAnalyticsService";
+import { useEffect } from "react";
 
 const areainktrap = localFont({
   src: [
@@ -30,6 +32,12 @@ const inter = Inter({
 });
 
 export default function Layout({ children }) {
+
+  useEffect(() => {
+    googleAnalyticsService.trackPageView();
+  }, []);
+
+
   return (
     <div className={`${inter.variable} ${areainktrap.variable}`}>
       <Header />
