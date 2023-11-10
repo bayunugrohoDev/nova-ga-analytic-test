@@ -7,7 +7,6 @@ import {
 } from "@/core/services/googleAnalytics";
 
 import Article from "./Article";
-
 import footerImage from "../../public/footer.png";
 import badgeAppleStore from "../../public/badge-apple-store-download.svg";
 import badgeGooglePlay from "../../public/badge-google-play-download.svg";
@@ -18,6 +17,10 @@ import xImage from "../../public/x.svg";
 import youtubeImage from "../../public/youtube.svg";
 
 import styles from "@/styles/Footer.module.css";
+import {
+  trackClickAppStore,
+  trackClickPlayStore,
+} from "@/core/services/googleAnalytics";
 
 export default function Footer() {
   return (
