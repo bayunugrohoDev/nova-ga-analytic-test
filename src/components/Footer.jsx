@@ -1,10 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import {
-  trackClickAppStore,
-  trackClickPlayStore,
-} from "@/core/services/googleAnalytics";
+import googleAnalyticsService from "@/core/services/googleAnalyticsService";
 
 import Article from "./Article";
 import footerImage from "../../public/footer.png";
@@ -41,7 +38,7 @@ export default function Footer() {
                   id="app-store"
                   target="_blank"
                   rel="noopener noreferrer"
-                  onClick={() => trackClickAppStore()}
+                  onClick={() => googleAnalyticsService.trackClickAppStore()}
                 >
                   <Image
                     src={badgeAppleStore}
@@ -59,7 +56,7 @@ export default function Footer() {
                     src={badgeGooglePlay}
                     alt="Get it on Google Play"
                     className={styles.badge}
-                    onClick={() => trackClickPlayStore()}
+                    onClick={() => googleAnalyticsService.trackClickPlayStore()}
                   />
                 </a>
               </div>

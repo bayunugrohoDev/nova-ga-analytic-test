@@ -3,7 +3,7 @@ import localFont from "next/font/local";
 
 import Header from "./Header";
 import Footer from "./Footer";
-import { initReactGA, trackPageView } from "@/core/services/googleAnalytics";
+import googleAnalyticsService from "@/core/services/googleAnalyticsService";
 import { useEffect } from "react";
 
 const areainktrap = localFont({
@@ -33,10 +33,8 @@ const inter = Inter({
 
 export default function Layout({ children }) {
 
-  initReactGA();
-
   useEffect(() => {
-    trackPageView();
+    googleAnalyticsService.trackPageView();
   }, []);
 
 
