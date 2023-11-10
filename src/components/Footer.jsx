@@ -17,10 +17,6 @@ import xImage from "../../public/x.svg";
 import youtubeImage from "../../public/youtube.svg";
 
 import styles from "@/styles/Footer.module.css";
-import {
-  trackClickAppStore,
-  trackClickPlayStore,
-} from "@/core/services/googleAnalytics";
 
 export default function Footer() {
   return (
