@@ -5,6 +5,8 @@ import Image from "next/image";
 
 import googleAnalyticsService from "@/core/services/googleAnalyticsService";
 
+import { storeLink } from "@/core/constants/storeLink";
+
 import Hero from "@/components/Hero";
 import Article from "@/components/Article";
 import styles from "@/styles/Home.module.css";
@@ -16,20 +18,19 @@ import firstSectionImage from "../../public/section1.png";
 import secondSectionImage from "../../public/section2.png";
 import thirdSectionImage from "../../public/section3.png";
 import firstSectionMobileImage from "../../public/section1.mobile.png";
-import { storeLink } from "@/core/constants/storeLink";
 
 export default function Home() {
-  
   const router = useRouter();
 
+  // handle action for click on 'Download our app' button
   const handleClickAppStore = () => {
     googleAnalyticsService.trackClickAppStore();
-    router.push(storeLink.appStoreLink);
+    window.open(storeLink.appStoreLink, "_blank");
   };
 
   const handleClickGooglePlay = () => {
     googleAnalyticsService.trackClickGooglePlay();
-    router.push(storeLink.googleAppLink);
+    window.open(storeLink.googleAppLink, "_blank");
   };
 
   // set scroll restoration to manual

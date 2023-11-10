@@ -3,6 +3,8 @@ import Link from "next/link";
 
 import googleAnalyticsService from "@/core/services/googleAnalyticsService";
 
+import { storeLink } from "@/core/constants/storeLink";
+
 import Article from "./Article";
 import footerImage from "../../public/footer.png";
 import badgeAppleStore from "../../public/badge-apple-store-download.svg";
@@ -14,19 +16,18 @@ import xImage from "../../public/x.svg";
 import youtubeImage from "../../public/youtube.svg";
 
 import styles from "@/styles/Footer.module.css";
-import { useRouter } from "next/router";
 
 export default function Footer() {
-  const router = useRouter();
 
+  // handle action for click on 'Download our app' button
   const handleClickAppStore = () => {
     googleAnalyticsService.trackClickAppStore();
-    router.push(storeLink.appStoreLink);
+    window.open(storeLink.appStoreLink, '_blank');
   };
 
   const handleClickGooglePlay = () => {
     googleAnalyticsService.trackClickGooglePlay();
-    router.push(storeLink.googleAppLink);
+    window.open(storeLink.googleAppLink, '_blank');
   };
 
   return (
