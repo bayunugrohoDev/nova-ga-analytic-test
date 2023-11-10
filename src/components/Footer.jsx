@@ -14,8 +14,21 @@ import xImage from "../../public/x.svg";
 import youtubeImage from "../../public/youtube.svg";
 
 import styles from "@/styles/Footer.module.css";
+import { useRouter } from "next/router";
 
 export default function Footer() {
+  const router = useRouter();
+
+  const handleClickAppStore = () => {
+    googleAnalyticsService.trackClickAppStore();
+    router.push(storeLink.appStoreLink);
+  };
+
+  const handleClickGooglePlay = () => {
+    googleAnalyticsService.trackClickGooglePlay();
+    router.push(storeLink.googleAppLink);
+  };
+
   return (
     <footer className={styles.footer}>
       <section id="join" className={styles.section}>
@@ -38,7 +51,7 @@ export default function Footer() {
                   id="app-store"
                   target="_blank"
                   rel="noopener noreferrer"
-                  onClick={() => googleAnalyticsService.trackClickAppStore()}
+                  onClick={() => handleClickAppStore()}
                 >
                   <Image
                     src={badgeAppleStore}
@@ -56,7 +69,7 @@ export default function Footer() {
                     src={badgeGooglePlay}
                     alt="Get it on Google Play"
                     className={styles.badge}
-                    onClick={() => googleAnalyticsService.trackClickPlayStore()}
+                    onClick={() => handleClickGooglePlay()}
                   />
                 </a>
               </div>

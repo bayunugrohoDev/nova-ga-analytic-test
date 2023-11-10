@@ -16,9 +16,21 @@ import firstSectionImage from "../../public/section1.png";
 import secondSectionImage from "../../public/section2.png";
 import thirdSectionImage from "../../public/section3.png";
 import firstSectionMobileImage from "../../public/section1.mobile.png";
+import { storeLink } from "@/core/constants/storeLink";
 
 export default function Home() {
+  
   const router = useRouter();
+
+  const handleClickAppStore = () => {
+    googleAnalyticsService.trackClickAppStore();
+    router.push(storeLink.appStoreLink);
+  };
+
+  const handleClickGooglePlay = () => {
+    googleAnalyticsService.trackClickGooglePlay();
+    router.push(storeLink.googleAppLink);
+  };
 
   // set scroll restoration to manual
   useEffect(() => {
@@ -90,7 +102,7 @@ export default function Home() {
                     href="#"
                     target="_blank"
                     rel="noopener noreferrer"
-                    onClick={() => googleAnalyticsService.trackClickAppStore()}
+                    onClick={() => handleClickAppStore()}
                   >
                     <Image
                       src={badgeAppleStore}
@@ -102,7 +114,7 @@ export default function Home() {
                     href="#"
                     target="_blank"
                     rel="noopener noreferrer"
-                    onClick={() => googleAnalyticsService.trackClickPlayStore()}
+                    onClick={() => handleClickGooglePlay()}
                   >
                     <Image
                       src={badgeGooglePlay}
