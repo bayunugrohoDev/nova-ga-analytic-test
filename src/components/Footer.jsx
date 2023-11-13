@@ -3,6 +3,8 @@ import Link from "next/link";
 
 import googleAnalyticsService from "@/core/services/googleAnalyticsService";
 
+import { storeLink } from "@/core/constants/storeLink";
+
 import Article from "./Article";
 import footerImage from "../../public/footer.png";
 import badgeAppleStore from "../../public/badge-apple-store-download.svg";
@@ -16,6 +18,18 @@ import youtubeImage from "../../public/youtube.svg";
 import styles from "@/styles/Footer.module.css";
 
 export default function Footer() {
+
+  // handle action for click on 'Download our app' button
+  const handleClickAppStore = () => {
+    googleAnalyticsService.trackClickAppStore();
+    window.open(storeLink.appStoreLink, '_blank');
+  };
+
+  const handleClickGooglePlay = () => {
+    googleAnalyticsService.trackClickGooglePlay();
+    window.open(storeLink.googleAppLink, '_blank');
+  };
+
   return (
     <footer className={styles.footer}>
       <section id="join" className={styles.section}>
@@ -38,7 +52,7 @@ export default function Footer() {
                   id="app-store"
                   target="_blank"
                   rel="noopener noreferrer"
-                  onClick={() => googleAnalyticsService.trackClickAppStore()}
+                  onClick={() => handleClickAppStore()}
                 >
                   <Image
                     src={badgeAppleStore}
@@ -56,7 +70,7 @@ export default function Footer() {
                     src={badgeGooglePlay}
                     alt="Get it on Google Play"
                     className={styles.badge}
-                    onClick={() => googleAnalyticsService.trackClickPlayStore()}
+                    onClick={() => handleClickGooglePlay()}
                   />
                 </a>
               </div>

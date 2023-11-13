@@ -34,7 +34,8 @@ const inter = Inter({
 export default function Layout({ children }) {
 
   useEffect(() => {
-    googleAnalyticsService.trackPageView();
+    const url = document.location.pathname;
+    googleAnalyticsService.trackPageView(url);
   }, []);
 
 
