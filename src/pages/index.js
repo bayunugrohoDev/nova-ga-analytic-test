@@ -3,10 +3,9 @@ import { useRouter } from "next/router";
 import Head from "next/head";
 import Image from "next/image";
 
-import {
-  trackClickAppStore,
-  trackClickPlayStore,
-} from "@/core/services/googleAnalytics";
+import googleAnalyticsService from "@/core/services/googleAnalyticsService";
+
+import { storeLink } from "@/core/constants/storeLink";
 
 import Hero from "@/components/Hero";
 import Article from "@/components/Article";
@@ -21,8 +20,18 @@ import thirdSectionImage from "../../public/section3.png";
 import firstSectionMobileImage from "../../public/section1.mobile.png";
 
 export default function Home() {
-
   const router = useRouter();
+
+  // handle action for click on 'Download our app' button
+  const handleClickAppStore = () => {
+    googleAnalyticsService.trackClickAppStore();
+    window.open(storeLink.appStoreLink, "_blank");
+  };
+
+  const handleClickGooglePlay = () => {
+    googleAnalyticsService.trackClickGooglePlay();
+    window.open(storeLink.googleAppLink, "_blank");
+  };
 
   // set scroll restoration to manual
   useEffect(() => {
@@ -94,7 +103,7 @@ export default function Home() {
                     href="#"
                     target="_blank"
                     rel="noopener noreferrer"
-                    onClick={() => trackClickAppStore()}
+                    onClick={() => handleClickAppStore()}
                   >
                     <Image
                       src={badgeAppleStore}
@@ -106,7 +115,7 @@ export default function Home() {
                     href="#"
                     target="_blank"
                     rel="noopener noreferrer"
-                    onClick={() => trackClickPlayStore()}
+                    onClick={() => handleClickGooglePlay()}
                   >
                     <Image
                       src={badgeGooglePlay}
