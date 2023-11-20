@@ -74,12 +74,6 @@ export default function Home() {
           content="Discover a World, From a Friendly Place"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta property="og:title" content="Nova Circle" />
-        <meta
-          property="og:description"
-          content="Discover a World, From a Friendly Place"
-        />  
-         <meta property="og:image" content="/nova-circle-icon.png" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
