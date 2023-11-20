@@ -19,6 +19,8 @@ import secondSectionImage from "../../public/section2.png";
 import thirdSectionImage from "../../public/section3.png";
 import firstSectionMobileImage from "../../public/section1.mobile.png";
 
+import ogImage from "../../public/nova-circle-icon.png";
+
 export default function Home() {
   const router = useRouter();
 
@@ -79,7 +81,7 @@ export default function Home() {
           property="og:description"
           content="Discover a World, From a Friendly Place"
         />  
-         <meta property="og:image" content="/nova-circle-icon.png" />
+         <meta property="og:image" content={ogImage} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
