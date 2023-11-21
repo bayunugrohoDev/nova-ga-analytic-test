@@ -6,6 +6,7 @@ import Image from "next/image";
 import googleAnalyticsService from "@/core/services/googleAnalyticsService";
 
 import { storeLink } from "@/core/constants/storeLink";
+import { og } from "@/core/constants/og";
 
 import Hero from "@/components/Hero";
 import Article from "@/components/Article";
@@ -18,8 +19,6 @@ import firstSectionImage from "../../public/section1.png";
 import secondSectionImage from "../../public/section2.png";
 import thirdSectionImage from "../../public/section3.png";
 import firstSectionMobileImage from "../../public/section1.mobile.png";
-
-import ogImage from "../../public/nova-circle-icon.png";
 
 export default function Home() {
   const router = useRouter();
@@ -76,13 +75,13 @@ export default function Home() {
           content="Discover a World, From a Friendly Place"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
         <meta property="og:title" content="Nova Circle" />
         <meta
           property="og:description"
           content="Discover a World, From a Friendly Place"
         />  
-         <meta property="og:image" content={ogImage} />
-        <link rel="icon" href="/favicon.ico" />
+         <meta property="og:image" content={og.image} />
       </Head>
       <main className={styles.main}>
         <section className={styles.section}>
