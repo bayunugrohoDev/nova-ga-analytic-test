@@ -1,5 +1,4 @@
 import Head from "next/head";
-
 import Navigation from "@/components/Navigation";
 import Bulletin from "@/components/Bulletin";
 import styles from "@/styles/Faq.module.css";
@@ -71,8 +70,11 @@ export default function FAQ() {
           name="description"
           content="Frequently asked questions about Nova Circle."
         />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <meta property="og:title" content="Nova Circle | FAQ" />
+        <meta
+          property="og:description"
+          content="Frequently asked questions about Nova Circle"
+        />
       </Head>
       <Navigation />
       <main className={styles.main}>

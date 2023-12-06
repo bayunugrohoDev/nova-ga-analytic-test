@@ -1,30 +1,12 @@
 import { Html, Head, Main, NextScript } from "next/document";
+import { og } from "@/core/constants/og";
 
 export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        {/* <link
-          rel="preload"
-          href="/fonts/AreaInktrap-Regular.woff2"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preload"
-          href="/fonts/AreaInktrap-Semibold.woff2"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="preload"
-          href="/fonts/AreaInktrap-Bold.woff2"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        /> */}
+        <link rel="icon" href="/favicon.ico" />
+        <meta property="og:image" content={og.image} />
       </Head>
       <body>
         <Main />

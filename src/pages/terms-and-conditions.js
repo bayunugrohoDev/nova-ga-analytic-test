@@ -1,5 +1,4 @@
 import Head from "next/head";
-
 import Navigation from "@/components/Navigation";
 import Bulletin from "@/components/Bulletin";
 import styles from "@/styles/TermsAndConditions.module.css";
@@ -480,8 +479,11 @@ export default function TermsAndConditions() {
       <Head>
         <title>Nova Circle | T&C</title>
         <meta name="description" content="Nova Circle's Terms and Conditions" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <meta property="og:title" content="Nova Circle | T&C" />
+        <meta
+          property="og:description"
+          content="Nova Circle's Terms and Conditions"
+        />
       </Head>
       <Navigation />
       <main className={styles.main}>
