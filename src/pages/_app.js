@@ -5,6 +5,7 @@ import Layout from "@/components/Layout";
 
 import "@/styles/globals.css";
 import { config } from "@/core/constants/config";
+import { fbPixelTrackName } from "@/core/constants/fbPixel";
 
 export default function App({ Component, pageProps }) {
   const router = useRouter();
@@ -18,6 +19,7 @@ export default function App({ Component, pageProps }) {
 
         router.events.on('routeChangeComplete', () => {
           ReactPixel.pageView()
+          ReactPixel.trackCustom(fbPixelTrackName.pageView);
         })
       })
       
