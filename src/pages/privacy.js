@@ -1,7 +1,6 @@
 import Head from "next/head";
-
-import Bulletin from "@/components/Bulletin";
 import Navigation from "@/components/Navigation";
+import Bulletin from "@/components/Bulletin";
 import styles from "@/styles/Privacy.module.css";
 
 const PRIVACY_ITEMS = [
@@ -98,10 +97,13 @@ export default function Privacy() {
         <title>Nova Circle | Privacy</title>
         <meta
           name="description"
-          content="Privacy statement that explains how we collect, use, and share your personal data when you use our mobile application"
+          content="Privacy statement that explains how we collect, use, and share your personal data when you use our services"
         />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <meta property="og:title" content="Nova Circle | Privacy" />
+        <meta
+          property="og:description"
+          content="Privacy statement that explains how we collect, use, and share your personal data when you use our services"
+        />
       </Head>
       <Navigation />
       <main className={styles.main}>

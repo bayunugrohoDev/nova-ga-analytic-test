@@ -6,7 +6,6 @@ import Image from "next/image";
 import googleAnalyticsService from "@/core/services/googleAnalyticsService";
 
 import { storeLink } from "@/core/constants/storeLink";
-import { og } from "@/core/constants/og";
 
 import Hero from "@/components/Hero";
 import Article from "@/components/Article";
@@ -70,26 +69,21 @@ export default function Home() {
     <>
       <Head>
         <title>Nova Circle</title>
-        <meta
-          name="description"
-          content="Discover a World, From a Friendly Place"
-        />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <meta name="description" content="Share once, explore together" />
         <meta property="og:title" content="Nova Circle" />
         <meta
           property="og:description"
-          content="Discover a World, From a Friendly Place"
-        />  
-         <meta property="og:image" content={og.image} />
+          content="Share once, explore together"
+        />
       </Head>
       <main className={styles.main}>
         <section className={styles.section}>
           <Hero
             title={
               <>
-                <strong>Discover a World, From a</strong> Friendly
-                <strong> Place</strong>
+                <strong>Share</strong> once,
+                <strong> explore</strong> together
               </>
             }
             description={
