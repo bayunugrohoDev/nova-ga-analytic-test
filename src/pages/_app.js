@@ -19,7 +19,7 @@ export default function App({ Component, pageProps }) {
 
         router.events.on('routeChangeComplete', () => {
           ReactPixel.pageView()
-          ReactPixel.trackCustom(fbPixelTrackName.pageView);
+          ReactPixel.track(fbPixelTrackName.pageView, {});
         })
       })
       
