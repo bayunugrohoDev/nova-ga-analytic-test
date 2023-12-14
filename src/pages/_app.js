@@ -12,7 +12,6 @@ export default function App({ Component, pageProps }) {
 
   useEffect(() => {
     if (config.facebookPixel.FACEBOOK_PIXEL_ID) {
-      console.log('ada')
       import("react-facebook-pixel")
         .then((x) => x.default)
         .then((ReactPixel) => {
