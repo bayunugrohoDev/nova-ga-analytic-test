@@ -16,7 +16,6 @@ import badgeGooglePlay from "../../public/badge-google-play-download.svg";
 
 import firstSectionImage from "../../public/meta-section1.png";
 import secondSectionImage from "../../public/meta-section2.png";
-// import thirdSectionImage from "../../public/meta-section3.png";
 import firstSectionMobileImage from "../../public/section1.mobile.png";
 
 export default function Meta() {
@@ -64,16 +63,6 @@ export default function Meta() {
       window.sessionStorage.removeItem("scrollPosition");
     }
   }, []);
-
-  //   useEffect(() => {
-  //     // Add the 'meta-page' class to the body when the component mounts
-  //     document.body.classList.add("meta-page");
-
-  //     // Remove the 'meta-page' class when the component unmounts
-  //     return () => {
-  //       document.body.classList.remove("meta-page");
-  //     };
-  //   }, []);
 
   return (
     <>
@@ -146,11 +135,11 @@ export default function Meta() {
             priority
             className={styles.firstSectionImage}
           />
-          <Image
+          {/* <Image
             src={firstSectionMobileImage}
             alt="First section image"
             className={styles.firstSectionMobileImage}
-          />
+          /> */}
         </section>
 
         <section className={styles.section}>
@@ -163,19 +152,19 @@ export default function Meta() {
             description={
             <>
                 <div>
-                    <img src="/icons/user-single.svg" alt="" />
+                    <Image width={80} height={80} src="/icons/user-single.svg" alt="" />
                     <p>Organize all your favorite spots</p>
                 </div>
                 <div>
-                    <img src="/icons/drink.svg" alt="" />
+                    <Image width={80} height={80} src="/icons/drink.svg" alt="" />
                     <p>Share your top picks from the world</p>
                 </div>
                 <div>
-                    <img src="/icons/wishlist.svg" alt="" />
+                    <Image width={80} height={80} src="/icons/wishlist.svg" alt="" />
                     <p>Create curated lists</p>
                 </div>
                 <div>
-                    <img src="/icons/map.svg" alt="" />
+                    <Image width={80} height={80} src="/icons/map.svg" alt="" />
                     <p>Get inspired for your next adventure by genuine recommendations</p>
                 </div>
             </>}

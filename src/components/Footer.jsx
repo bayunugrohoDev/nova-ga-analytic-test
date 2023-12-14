@@ -37,6 +37,7 @@ export default function Footer() {
     window.open(storeLink.googleAppLink, "_blank");
   };
 
+
   return (
     <footer className={styles.footer}>
       {currentPath == "/meta" ? (

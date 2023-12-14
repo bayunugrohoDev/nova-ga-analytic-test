@@ -29,6 +29,7 @@
   --border: #f8f9fa;
 
   --background: #fff;
+  --background-meta: #F8F9FA;
 }
 
 /* Large Desktop */
@@ -61,8 +62,41 @@ body {
 }
 
 .layout.meta {
-  background-image: url("/bg-meta.svg");
-  /* background-position-y: 200%; */
+  background-size: cover;
+  background-color: var(--background-meta);
+  background-image: unset;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-size-adjust: none;
+  z-index: 1;
+}
+
+.layout.meta::before,
+.layout.meta::after {
+  content: '';
+  position: absolute;
+  background-repeat: no-repeat;
+}
+
+.layout.meta::before {
+  top: 0;
+  background-image: url(/top-buble.svg);
+  background-position: 100% 100%;
+  z-index: -1;
+  background-size: 100% 100%;
+  width: 100%;
+  height: 37.5%;
+}
+
+.layout.meta::after {
+  bottom: 0;
+  background-image: url("/bottom-buble.svg");
+  background-position: 100% 100%;
+  z-index: -1;
+  background-size: 100% 100%;
+  width: 100%;
+  height: 25%;
 }
 
 a {
@@ -88,4 +122,9 @@ a:hover {
 :-ms-input-placeholder {
   /* Internet Explorer 10-11 */
   color: var(--text-lighter);
+}
+@media (max-width: 700px) {
+  .layout.meta::before {
+    height: 27%;
+  }
 }
