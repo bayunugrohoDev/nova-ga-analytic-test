@@ -3,7 +3,11 @@
 
   --text-dark: #0c0c0c;
   --text-light: #00496d;
+  --text-white: #fff;
+  --text-grey-light: #d5dde4;
+  --text-grey-darkest: #404b59;
   --text-lighter: #aebecc;
+  --text-black: #000000;
 
   --text-link: #000;
 
@@ -25,6 +29,7 @@
   --border: #f8f9fa;
 
   --background: #fff;
+  --background-meta: #f8f9fa;
 }
 
 /* Large Desktop */
@@ -46,7 +51,7 @@ body {
   overflow-x: hidden;
 }
 
-body {
+.layout {
   background-image: url("/bg.svg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -54,6 +59,84 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-size-adjust: none;
+}
+
+.layout.meta {
+  background-size: cover;
+  background-color: var(--background-meta);
+  background-image: unset;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-size-adjust: none;
+  z-index: 1;
+}
+
+.layout.meta::before,
+.layout.meta::after {
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
+}
+
+.layout.meta::before {
+  top: 0;
+  background-image: url(/top-buble.svg);
+  background-position: 100% 100%;
+  z-index: -1;
+  background-size: 100% 100%;
+  width: 100%;
+  height: 37.5%;
+}
+
+.layout.meta::after {
+  bottom: 0;
+  background-image: url("/bottom-buble.svg");
+  background-position: 100% 100%;
+  z-index: -1;
+  background-size: 100% 100%;
+  width: 100%;
+  height: 25%;
+}
+
+/* Tablet and Smaller Desktop For Meta Page */
+@media (min-width: 1120.5) and (max-width: 1285px) {
+  .layout.meta::before {
+    height: 45%;
+  }
+}
+@media (min-width: 770px) and (max-width: 1120px) {
+  .layout.meta::before {
+    height: 55%;
+  }
+}
+/* Mobile For Meta Page */
+
+@media (max-width: 769px) {
+  .layout.meta::before {
+    height: 65%;
+  }
+}
+
+@media (max-width: 700px) {
+  .layout.meta::before {
+    height: 30%;
+  }
+}
+@media (max-width: 400px) {
+  .layout.meta::before {
+    height: 36%;
+  }
+}
+@media (max-width: 365px) {
+  .layout.meta::before {
+    height: 38%;
+  }
+}
+@media (max-width: 290px) {
+  .layout.meta::before {
+    height: 48%;
+  }
 }
 
 a {
