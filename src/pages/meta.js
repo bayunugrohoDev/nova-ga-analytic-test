@@ -16,7 +16,6 @@ import badgeGooglePlay from "../../public/badge-google-play-download.svg";
 
 import firstSectionImage from "../../public/meta-section1.png";
 import secondSectionImage from "../../public/meta-section2.png";
-import firstSectionMobileImage from "../../public/section1.mobile.png";
 
 export default function Meta() {
   const router = useRouter();
@@ -77,11 +76,14 @@ export default function Meta() {
         />
       </Head>
       <main className={styles.main}>
-        <section className={`${styles.section} ${styles.spaceBottomAfterHero} hero-meta`}>
+        <section
+          className={`${styles.section} ${styles.spaceBottomAfterHero} hero-meta`}
+        >
           <Hero
             title={
               <>
-                <strong>All the best</strong> spots <strong>in one place. </strong>
+                <strong>All the best</strong> spots{" "}
+                <strong>in one place. </strong>
                 <strong> Recommended by those you </strong>trust
               </>
             }
@@ -135,14 +137,9 @@ export default function Meta() {
             priority
             className={styles.firstSectionImage}
           />
-          {/* <Image
-            src={firstSectionMobileImage}
-            alt="First section image"
-            className={styles.firstSectionMobileImage}
-          /> */}
         </section>
 
-        <section className={`${styles.section} why-nova-cricle`}>
+        <section className={`${styles.section}`}>
           <Article
             title={
               <>
@@ -150,24 +147,38 @@ export default function Meta() {
               </>
             }
             description={
-            <>
+              <>
                 <div>
-                    <Image width={80} height={80} src="/icons/user-single.svg" alt="" />
-                    <p>Organize all your favorite spots</p>
+                  <Image
+                    width={80}
+                    height={80}
+                    src="/icons/user-single.svg"
+                    alt=""
+                  />
+                  <p>Organize all your favorite spots</p>
                 </div>
                 <div>
-                    <Image width={80} height={80} src="/icons/drink.svg" alt="" />
-                    <p>Share your top picks from the world</p>
+                  <Image width={80} height={80} src="/icons/drink.svg" alt="" />
+                  <p>Share your top picks from the world</p>
                 </div>
                 <div>
-                    <Image width={80} height={80} src="/icons/wishlist.svg" alt="" />
-                    <p>Create curated lists</p>
+                  <Image
+                    width={80}
+                    height={80}
+                    src="/icons/wishlist.svg"
+                    alt=""
+                  />
+                  <p>Create curated lists</p>
                 </div>
                 <div>
-                    <Image width={80} height={80} src="/icons/map.svg" alt="" />
-                    <p>Get inspired for your next adventure by genuine recommendations</p>
+                  <Image width={80} height={80} src="/icons/map.svg" alt="" />
+                  <p>
+                    Get inspired for your next adventure by genuine
+                    recommendations
+                  </p>
                 </div>
-            </>}
+              </>
+            }
           />
           <Image
             src={secondSectionImage}
@@ -179,4 +190,3 @@ export default function Meta() {
     </>
   );
 }
-

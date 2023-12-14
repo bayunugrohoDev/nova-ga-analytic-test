@@ -23,10 +23,10 @@ function FooterMetaContent({ handleClickAppStore, handleClickGooglePlay }) {
         title="Get it now"
         description={
           <>
-            <p className={styles.header}>
+            <p className={`${styles.header}`}>
               <strong>Download our app. it`s free</strong>
             </p>
-            <div className={styles.badges}>
+            <div className={`${styles.badges}  ${styles.pt0}`}>
               <a
                 href="#"
                 id="app-store"

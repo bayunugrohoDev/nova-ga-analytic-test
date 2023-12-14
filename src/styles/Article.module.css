@@ -33,10 +33,6 @@
   font-size: 22px;
 }
 
-.description.meta div img {
-  height: 80px;
-}
-
 /* Mobile */
 @media (max-width: 700px) {
 
