@@ -9,6 +9,7 @@ import { storeLink } from "@/core/constants/storeLink";
 
 import Hero from "@/components/Hero";
 import Article from "@/components/Article";
+import Testimonials from "@/components/Testimonials";
 import styles from "@/styles/Home.module.css";
 
 import badgeAppleStore from "../../public/badge-apple-store-download.svg";
@@ -89,16 +90,19 @@ export default function Home() {
             description={
               <>
                 <p>
-                  Nova Circle is your world of inspiration, connecting friends
-                  and like-minded individuals to uncover new experiences and
-                  hotspots. Say goodbye to endlessly searching for the perfect
-                  spot for cocktails, a romantic dinner, or yoga studio. Our
-                  feed is packed with curated content from your network,
-                  inspiring you in an effortless and enjoyable way.
+                  Nova Circle is your free single space for saving and sharing
+                  top recommendations around the world while getting inspired by
+                  likeminded people. Find out what restaurants, hotels, bar and
+                  acitivites people in your circle recommend, and forget about
+                  the hustle to ask around for recommendations when going
+                  somewhere new.
                 </p>
+                <br />
+                <p> #Eat - #Stay - #Drink - #Do</p>
+
                 <div className={styles.badges}>
                   <p className={styles.header}>
-                    <strong>Download our app</strong>
+                    <strong>Download our app. It's free</strong>
                   </p>
                   <a
                     href="#"
@@ -174,6 +178,7 @@ export default function Home() {
           />
         </section>
       </main>
+      <Testimonials />
     </>
   );
 }

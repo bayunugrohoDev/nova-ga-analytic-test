@@ -18,16 +18,15 @@ import youtubeImage from "../../public/youtube.svg";
 import styles from "@/styles/Footer.module.css";
 
 export default function Footer() {
-
   // handle action for click on 'Download our app' button
   const handleClickAppStore = () => {
     googleAnalyticsService.trackClickAppStore();
-    window.open(storeLink.appStoreLink, '_blank');
+    window.open(storeLink.appStoreLink, "_blank");
   };
 
   const handleClickGooglePlay = () => {
     googleAnalyticsService.trackClickGooglePlay();
-    window.open(storeLink.googleAppLink, '_blank');
+    window.open(storeLink.googleAppLink, "_blank");
   };
 
   return (
@@ -45,7 +44,7 @@ export default function Footer() {
               <a href="mailto:hello@novacircle.com">hello@novacircle.com</a>.
               <div className={styles.badges}>
                 <p className={styles.header}>
-                  <strong>Download our app</strong>
+                  <strong>Download our app. It's free</strong>
                 </p>
                 <a
                   href="#"

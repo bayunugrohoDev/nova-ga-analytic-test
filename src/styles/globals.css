@@ -2,27 +2,28 @@
   --max-width: 1440px;
 
   --text-dark: #0c0c0c;
-  --text-light: #00496d;
+  --text-light: #1c1f32;
   --text-lighter: #aebecc;
 
   --text-link: #000;
 
-  --button-bg: #00496d;
+  --button-bg: #1c1f32;
   --button-text: #ffffff;
 
   --error: #ec302f;
-  --success: #28b328;
+  --success: #117627;
 
   --error-toast: #ec302f;
 
-  --indicator: #d5dde4;
+  --indicator: #aebecc;
   --indicator-active: #fa7328;
 
   --bubble-background: #ffffff;
   --input-background: #ffffff;
   --input-border: #aebecc;
 
-  --border: #f8f9fa;
+  --avatar-border: #aebecc;
+  --border: #d5dde4;
 
   --background: #fff;
 }
