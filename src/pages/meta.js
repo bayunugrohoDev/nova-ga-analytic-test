@@ -77,7 +77,7 @@ export default function Meta() {
         />
       </Head>
       <main className={styles.main}>
-        <section className={`${styles.section} ${styles.spaceBottom}`}>
+        <section className={`${styles.section} ${styles.spaceBottomAfterHero} hero-meta`}>
           <Hero
             title={
               <>
@@ -99,7 +99,7 @@ export default function Meta() {
                 <p> #Eat - #Stay - #Drink - #Do</p>
                 <div className={styles.badges}>
                   <p className={styles.header}>
-                    <strong>Download our app. It's free</strong>
+                    <strong>Download our app. It`s free</strong>
                   </p>
                   <a
                     href="#"
@@ -142,7 +142,7 @@ export default function Meta() {
           /> */}
         </section>
 
-        <section className={styles.section}>
+        <section className={`${styles.section} why-nova-cricle`}>
           <Article
             title={
               <>
