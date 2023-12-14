@@ -17,6 +17,23 @@
   /* padding-bottom: 2rem; */
 }
 
+.section {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  /* column-gap: 4rem; */
+  align-items: center;
+  justify-content: space-between;
+  /* padding-bottom: 2rem; */
+}
+
+.sectionForFooterMeta {
+  grid-template-columns: 1fr 1fr;
+  column-gap: 4rem;
+}
+.imageArticleFooter {
+  margin: 0 auto; 
+}
+
 .badges {
   padding-top: 2rem;
 }
@@ -91,6 +108,9 @@
 
   .links > div:last-of-type .link:last-of-type {
     padding-right: 12px;
+  }
+  .wFull {
+    width: 100%;
   }
 }
 

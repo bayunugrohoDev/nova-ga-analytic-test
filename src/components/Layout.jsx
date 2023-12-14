@@ -5,6 +5,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import googleAnalyticsService from "@/core/services/googleAnalyticsService";
 import { useEffect } from "react";
+import { useRouter } from "next/router";
 
 const areainktrap = localFont({
   src: [
@@ -32,7 +33,9 @@ const inter = Inter({
 });
 
 export default function Layout({ children }) {
-
+  const router = useRouter() 
+  const currentPath = router.pathname.replace(/^\/+/, ''); 
+  
   useEffect(() => {
     const url = document.location.pathname;
     googleAnalyticsService.trackPageView(url);
@@ -40,7 +43,7 @@ export default function Layout({ children }) {
 
 
   return (
-    <div className={`${inter.variable} ${areainktrap.variable}`}>
+    <div className={`layout ${currentPath} ${inter.variable} ${areainktrap.variable}`}>
       <Header />
       {children}
       <Footer />

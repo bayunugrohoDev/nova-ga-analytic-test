@@ -1,0 +1,18 @@
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path
+        d="M0 40C0 17.9086 17.9086 0 40 0C62.0914 0 80 17.9086 80 40C80 62.0914 62.0914 80 40 80C17.9086 80 0 62.0914 0 40Z"
+        fill="white" />
+    <path
+        d="M34.5171 50.0257L28.4453 51.428C27.0727 51.745 25.762 50.7025 25.762 49.2936V29.5262C25.762 28.5063 26.4658 27.6214 27.4595 27.3919L34.5171 25.762V50.0257Z"
+        stroke="#1C1F32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M34.5171 50.0257V25.762L43.2925 27.7839V34.5239" stroke="#1C1F32" stroke-width="1.5"
+        stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M43.2925 27.784L49.3642 26.3817C50.737 26.0647 52.0476 27.1072 52.0476 28.516V36.7144"
+        stroke="#1C1F32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+    <path
+        d="M45.4762 52.0476C49.1056 52.0476 52.0476 49.1056 52.0476 45.4762C52.0476 41.8469 49.1056 38.9048 45.4762 38.9048C41.8469 38.9048 38.9048 41.8469 38.9048 45.4762C38.9048 49.1056 41.8469 52.0476 45.4762 52.0476Z"
+        stroke="#1C1F32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M54.2381 54.2381L50.4048 50.4048" stroke="#1C1F32" stroke-width="1.5"
+        stroke-linecap="round" stroke-linejoin="round" />
+</svg>
+    

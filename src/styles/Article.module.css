@@ -7,13 +7,31 @@
   max-width: 620px;
 }
 
+.title.meta {
+  color: var(--text-black);
+  font-size: 45px;
+}
+
 .description {
   font-family: var(--font-inter);
   font-size: 24px;
   line-height: 1.2;
   color: var(--text-dark);
-  padding: 1em 0;
+  padding: 2em 0;
   max-width: 620px;
+}
+.description.meta div{
+  display: flex;
+  align-items: center;
+  gap:24px;
+  margin-bottom: 32px;
+}
+.description.meta {
+  color: var(--text-grey-darkest);
+  font-size: 22px;
+}
+.description.meta div img{
+  height: 80px;
 }
 
 /* Mobile */

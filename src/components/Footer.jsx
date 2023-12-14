@@ -7,6 +7,8 @@ import { storeLink } from "@/core/constants/storeLink";
 
 import Article from "./Article";
 import footerImage from "../../public/footer.png";
+import footerImageForMeta from "../../public/footer-meta.png";
+
 import badgeAppleStore from "../../public/badge-apple-store-download.svg";
 import badgeGooglePlay from "../../public/badge-google-play-download.svg";
 import instagramImage from "../../public/instagram.svg";
@@ -16,70 +18,39 @@ import xImage from "../../public/x.svg";
 import youtubeImage from "../../public/youtube.svg";
 
 import styles from "@/styles/Footer.module.css";
+import { useRouter } from "next/router";
+import FooterMetaContent from "./FooterMetaContent";
+import FooterContent from "./FooterContent";
 
 export default function Footer() {
+  const router = useRouter();
+  const currentPath = router.pathname;
 
   // handle action for click on 'Download our app' button
   const handleClickAppStore = () => {
     googleAnalyticsService.trackClickAppStore();
-    window.open(storeLink.appStoreLink, '_blank');
+    window.open(storeLink.appStoreLink, "_blank");
   };
 
   const handleClickGooglePlay = () => {
     googleAnalyticsService.trackClickGooglePlay();
-    window.open(storeLink.googleAppLink, '_blank');
+    window.open(storeLink.googleAppLink, "_blank");
   };
 
   return (
     <footer className={styles.footer}>
-      <section id="join" className={styles.section}>
-        <Image src={footerImage} width={358} height="auto" alt="Footer image" />
-        <Article
-          title="Get our app"
-          description={
-            <>
-              Nova Circle is in beta phase. Based on feedback from our
-              community, we will improve on the things you already enjoy, build
-              missing functionalities, and alleviate pain points. If you have
-              any feedback or suggestions for improvements, shoot us an email at{" "}
-              <a href="mailto:hello@novacircle.com">hello@novacircle.com</a>.
-              <div className={styles.badges}>
-                <p className={styles.header}>
-                  <strong>Download our app</strong>
-                </p>
-                <a
-                  href="#"
-                  id="app-store"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={() => handleClickAppStore()}
-                >
-                  <Image
-                    src={badgeAppleStore}
-                    alt="Download on the App Store"
-                    className={styles.badge}
-                  />
-                </a>
-                <a
-                  href="#"
-                  target="_blank"
-                  id="google-play"
-                  rel="noopener noreferrer"
-                >
-                  <Image
-                    src={badgeGooglePlay}
-                    alt="Get it on Google Play"
-                    className={styles.badge}
-                    onClick={() => handleClickGooglePlay()}
-                  />
-                </a>
-              </div>
-            </>
-          }
-        >
-          {/* <WaitlistForm /> */}
-        </Article>
-      </section>
+      {currentPath == "/meta" ? (
+        <FooterMetaContent
+          handleClickAppStore={handleClickAppStore}
+          handleClickGooglePlay={handleClickGooglePlay}
+        />
+      ) : (
+        <FooterContent
+          handleClickAppStore={handleClickAppStore}
+          handleClickGooglePlay={handleClickGooglePlay}
+        />
+      )}
+
       <div className={styles.links}>
         <div>
           <nav>

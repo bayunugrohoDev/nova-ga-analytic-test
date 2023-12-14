@@ -8,6 +8,11 @@
   margin-top: 10rem;
 }
 
+.title.meta {
+  font-size: 60px;
+  color: var(--text-white); 
+}
+
 .description {
   display: flex;
   flex-direction: column;
@@ -17,11 +22,16 @@
   padding: 1.5em 0 0 0;
   font-family: var(--font-inter);
   max-width: 620px;
+  font-size: 22px;
+}
+
+.description.meta {
+  color: var(--text-grey-light); 
 }
 
 /* Mobile */
 @media (max-width: 700px) {
-  .title {
+  .title, .title.meta {
     font-size: 32px;
   }
 

@@ -3,8 +3,12 @@
 
   --text-dark: #0c0c0c;
   --text-light: #00496d;
+  --text-white: #fff;
+  --text-grey-light: #D5DDE4;
+  --text-grey-darkest: #404B59;
   --text-lighter: #aebecc;
-
+  --text-black: #000000;
+  
   --text-link: #000;
 
   --button-bg: #00496d;
@@ -46,7 +50,7 @@ body {
   overflow-x: hidden;
 }
 
-body {
+.layout {
   background-image: url("/bg.svg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -54,6 +58,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-size-adjust: none;
+}
+
+.layout.meta {
+  background-image: url("/bg-meta.svg");
+  /* background-position-y: 200%; */
 }
 
 a {
