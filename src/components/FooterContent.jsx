@@ -2,6 +2,7 @@ import React from "react";
 import Article from "./Article";
 import Image from "next/image";
 import footerImage from "../../public/footer.png";
+import rateOnAppStore from "../../public/rate-on-app-store.svg";
 
 import styles from "@/styles/Footer.module.css";
 
@@ -14,7 +15,13 @@ function FooterContent({ handleClickAppStore, handleClickGooglePlay }) {
       id="join"
       className={`${styles.section} ${styles.sectionForFooterMeta}`}
     >
-      <Image src={footerImage} width={358} height="auto" alt="Footer image" />
+      <Image
+        className={styles.imageArticleFooter}
+        src={footerImage}
+        width={358}
+        height="auto"
+        alt="Footer image"
+      />
       <Article
         title="Get our app"
         description={
@@ -26,7 +33,7 @@ function FooterContent({ handleClickAppStore, handleClickGooglePlay }) {
               any feedback or suggestions for improvements, shoot us an email at{" "}
               <a href="mailto:hello@novacircle.com">hello@novacircle.com</a>.
             </p>
-            <div>
+            <div className={styles.badges}>
               <p className={styles.header}>
                 <strong>Download our app</strong>
               </p>
@@ -56,6 +63,9 @@ function FooterContent({ handleClickAppStore, handleClickGooglePlay }) {
                   onClick={() => handleClickGooglePlay()}
                 />
               </a>
+            </div>
+            <div>
+              <Image className={styles.rating} src={rateOnAppStore} alt="" />
             </div>
           </>
         }

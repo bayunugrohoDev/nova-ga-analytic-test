@@ -14,13 +14,10 @@
   padding: 1rem 0;
 }
 
-.spaceBottomAfterHero {
-  padding-bottom: 12rem;
-}
-
 .main > .section:first-of-type {
   margin-top: -90px;
   padding-top: 0;
+  padding-bottom: 16rem;
 }
 
 .badges {
@@ -35,29 +32,15 @@
   margin-right: 1rem;
 }
 
-.firstSectionImage {
+.heroImage {
   width: 100%;
   max-width: 550px;
   height: auto;
 }
 
-.secondSectionImage {
+.firstSectionImage {
   width: 100%;
   height: auto;
-}
-
-.thirdSectionImage {
-  width: 100%;
-  height: auto;
-}
-
-.firstSectionMobileImage {
-  display: none;
-  position: absolute;
-  object-fit: contain;
-  top: 5rem;
-  right: 0;
-  z-index: -1;
 }
 
 .grid {
@@ -65,6 +48,26 @@
   grid-template-columns: repeat(4, minmax(25%, auto));
   width: var(--max-width);
   max-width: 100%;
+}
+
+/* Tablet and Smaller Desktop */
+@media (min-width: 701px) and (max-width: 1120px) {
+  .main {
+    padding: 0 2rem;
+  }
+
+  .main > .section:first-of-type {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .main > .section:first-of-type button {
+    margin-top: 2rem;
+  }
+
+  .main > .section:nth-of-type(2) {
+    margin-top: 5rem;
+  }
 }
 
 /* Mobile */
@@ -79,6 +82,7 @@
 
   .main > .section:first-of-type {
     padding-top: 6rem;
+    padding-bottom: 5rem;
   }
 
   .main > .section:last-of-type {
@@ -87,36 +91,7 @@
     gap: 32px;
   }
 
-  .firstSectionImage {
+  .heroImage {
     display: none;
-  }
-
-  .firstSectionMobileImage {
-    display: block;
-  }
-  .spaceBottomAfterHero {
-    padding-bottom: 5rem;
-  }
-}
-
-/* Tablet and Smaller Desktop */
-@media (min-width: 701px) and (max-width: 1120px) {
-  .main {
-    padding: 0 2rem;
-  }
-
-  .main > .section:first-of-type {
-    padding-top: 3rem;
-  }
-
-  .main > .section:first-of-type button {
-    margin-top: 2rem;
-  }
-
-  .main > .section:nth-of-type(2) {
-    margin-top: 5rem;
-  }
-  .spaceBottomAfterHero {
-    padding-bottom: 3rem;
   }
 }

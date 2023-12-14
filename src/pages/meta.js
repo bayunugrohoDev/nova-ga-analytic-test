@@ -9,13 +9,14 @@ import { storeLink } from "@/core/constants/storeLink";
 
 import Hero from "@/components/Hero";
 import Article from "@/components/Article";
+import Testimonials from "@/components/Testimonials";
 import styles from "@/styles/Meta.module.css";
 
 import badgeAppleStore from "../../public/badge-apple-store-download.svg";
 import badgeGooglePlay from "../../public/badge-google-play-download.svg";
 
-import firstSectionImage from "../../public/meta-section1.png";
-import secondSectionImage from "../../public/meta-section2.png";
+import heroImage from "../../public/hero-meta.png";
+import firstSectionImage from "../../public/section-2-meta.png";
 
 export default function Meta() {
   const router = useRouter();
@@ -76,9 +77,7 @@ export default function Meta() {
         />
       </Head>
       <main className={styles.main}>
-        <section
-          className={`${styles.section} ${styles.spaceBottomAfterHero} hero-meta`}
-        >
+        <section className={styles.section}>
           <Hero
             title={
               <>
@@ -99,9 +98,10 @@ export default function Meta() {
                 </p>
                 <br />
                 <p> #Eat - #Stay - #Drink - #Do</p>
+
                 <div className={styles.badges}>
                   <p className={styles.header}>
-                    <strong>Download our app. It`s free</strong>
+                    <strong>Download our app. It's free</strong>
                   </p>
                   <a
                     href="#"
@@ -132,14 +132,14 @@ export default function Meta() {
             }
           ></Hero>
           <Image
-            src={firstSectionImage}
-            alt="First section image"
+            src={heroImage}
+            alt="Hero"
             priority
-            className={styles.firstSectionImage}
+            className={styles.heroImage}
           />
         </section>
 
-        <section className={`${styles.section}`}>
+        <section className={styles.section}>
           <Article
             title={
               <>
@@ -148,17 +148,22 @@ export default function Meta() {
             }
             description={
               <>
-                <div>
+                <div className={styles.list}>
                   <Image
                     width={80}
                     height={80}
                     src="/icons/user-single.svg"
-                    alt=""
+                    alt="User icon"
                   />
                   <p>Organize all your favorite spots</p>
                 </div>
-                <div>
-                  <Image width={80} height={80} src="/icons/drink.svg" alt="" />
+                <div className={styles.list}>
+                  <Image
+                    width={80}
+                    height={80}
+                    src="/icons/drink.svg"
+                    alt="Drink icon"
+                  />
                   <p>Share your top picks from the world</p>
                 </div>
                 <div>
@@ -166,12 +171,17 @@ export default function Meta() {
                     width={80}
                     height={80}
                     src="/icons/wishlist.svg"
-                    alt=""
+                    alt="Wishlist icon"
                   />
                   <p>Create curated lists</p>
                 </div>
-                <div>
-                  <Image width={80} height={80} src="/icons/map.svg" alt="" />
+                <div className={styles.list}>
+                  <Image
+                    width={80}
+                    height={80}
+                    src="/icons/map.svg"
+                    alt="Discover icon"
+                  />
                   <p>
                     Get inspired for your next adventure by genuine
                     recommendations
@@ -181,12 +191,13 @@ export default function Meta() {
             }
           />
           <Image
-            src={secondSectionImage}
-            alt="Nova Circle app views"
-            className={styles.secondSectionImage}
+            src={firstSectionImage}
+            alt="Nova Circle app"
+            className={styles.firstSectionImage}
           />
         </section>
       </main>
+      <Testimonials />
     </>
   );
 }

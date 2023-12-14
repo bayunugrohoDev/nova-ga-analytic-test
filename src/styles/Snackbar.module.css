@@ -20,13 +20,13 @@
 .success {
   visibility: visible;
   animation: fadein 0.75s, fadeout 0.75s 5.5s;
-  background-color: var(--success);
+  background-color: var(--color-success);
 }
 
 .error {
   visibility: visible;
   animation: fadein 0.75s, fadeout 0.75s 5.5s;
-  background-color: var(--error-toast);
+  background-color: var(--color-error);
 }
 
 @-webkit-keyframes fadein {

@@ -1,7 +1,7 @@
 import React from "react";
 import Article from "./Article";
 import Image from "next/image";
-import footerImageForMeta from "../../public/footer-meta.png";
+import footerImage from "../../public/footer-meta.png";
 import rateOnAppStore from "../../public/rate-on-app-store.svg";
 
 import styles from "@/styles/Footer.module.css";
@@ -9,24 +9,34 @@ import styles from "@/styles/Footer.module.css";
 import badgeAppleStore from "../../public/badge-apple-store-download.svg";
 import badgeGooglePlay from "../../public/badge-google-play-download.svg";
 
-function FooterMetaContent({ handleClickAppStore, handleClickGooglePlay }) {
+function FooterContent({ handleClickAppStore, handleClickGooglePlay }) {
   return (
-    <section id="join" className={`${styles.section} ${styles.sectionForFooterMeta}`}>
+    <section
+      id="join"
+      className={`${styles.section} ${styles.sectionForFooterMeta}`}
+    >
       <Image
-        src={footerImageForMeta}
+        className={styles.imageArticleFooter}
+        src={footerImage}
         width={358}
         height="auto"
         alt="Footer image"
-        className={styles.imageArticleFooter}
       />
       <Article
-        title="Get it now"
+        title="Get our app"
         description={
           <>
-            <p className={`${styles.header}`}>
-              <strong>Download our app. it`s free</strong>
+            <p>
+              Nova Circle is in beta phase. Based on feedback from our
+              community, we will improve on the things you already enjoy, build
+              missing functionalities, and alleviate pain points. If you have
+              any feedback or suggestions for improvements, shoot us an email at{" "}
+              <a href="mailto:hello@novacircle.com">hello@novacircle.com</a>.
             </p>
-            <div className={`${styles.badges}  ${styles.pt0}`}>
+            <div className={styles.badges}>
+              <p className={styles.header}>
+                <strong>Download our app</strong>
+              </p>
               <a
                 href="#"
                 id="app-store"
@@ -54,14 +64,14 @@ function FooterMetaContent({ handleClickAppStore, handleClickGooglePlay }) {
                 />
               </a>
             </div>
-            <Image className={styles.wFull} src={rateOnAppStore}  alt="" />
+            <div>
+              <Image className={styles.rating} src={rateOnAppStore} alt="" />
+            </div>
           </>
         }
-      >
-        {/* <WaitlistForm /> */}
-      </Article>
+      ></Article>
     </section>
   );
 }
 
-export default FooterMetaContent;
+export default FooterContent;

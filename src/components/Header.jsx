@@ -13,7 +13,7 @@ export default function Header() {
     <header className={styles.header}>
       <Link href="/">
         <Image
-          src={currentPath == "/meta" ? "logo-orange.svg" : "logo.svg"}
+          src={currentPath == "/meta" ? "logo-sunset.svg" : "logo.svg"}
           width={120}
           height={86}
           alt="Nova Circle"

@@ -15,10 +15,10 @@ import styles from "@/styles/Home.module.css";
 import badgeAppleStore from "../../public/badge-apple-store-download.svg";
 import badgeGooglePlay from "../../public/badge-google-play-download.svg";
 
-import firstSectionImage from "../../public/section1.png";
-import secondSectionImage from "../../public/section2.png";
-import thirdSectionImage from "../../public/section3.png";
-import firstSectionMobileImage from "../../public/section1.mobile.png";
+import firstSectionImage from "../../public/section-1.png";
+import secondSectionImage from "../../public/section-2.png";
+import thirdSectionImage from "../../public/section-3.png";
+import firstSectionMobileImage from "../../public/section-1-mobile.png";
 
 export default function Home() {
   const router = useRouter();

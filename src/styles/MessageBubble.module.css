@@ -4,7 +4,7 @@
   align-items: flex-start;
   padding: 12px 24px;
   gap: 4px;
-  background-color: var(--bubble-background);
+  background-color: var(--color-white);
   box-shadow: 0px -4px 6px rgba(174, 190, 204, 0.24);
   border-radius: 16px;
 }
@@ -17,7 +17,7 @@
   font-weight: 700;
   font-size: 24px;
   line-height: 1.2;
-  color: var(--text-dark);
+  color: var(--color-night);
 }
 
 .userContainer {
@@ -29,7 +29,7 @@
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background-color: var(--text-light);
+  background-color: var(--color-night);
 }
 
 .username {
@@ -39,5 +39,5 @@
   font-size: 16px;
   line-height: 1.2;
   margin-left: 15px;
-  color: var(--text-light);
+  color: var(--color-night);
 }

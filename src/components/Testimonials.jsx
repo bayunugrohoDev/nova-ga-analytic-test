@@ -39,13 +39,14 @@ export default function Testimonials() {
   return (
     <section className={styles.container}>
       <Swiper
-        spaceBetween={30}
+        spaceBetween={32}
         slidesPerView="auto"
         className={styles.swiper}
         centeredSlides={true}
         centerInsufficientSlides={true}
         autoplay={{ delay: 6000 }}
-        speed={600}
+        loop={true}
+        speed={300}
         initialSlide={Math.min(TESTIMONIAL_PERSONS.length / 2)}
         pagination={{
           clickable: true,
