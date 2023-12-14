@@ -10,7 +10,7 @@
 
 .title.meta {
   font-size: 60px;
-  color: var(--text-white); 
+  color: var(--text-white);
 }
 
 .description {
@@ -26,40 +26,43 @@
 }
 
 .description.meta {
-  color: var(--text-grey-light); 
+  color: var(--text-grey-light);
 }
 
 /* Mobile */
 @media (max-width: 700px) {
-  .title, .title.meta {
+  .title,
+  .title.meta {
     font-size: 32px;
   }
 
-  .description,  .description.meta {
+  .description,
+  .description.meta {
     font-size: 16px;
   }
 }
 
 /* Tablet and Smaller Desktop */
 @media (min-width: 701px) and (max-width: 1120px) {
-  .title{
+  .title {
     font-size: 48px;
-    line-height: 62px;
+    line-height: 1.1;
     margin-top: 4rem;
   }
-  .title.meta  {
+  .title.meta {
     font-size: 38px;
   }
 
-  .description{
+  .description {
     font-size: 20px;
-    line-height: 24px;
+    line-height: 1.2;
   }
 }
 
 /* Mobile */
 @media (max-width: 700px) {
-  .title, .title.meta {
+  .title,
+  .title.meta {
     margin-top: 0;
   }
 }

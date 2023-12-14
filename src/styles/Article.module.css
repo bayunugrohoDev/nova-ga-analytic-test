@@ -35,7 +35,6 @@
 
 /* Mobile */
 @media (max-width: 700px) {
-
   .title,
   .title.meta {
     font-size: 32px;
@@ -52,20 +51,16 @@
 
 /* Tablet and Smaller Desktop */
 @media (min-width: 701px) and (max-width: 1120px) {
-
-  .title{
+  .title {
     font-size: 48px;
-    line-height: 62px;
+    line-height: 1.1;
   }
-  .title.meta  {
+  .title.meta {
     font-size: 38px;
   }
   .description,
   .description.meta {
-
     font-size: 20px;
-    line-height: 24px;
+    line-height: 1.2;
   }
-
-
 }

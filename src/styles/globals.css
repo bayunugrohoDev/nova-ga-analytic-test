@@ -4,11 +4,11 @@
   --text-dark: #0c0c0c;
   --text-light: #00496d;
   --text-white: #fff;
-  --text-grey-light: #D5DDE4;
-  --text-grey-darkest: #404B59;
+  --text-grey-light: #d5dde4;
+  --text-grey-darkest: #404b59;
   --text-lighter: #aebecc;
   --text-black: #000000;
-  
+
   --text-link: #000;
 
   --button-bg: #00496d;
@@ -29,7 +29,7 @@
   --border: #f8f9fa;
 
   --background: #fff;
-  --background-meta: #F8F9FA;
+  --background-meta: #f8f9fa;
 }
 
 /* Large Desktop */
@@ -74,7 +74,7 @@ body {
 
 .layout.meta::before,
 .layout.meta::after {
-  content: '';
+  content: "";
   position: absolute;
   background-repeat: no-repeat;
 }
@@ -120,7 +120,7 @@ body {
 
 @media (max-width: 700px) {
   .layout.meta::before {
-    height: 32%;
+    height: 30%;
   }
 }
 @media (max-width: 400px) {
@@ -138,7 +138,6 @@ body {
     height: 48%;
   }
 }
-
 
 a {
   color: var(--text-link);

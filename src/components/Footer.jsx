@@ -1,16 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-
 import googleAnalyticsService from "@/core/services/googleAnalyticsService";
-
 import { storeLink } from "@/core/constants/storeLink";
-
-import Article from "./Article";
-import footerImage from "../../public/footer.png";
-import footerImageForMeta from "../../public/footer-meta.png";
-
-import badgeAppleStore from "../../public/badge-apple-store-download.svg";
-import badgeGooglePlay from "../../public/badge-google-play-download.svg";
 import instagramImage from "../../public/instagram.svg";
 import facebookImage from "../../public/facebook.svg";
 import tiktokImage from "../../public/tiktok.svg";
@@ -36,7 +27,6 @@ export default function Footer() {
     googleAnalyticsService.trackClickGooglePlay();
     window.open(storeLink.googleAppLink, "_blank");
   };
-
 
   return (
     <footer className={styles.footer}>
