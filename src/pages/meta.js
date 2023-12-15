@@ -4,32 +4,54 @@ import Head from "next/head";
 import Image from "next/image";
 
 import googleAnalyticsService from "@/core/services/googleAnalyticsService";
-
 import { storeLink } from "@/core/constants/storeLink";
 
 import Hero from "@/components/Hero";
 import Article from "@/components/Article";
 import Testimonials from "@/components/Testimonials";
+
 import styles from "@/styles/Meta.module.css";
 
 import badgeAppleStore from "../../public/badge-apple-store-download.svg";
 import badgeGooglePlay from "../../public/badge-google-play-download.svg";
-
 import heroImage from "../../public/hero-meta.png";
 import firstSectionImage from "../../public/section-2-meta.png";
 
 export default function Meta() {
   const router = useRouter();
 
+  const WHY_NOVA_CIRCLE_LISTS = [
+    {
+      img_src: "/icons/user-single.svg",
+      description: "Organize all your favorite spots",
+      alt: "User icon",
+    },
+    {
+      img_src: "/icons/drink.svg",
+      description: "Share your top picks from the world",
+      alt: "Drink icon",
+    },
+    {
+      img_src: "/icons/wishlist.svg",
+      description: "Create curated lists",
+      alt: "Wishlist icon",
+    },
+    {
+      img_src: "/icons/map.svg",
+      description:
+        "Get inspired for your next adventure by genuine recommendations",
+      alt: "Discover icon",
+    },
+  ];
   // handle action for click on 'Download our app' button
   const handleClickAppStore = () => {
     googleAnalyticsService.trackClickAppStore();
-    window.open(storeLink.appStoreLink, "_blank");
+    window.open(storeLink.appStoreLinkForMetaPage, "_blank");
   };
 
   const handleClickGooglePlay = () => {
     googleAnalyticsService.trackClickGooglePlay();
-    window.open(storeLink.googleAppLink, "_blank");
+    window.open(storeLink.googleAppLinkForMetaPage, "_blank");
   };
 
   // set scroll restoration to manual
@@ -101,7 +123,7 @@ export default function Meta() {
 
                 <div className={styles.badges}>
                   <p className={styles.header}>
-                    <strong>Download our app. It's free</strong>
+                    <strong>Download our app. It`s free</strong>
                   </p>
                   <a
                     href="#"
@@ -148,45 +170,17 @@ export default function Meta() {
             }
             description={
               <>
-                <div className={styles.list}>
-                  <Image
-                    width={80}
-                    height={80}
-                    src="/icons/user-single.svg"
-                    alt="User icon"
-                  />
-                  <p>Organize all your favorite spots</p>
-                </div>
-                <div className={styles.list}>
-                  <Image
-                    width={80}
-                    height={80}
-                    src="/icons/drink.svg"
-                    alt="Drink icon"
-                  />
-                  <p>Share your top picks from the world</p>
-                </div>
-                <div>
-                  <Image
-                    width={80}
-                    height={80}
-                    src="/icons/wishlist.svg"
-                    alt="Wishlist icon"
-                  />
-                  <p>Create curated lists</p>
-                </div>
-                <div className={styles.list}>
-                  <Image
-                    width={80}
-                    height={80}
-                    src="/icons/map.svg"
-                    alt="Discover icon"
-                  />
-                  <p>
-                    Get inspired for your next adventure by genuine
-                    recommendations
-                  </p>
-                </div>
+                {WHY_NOVA_CIRCLE_LISTS.map((item, idx) => (
+                  <div key={idx} className={styles.list}>
+                    <Image
+                      width={80}
+                      height={80}
+                      src={item.img_src}
+                      alt={item.alt}
+                    />
+                    <p>{item.description}</p>
+                  </div>
+                ))}
               </>
             }
           />
