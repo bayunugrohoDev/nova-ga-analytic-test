@@ -1,35 +1,28 @@
 :root {
   --max-width: 1440px;
 
-  --text-dark: #0c0c0c;
-  --text-light: #00496d;
-  --text-white: #fff;
-  --text-grey-light: #d5dde4;
-  --text-grey-darkest: #404b59;
-  --text-lighter: #aebecc;
-  --text-black: #000000;
+  --color-sunset: #fa7328;
+  --color-sunset-light: #fc9d69;
 
-  --text-link: #000;
+  --color-midnight: #1c1f32;
+  --color-blue-sky: #00496d;
+  --color-blue-sky-light: #336d8a;
+  --color-blue-sky-lighter: #99b6c5;
+  --color-blue-sky-lightest: #e6edf0;
 
-  --button-bg: #00496d;
-  --button-text: #ffffff;
+  --color-black: #000;
+  --color-night: #0c0c0c;
+  --color-grey-darkest: #404b59;
+  --color-grey-darker: #6e7a89;
+  --color-grey: #aebecc;
+  --color-grey-lightest: #f8f9fa;
+  --color-white: #fff;
 
-  --error: #ec302f;
-  --success: #28b328;
+  --color-error: #ec302f;
+  --color-warning: #ffc107;
+  --color-success: #117627;
 
-  --error-toast: #ec302f;
-
-  --indicator: #d5dde4;
-  --indicator-active: #fa7328;
-
-  --bubble-background: #ffffff;
-  --input-background: #ffffff;
-  --input-border: #aebecc;
-
-  --border: #f8f9fa;
-
-  --background: #fff;
-  --background-meta: #f8f9fa;
+  --background: var(--color-grey-lightest);
 }
 
 /* Large Desktop */
@@ -52,18 +45,8 @@ body {
 }
 
 .layout {
-  background-image: url("/bg.svg");
-  background-repeat: no-repeat;
   background-size: cover;
   background-color: var(--background);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-size-adjust: none;
-}
-
-.layout.meta {
-  background-size: cover;
-  background-color: var(--background-meta);
   background-image: unset;
   position: relative;
   -webkit-font-smoothing: antialiased;
@@ -72,94 +55,97 @@ body {
   z-index: 1;
 }
 
-.layout.meta::before,
-.layout.meta::after {
+.layout::before,
+.layout::after {
   content: "";
   position: absolute;
   background-repeat: no-repeat;
 }
 
-.layout.meta::before {
+.layout::before {
   top: 0;
-  background-image: url(/top-buble.svg);
-  background-position: 100% 100%;
+  background-image: url("/bg-top.svg");
+  background-position: center 100%;
+  z-index: -1;
+  background-size: cover;
+  width: 100%;
+  height: 40%;
+}
+
+.layout::after {
+  bottom: 0;
+  background-image: url("/bg-bottom.svg");
+  background-position: center 100%;
   z-index: -1;
   background-size: 100% 100%;
   width: 100%;
-  height: 37.5%;
+  height: 30%;
+}
+
+.layout.meta::before {
+  background-image: url("/bg-meta-top.svg");
 }
 
 .layout.meta::after {
-  bottom: 0;
-  background-image: url("/bottom-buble.svg");
-  background-position: 100% 100%;
-  z-index: -1;
-  background-size: 100% 100%;
-  width: 100%;
-  height: 25%;
+  background-image: url("/bg-meta-bottom.svg");
 }
 
-/* Tablet and Smaller Desktop For Meta Page */
-@media (min-width: 1120.5) and (max-width: 1285px) {
-  .layout.meta::before {
-    height: 45%;
-  }
-}
-@media (min-width: 770px) and (max-width: 1120px) {
-  .layout.meta::before {
-    height: 55%;
-  }
-}
-/* Mobile For Meta Page */
-
-@media (max-width: 769px) {
-  .layout.meta::before {
-    height: 65%;
-  }
-}
-
-@media (max-width: 700px) {
-  .layout.meta::before {
-    height: 30%;
-  }
-}
-@media (max-width: 400px) {
-  .layout.meta::before {
-    height: 36%;
-  }
-}
-@media (max-width: 365px) {
-  .layout.meta::before {
+/* Tablet and Smaller Desktop */
+@media (min-width: 701px) and (max-width: 1120px) {
+  .layout::before {
     height: 38%;
   }
+
+  .layout::after {
+    height: 43%;
+  }
 }
-@media (max-width: 290px) {
-  .layout.meta::before {
-    height: 48%;
+
+/* Mobile */
+@media (max-width: 700px) {
+  .layout::before {
+    height: 21%;
+  }
+
+  .layout::after {
+    background-size: cover;
+    height: 34%;
+  }
+}
+
+/* Extra Small Mobile - sm*/
+@media (max-width: 400px) {
+  .layout::before {
+    height: 23%;
+  }
+
+  .layout::after {
+    height: 34%;
   }
 }
 
 a {
-  color: var(--text-link);
+  color: var(--color-midnight);
   text-decoration: none;
 }
 
 a:hover {
+  color: var(--color-black);
   text-decoration: underline;
 }
 
 ::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: var(--text-lighter);
+  color: var(--color-grey);
   opacity: 1; /* Firefox */
 }
 
 ::-ms-input-placeholder {
   /* Microsoft Edge */
-  color: var(--text-lighter);
+  color: var(--color-grey);
 }
 
 :-ms-input-placeholder {
   /* Internet Explorer 10-11 */
-  color: var(--text-lighter);
+  color: var(--color-grey);
 }

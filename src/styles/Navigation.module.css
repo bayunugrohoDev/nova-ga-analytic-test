@@ -18,11 +18,11 @@
   font-size: 16px;
   line-height: 1.2;
   padding: 0.5rem 0;
-  color: var(--text-dark);
+  color: var(--color-night);
 }
 
 .linkActive {
-  color: var(--text-dark);
+  color: var(--color-night);
 }
 
 .linkActive::before {
@@ -31,7 +31,7 @@
   width: 4px;
   height: 20px;
   left: -20px;
-  background: var(--indicator-active);
+  background: var(--color-sunset);
   border-radius: 2px;
 }
 

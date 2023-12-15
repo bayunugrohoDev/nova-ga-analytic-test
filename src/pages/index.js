@@ -9,15 +9,16 @@ import { storeLink } from "@/core/constants/storeLink";
 
 import Hero from "@/components/Hero";
 import Article from "@/components/Article";
+import Testimonials from "@/components/Testimonials";
 import styles from "@/styles/Home.module.css";
 
 import badgeAppleStore from "../../public/badge-apple-store-download.svg";
 import badgeGooglePlay from "../../public/badge-google-play-download.svg";
 
-import firstSectionImage from "../../public/section1.png";
-import secondSectionImage from "../../public/section2.png";
-import thirdSectionImage from "../../public/section3.png";
-import firstSectionMobileImage from "../../public/section1.mobile.png";
+import firstSectionImage from "../../public/section-1.png";
+import secondSectionImage from "../../public/section-2.png";
+import thirdSectionImage from "../../public/section-3.png";
+import firstSectionMobileImage from "../../public/section-1-mobile.png";
 
 export default function Home() {
   const router = useRouter();
@@ -89,16 +90,19 @@ export default function Home() {
             description={
               <>
                 <p>
-                  Nova Circle is your world of inspiration, connecting friends
-                  and like-minded individuals to uncover new experiences and
-                  hotspots. Say goodbye to endlessly searching for the perfect
-                  spot for cocktails, a romantic dinner, or yoga studio. Our
-                  feed is packed with curated content from your network,
-                  inspiring you in an effortless and enjoyable way.
+                  Nova Circle is your free single space for saving and sharing
+                  top recommendations around the world while getting inspired by
+                  likeminded people. Find out what restaurants, hotels, bar and
+                  acitivites people in your circle recommend, and forget about
+                  the hustle to ask around for recommendations when going
+                  somewhere new.
                 </p>
+                <br />
+                <p> #Eat - #Stay - #Drink - #Do</p>
+
                 <div className={styles.badges}>
                   <p className={styles.header}>
-                    <strong>Download our app</strong>
+                    <strong>Download our app. It`s free</strong>
                   </p>
                   <a
                     href="#"
@@ -133,11 +137,6 @@ export default function Home() {
             alt="First section image"
             priority
             className={styles.firstSectionImage}
-          />
-          <Image
-            src={firstSectionMobileImage}
-            alt="First section image"
-            className={styles.firstSectionMobileImage}
           />
         </section>
 
@@ -174,6 +173,7 @@ export default function Home() {
           />
         </section>
       </main>
+      <Testimonials />
     </>
   );
 }
