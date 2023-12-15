@@ -175,7 +175,7 @@ export default function Footer() {
         ></Article>
       </section>
 
-      <d iv className={styles.links}>
+      <div className={styles.links}>
         <div>
           <nav>
             {FOOTER_CONTENT.footerMenu.map((menu, idx) =>
@@ -199,7 +199,7 @@ export default function Footer() {
         </div>
         <div>
           {FOOTER_CONTENT.socialMediaList.map((socialMedia, idx) => (
-            <a
+            <Link
               key={idx}
               href={socialMedia.link}
               className={styles.link}
@@ -207,10 +207,10 @@ export default function Footer() {
               rel="noopener noreferrer"
             >
               <Image src={socialMedia.imgSrc} alt={socialMedia.alt} />
-            </a>
+            </Link>
           ))}
         </div>
-      </d>
+      </div>
     </footer>
   );
 }
