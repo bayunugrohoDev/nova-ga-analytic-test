@@ -100,7 +100,62 @@ export default function Footer() {
         </>
       ),
     },
+    footerMenu: [
+      {
+        name: "Terms & Conditions",
+        link: "/terms-and-conditions",
+        is_new_tab: false,
+      },
+      {
+        name: "FAQ",
+        link: "/faq",
+        is_new_tab: false,
+      },
+      {
+        name: "Privacy",
+        link: "/privacy",
+        is_new_tab: false,
+      },
+      {
+        name: "Career",
+        link: "https://novacircle.teamtailor.com/",
+        is_new_tab: true,
+      },
+      {
+        name: "Contact",
+        link: "mailto:hello@novacircle.com",
+        is_new_tab: false,
+      },
+    ],
+    socialMediaList: [
+      {
+        imgSrc: instagramImage,
+        alt: "Instagram logotype",
+        link: "https://www.instagram.com/novacircleofficial",
+      },
+      {
+        imgSrc: facebookImage,
+        alt: "Facebook logotype",
+        link: "https://www.facebook.com/novacircleofficial",
+      },
+      {
+        imgSrc: tiktokImage,
+        alt: "TikTok logotype",
+        link: "https://www.tiktok.com/@novacircleofficial",
+      },
+      {
+        imgSrc: xImage,
+        alt: "X logotype",
+        link: "https://x.com/NovaCircleapp",
+      },
+      {
+        imgSrc: youtubeImage,
+        alt: "Youtube logotype",
+        link: "https://www.youtube.com/channel/UCeYlsxCxJwsjGB3aaj3OjrA",
+      },
+    ],
   };
+
   return (
     <footer className={styles.footer}>
       <section
@@ -123,69 +178,37 @@ export default function Footer() {
       <div className={styles.links}>
         <div>
           <nav>
-            <Link href="/terms-and-conditions" className={styles.link}>
-              Terms & Conditions
-            </Link>
-            <Link href="/faq" className={styles.link}>
-              FAQ
-            </Link>
-            <Link href="/privacy" className={styles.link}>
-              Privacy
-            </Link>
-            <a
-              href="https://novacircle.teamtailor.com/"
+            {FOOTER_CONTENT.footerMenu.map((menu, idx) =>
+              menu.is_new_tab ? (
+                <Link
+                  key={idx}
+                  href={menu.link}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  className={styles.link}
+                >
+                  {menu.name}
+                </Link>
+              ) : (
+                <Link key={idx} href={menu.link} className={styles.link}>
+                  {menu.name}
+                </Link>
+              )
+            )}
+          </nav>
+        </div>
+        <div>
+          {FOOTER_CONTENT.socialMediaList.map((socialMedia, idx) => (
+            <Link
+              key={idx}
+              href={socialMedia.link}
               className={styles.link}
               target="_blank"
               rel="noopener noreferrer"
             >
-              Career
-            </a>
-            <a href="mailto:hello@novacircle.com" className={styles.link}>
-              Contact
-            </a>
-          </nav>
-        </div>
-        <div>
-          <a
-            href="https://www.instagram.com/novacircleofficial"
-            className={styles.link}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image src={instagramImage} alt="Instagram logotype" />
-          </a>
-          <a
-            href="https://www.facebook.com/novacircleofficial"
-            className={styles.link}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image src={facebookImage} alt="Facebook logotype" />
-          </a>
-          <a
-            href="https://www.tiktok.com/@novacircleofficial"
-            className={styles.link}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image src={tiktokImage} alt="TikTok logotype" />
-          </a>
-          <a
-            href="https://x.com/NovaCircleapp"
-            className={styles.link}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image src={xImage} alt="X logotype" />
-          </a>
-          <a
-            href="https://www.youtube.com/channel/UCeYlsxCxJwsjGB3aaj3OjrA"
-            className={styles.link}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image src={youtubeImage} alt="Youtube logotype" />
-          </a>
+              <Image src={socialMedia.imgSrc} alt={socialMedia.alt} />
+            </Link>
+          ))}
         </div>
       </div>
     </footer>
