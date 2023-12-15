@@ -31,18 +31,18 @@
   margin-right: 1rem;
 }
 
-.firstSectionImage {
+.heroImage {
   width: 100%;
   max-width: 550px;
   height: auto;
 }
 
-.secondSectionImage {
+.firstSectionImage {
   width: 100%;
   height: auto;
 }
 
-.thirdSectionImage {
+.secondSectionImage {
   width: 100%;
   height: auto;
 }
@@ -75,10 +75,6 @@
 
   .firstSectionImage {
     display: none;
-  }
-
-  .firstSectionMobileImage {
-    display: block;
   }
 }
 

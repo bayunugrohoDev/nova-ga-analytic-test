@@ -13,25 +13,25 @@ import sebastianImage from "../../public/testimonials/sebastian-gibrand.jpg";
 import amandaImage from "../../public/testimonials/amanda-k.jpg";
 
 const TESTIMONIAL_PERSONS = [
-  {
+  /*   {
     avatar: johnnyImage,
     name: "Johnny Edlind",
     testimonial: `"I absolutely love this travel app! It's so easy to use and has all the features I need to plan my perfect vacation. The interface is user-friendly, making it easy to use and find the needed info."`,
-  },
-  {
+  }, */
+  /*   {
     avatar: paulineImage,
     name: "Pauline Krogsbøll",
     testimonial: `"I'm so impressed with this travel app! Its great features, such as the ability to create custom lists and find personalized recommendations, have made my travel experiences so much better."`,
+  }, */
+  {
+    avatar: amandaImage,
+    name: "Amanda Kymmer",
+    testimonial: `"Love this app! As a foodie myself, living in NYC with endless options - ”where should we eat/go for drinks today?” is a constant question. l always trust recommendations from friends more than anything and with Nova Circle it’s so easy to find new places that are genuinely good, recommended by all the people I trust."`,
   },
   {
     avatar: sebastianImage,
     name: "Sebastian Gibrand",
-    testimonial: `"I live for food, wine & experiences. Finally there’s an app where I can Share my favourites spots & get inspired by others."`,
-  },
-  {
-    avatar: amandaImage,
-    name: "Amanda Kymmer",
-    testimonial: `"I can't say enough good things about this travel app! It's so easy to use and has all the features I need to plan my trips."`,
+    testimonial: `"I live for food, wine and experiences. Finally there’s an app where I can share my favorite spots and get inspired by others."`,
   },
 ];
 
