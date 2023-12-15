@@ -165,7 +165,7 @@ export default function Meta() {
           <Article
             title={
               <>
-                <strong>Why Nova Circle? </strong>
+                <strong>Why Nova Circle?</strong>
               </>
             }
             description={

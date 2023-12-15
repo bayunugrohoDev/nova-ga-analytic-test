@@ -27,14 +27,17 @@ export default function Footer() {
   // handle action for click on 'Download our app' button
   const handleClickAppStore = () => {
     googleAnalyticsService.trackClickAppStore();
-    const link = isMetaPage() ? storeLink.appStoreLinkForMetaPage : storeLink.appStoreLink;
+    const link = isMetaPage()
+      ? storeLink.appStoreLinkForMetaPage
+      : storeLink.appStoreLink;
     window.open(link, "_blank");
-
   };
 
   const handleClickGooglePlay = () => {
     googleAnalyticsService.trackClickGooglePlay();
-    const link = isMetaPage() ? storeLink.googleAppLinkForMetaPage : storeLink.googleAppLink;
+    const link = isMetaPage()
+      ? storeLink.googleAppLinkForMetaPage
+      : storeLink.googleAppLink;
     window.open(link, "_blank");
   };
 
@@ -50,7 +53,7 @@ export default function Footer() {
       src: isMetaPage() ? footerMetaImage : footerImage,
     },
     article: {
-      title: "Get our app",
+      title: <strong>Get our app</strong>,
       description: (
         <>
           <p>

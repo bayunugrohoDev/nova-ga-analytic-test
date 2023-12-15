@@ -6,24 +6,26 @@
   position: relative;
   z-index: 1;
   height: 490px;
+  padding: 0 4rem;
 }
 
 .swiperSlide {
-  width: 33vw;
+  width: 50vw;
+  max-width: 620px;
 }
 
 .indicator {
-  width: 62px !important;
-  height: 4px !important;
-  background: var(--color-blue-sky-lighter) !important;
-  border-radius: 2px !important;
+  width: 62px;
+  height: 4px;
+  background: var(--color-blue-sky-lighter);
+  border-radius: 2px;
 }
 
 .indicatorActive {
-  width: 62px !important;
-  height: 4px !important;
-  background: var(--color-sunset) !important;
-  border-radius: 2px !important;
+  width: 62px;
+  height: 4px;
+  background: var(--color-sunset);
+  border-radius: 2px;
 }
 
 .indicators {
@@ -31,7 +33,7 @@
 }
 
 .swiper :global(.swiper-pagination) {
-  bottom: 80px !important;
+  bottom: 80px;
 }
 
 /* Tablet and Smaller Desktop */
@@ -42,6 +44,10 @@
 
   .swiper {
     height: 420px;
+  }
+
+  .swiper :global(.swiper-pagination) {
+    bottom: 0;
   }
 
   .swiperSlide {
@@ -58,11 +64,13 @@
   .swiper {
     min-width: 375px;
     height: auto;
+    padding: 0;
   }
 
   .swiperSlide {
-    width: 90%;
+    width: 100%;
     max-width: unset;
+    padding: 0 1rem;
   }
 
   .swiper :global(.swiper-pagination) {

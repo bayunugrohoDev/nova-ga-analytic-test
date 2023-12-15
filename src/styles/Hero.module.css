@@ -27,14 +27,6 @@
   color: var(--color-white);
 }
 
-/* Mobile */
-@media (max-width: 700px) {
-  .title,
-  .title.meta {
-    font-size: 32px;
-  }
-}
-
 /* Tablet and Smaller Desktop */
 @media (min-width: 701px) and (max-width: 1120px) {
   .title {
@@ -51,11 +43,11 @@
 @media (max-width: 700px) {
   .title,
   .title.meta {
-    font-size: 32px;
+    font-size: 40px;
     margin-top: 0;
   }
 
   .description {
-    font-size: 14px;
+    font-size: 16px;
   }
 }

@@ -9,23 +9,18 @@
 
 .description {
   font-family: var(--font-inter);
-  font-size: 24px;
+  font-size: 22px;
   line-height: 1.2;
-  color: var(--color-night);
+  color: var(--text-grey-darkest);
   padding-top: 2rem;
   max-width: 620px;
 }
 
-.description.meta {
-  color: var(--text-grey-darkest);
-  font-size: 22px;
-}
-
-/* Tablet and Smaller Desktop */
+/* Tablet and Smaller Desktop - lg*/
 @media (min-width: 701px) and (max-width: 1120px) {
   .title,
   .title.meta {
-    font-size: 32px;
+    font-size: 36px;
   }
 
   .description {
@@ -35,14 +30,15 @@
   }
 }
 
-/* Mobile */
+/* Mobile - md*/
 @media (max-width: 700px) {
   .title,
   .title.meta {
-    font-size: 26px;
+    font-size: 32px;
   }
 
-  .description {
+  .description,
+  .description.meta {
     font-size: 16px;
     padding: 1rem 0;
     max-width: 100%;
