@@ -128,7 +128,7 @@ export default function Meta() {
 
                 <div className={styles.badges}>
                   <p className={styles.header}>
-                    <strong>Download our app. It`s free</strong>
+                    <strong>Download our app. It’s free</strong>
                   </p>
                   <a
                     href="#"
