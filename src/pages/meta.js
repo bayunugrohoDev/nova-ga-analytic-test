@@ -108,9 +108,9 @@ export default function Meta() {
           <Hero
             title={
               <>
-                <strong>All the best</strong> spots{" "}
-                <strong>in one place. </strong>
-                <strong> Recommended by those you </strong>trust
+                <strong>All the best</strong> spots
+                <strong> in one place. </strong>
+                <strong>Recommended by those you </strong>trust.
               </>
             }
             description={

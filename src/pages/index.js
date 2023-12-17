@@ -85,17 +85,17 @@ export default function Home() {
           <Hero
             title={
               <>
-                <strong>All the best</strong> spots{" "}
-                <strong>in one place. </strong>
-                <strong> Recommended by those you </strong>trust
+                <strong>All the best</strong> spots
+                <strong> in one place. </strong>
+                <strong>Recommended by those you </strong>trust.
               </>
             }
             description={
               <>
                 <p>
-                  Nova Circle is your free single space for saving and sharing
-                  top recommendations around the world while getting inspired by
-                  likeminded people. Find out what restaurants, hotels, bar and
+                  Nova Circle is your single space for saving and sharing top
+                  recommendations around the world while getting inspired by
+                  likeminded people. Find out what restaurants, hotels, bars and
                   activities people in your circle recommend, and forget about
                   the hustle to ask around for recommendations when going
                   somewhere new.
