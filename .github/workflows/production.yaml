@@ -4,7 +4,7 @@ on:
     tags:
     - "v*.*.*"
 env:
-  SLACK_CHANNEL_ID: C04LVGWMDTL # builds
+  SLACK_CHANNEL_ID: C06AVHPS8CV # deployment_nova
   ECR_REPO: "novacircle/novacircle-web"
   ENV_FILE_CONTENTS: ${{ secrets.ENV_FILE_CONTENTS_PROD }}
 
