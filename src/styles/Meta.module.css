@@ -21,7 +21,12 @@
 }
 
 .badges {
-  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.badge {
+  width: auto;
+  height: 5rem;
 }
 
 .header {

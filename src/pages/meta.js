@@ -95,12 +95,12 @@ export default function Meta() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="description"
-          content="All the best spots in one place. Recommended by those you trust"
+          content="All the best spots in one place. Recommended by those you trust."
         />
         <meta property="og:title" content="Nova Circle" />
         <meta
           property="og:description"
-          content="All the best spots in one place. Recommended by those you trust"
+          content="All the best spots in one place. Recommended by those you trust."
         />
       </Head>
       <main className={styles.main}>
@@ -108,24 +108,14 @@ export default function Meta() {
           <Hero
             title={
               <>
-                <strong>All the best</strong> spots
-                <strong> in one place. </strong>
-                <strong>Recommended by those you </strong>trust.
+                <strong>
+                  Find the best bars, hotels & activities based on
+                </strong>{" "}
+                trusted <strong>recommendations.</strong>
               </>
             }
             description={
               <>
-                <p>
-                  Nova Circle is your free single space for saving and sharing
-                  top recommendations around the world while getting inspired by
-                  likeminded people. Find out what restaurants, hotels, bar and
-                  activities people in your circle recommend, and forget about
-                  the hustle to ask around for recommendations when going
-                  somewhere new.
-                </p>
-                <br />
-                <p> #Eat #Stay #Drink #Do</p>
-
                 <div className={styles.badges}>
                   <p className={styles.header}>
                     <strong>Download our app. It’s free</strong>
@@ -155,6 +145,17 @@ export default function Meta() {
                     />
                   </a>
                 </div>
+
+                <p>
+                  Nova Circle is your free single space for saving and sharing
+                  top recommendations around the world while getting inspired by
+                  likeminded people. Find out what restaurants, hotels, bar and
+                  activities people in your circle recommend, and forget about
+                  the hustle to ask around for recommendations when going
+                  somewhere new.
+                </p>
+                <br />
+                <p> #Eat #Stay #Drink #Do</p>
               </>
             }
           ></Hero>

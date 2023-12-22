@@ -72,12 +72,12 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="description"
-          content="All the best spots in one place. Recommended by those you trust"
+          content="All the best spots in one place. Recommended by those you trust."
         />
         <meta property="og:title" content="Nova Circle" />
         <meta
           property="og:description"
-          content="All the best spots in one place. Recommended by those you trust"
+          content="All the best spots in one place. Recommended by those you trust."
         />
       </Head>
       <main className={styles.main}>
@@ -95,9 +95,9 @@ export default function Home() {
                 <p>
                   Nova Circle is your single space for saving and sharing top
                   recommendations around the world while getting inspired by
-                  likeminded people. Find out what restaurants, hotels, bars and
-                  activities people in your circle recommend, and forget about
-                  the hustle to ask around for recommendations when going
+                  likeminded people. Find out which restaurants, hotels, bars
+                  and activities people in your circle recommend, and forget
+                  about the hustle to ask around for recommendations when going
                   somewhere new.
                 </p>
                 <br />

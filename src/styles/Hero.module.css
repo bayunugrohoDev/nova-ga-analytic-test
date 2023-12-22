@@ -9,6 +9,7 @@
 }
 
 .title.meta {
+  font-size: 45px;
   color: var(--color-white);
 }
 
@@ -34,6 +35,10 @@
     margin-top: 4rem;
   }
 
+  .title.meta {
+    font-size: 36px;
+  }
+
   .description {
     font-size: 18px;
   }
@@ -45,6 +50,10 @@
   .title.meta {
     font-size: 40px;
     margin-top: 0;
+  }
+
+  .title.meta {
+    font-size: 32px;
   }
 
   .description {
