@@ -6,7 +6,7 @@ export const config = {
         FACEBOOK_PIXEL_ID : process.env.NEXT_PUBLIC_FACEBOOK_PIXEL_ID
     },
     googleTagManager : {
-        GTM_ID : 'GTM-PB9LD2TF'
+        GTM_ID : process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID
     },
     environment: process.env.APP_ENV,
 }
