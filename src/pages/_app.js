@@ -26,7 +26,7 @@ export default function App({ Component, pageProps }) {
 
   return  (
     <Layout>
-      <GoogleTagManager gtmId={config.googleAnalytics.MEASUREMENT_ID} />
+      <GoogleTagManager gtmId={config.googleTagManager.GTM_ID} />
       <Component {...pageProps} />
     </Layout>
   );
