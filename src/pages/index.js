@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useRouter } from "next/router";
 import Head from "next/head";
 import Image from "next/image";
+import { sendGTMEvent } from '@next/third-parties/google'
 
 import googleAnalyticsService from "@/core/services/googleAnalyticsService";
 
@@ -15,20 +16,24 @@ import styles from "@/styles/Home.module.css";
 import badgeAppleStore from "../../public/badge-apple-store-download.svg";
 import badgeGooglePlay from "../../public/badge-google-play-download.svg";
 
-import heroImage from "../../public/hero-home.png";
-import firstSectionImage from "../../public/section-1-home.png";
-import secondSectionImage from "../../public/section-2-home.png";
+import firstSectionImage from "../../public/section-1.png";
+import secondSectionImage from "../../public/section-2.png";
+import thirdSectionImage from "../../public/section-3.png";
+import firstSectionMobileImage from "../../public/section-1-mobile.png";
+import { googleAnalyticsTrackName } from "@/core/constants/googleAnalytics";
 
 export default function Home() {
   const router = useRouter();
 
   // handle action for click on 'Download our app' button
   const handleClickAppStore = () => {
+    sendGTMEvent({ event: 'buttonClicked', value: googleAnalyticsTrackName.appStore })
     googleAnalyticsService.trackClickAppStore();
     window.open(storeLink.appStoreLink, "_blank");
   };
 
   const handleClickGooglePlay = () => {
+    sendGTMEvent({ event: 'buttonClicked', value: googleAnalyticsTrackName.playStore })
     googleAnalyticsService.trackClickGooglePlay();
     window.open(storeLink.googleAppLink, "_blank");
   };
@@ -70,14 +75,11 @@ export default function Home() {
       <Head>
         <title>Nova Circle</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta
-          name="description"
-          content="All the best spots in one place. Recommended by those you trust."
-        />
+        <meta name="description" content="Share once, explore together" />
         <meta property="og:title" content="Nova Circle" />
         <meta
           property="og:description"
-          content="All the best spots in one place. Recommended by those you trust."
+          content="Share once, explore together"
         />
       </Head>
       <main className={styles.main}>
@@ -85,27 +87,26 @@ export default function Home() {
           <Hero
             title={
               <>
-                <strong>All the best</strong> spots
-                <strong> in one place. </strong>
-                <strong>Recommended by those you </strong>trust.
+                <strong>Share</strong> once,
+                <strong> explore</strong> together
               </>
             }
             description={
               <>
                 <p>
-                  Nova Circle is your single space for saving and sharing top
-                  recommendations around the world while getting inspired by
-                  likeminded people. Find out which restaurants, hotels, bars
-                  and activities people in your circle recommend, and forget
-                  about the hustle to ask around for recommendations when going
+                  Nova Circle is your free single space for saving and sharing
+                  top recommendations around the world while getting inspired by
+                  likeminded people. Find out what restaurants, hotels, bar and
+                  acitivites people in your circle recommend, and forget about
+                  the hustle to ask around for recommendations when going
                   somewhere new.
                 </p>
                 <br />
-                <p>#Eat #Stay #Drink #Do</p>
+                <p> #Eat - #Stay - #Drink - #Do</p>
 
                 <div className={styles.badges}>
                   <p className={styles.header}>
-                    <strong>Download our app. It’s free</strong>
+                    <strong>Download our app. It`s free</strong>
                   </p>
                   <a
                     href="#"
@@ -136,18 +137,18 @@ export default function Home() {
             }
           ></Hero>
           <Image
-            src={heroImage}
+            src={firstSectionImage}
             alt="First section image"
             priority
-            className={styles.heroImage}
+            className={styles.firstSectionImage}
           />
         </section>
 
         <section className={styles.section}>
           <Image
-            src={firstSectionImage}
+            src={secondSectionImage}
             alt="Nova Circle app views"
-            className={styles.firstSectionImage}
+            className={styles.secondSectionImage}
           />
           <Article
             title={
@@ -170,9 +171,9 @@ export default function Home() {
             description="Nova Circle is your social app for discovering the places to go and things to do, built on recommendations by those you trust. Connect with friends and likeminded members who share your interests, whether you’re seeking fresh horizons or looking to uncover hidden gems in your hometown. Join us today to begin your journey of friendship and inspiration."
           />
           <Image
-            src={secondSectionImage}
+            src={thirdSectionImage}
             alt="Third section image"
-            className={styles.secondSectionImage}
+            className={styles.thirdSectionImage}
           />
         </section>
       </main>
