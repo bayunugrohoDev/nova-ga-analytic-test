@@ -21,7 +21,12 @@
 }
 
 .badges {
-  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.badge {
+  width: auto;
+  height: 5rem;
 }
 
 .header {
@@ -51,10 +56,10 @@
 }
 
 .list {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 /* Tablet and Smaller Desktop */

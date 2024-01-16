@@ -31,18 +31,18 @@
   margin-right: 1rem;
 }
 
-.firstSectionImage {
+.heroImage {
   width: 100%;
   max-width: 550px;
   height: auto;
 }
 
-.secondSectionImage {
+.firstSectionImage {
   width: 100%;
   height: auto;
 }
 
-.thirdSectionImage {
+.secondSectionImage {
   width: 100%;
   height: auto;
 }
@@ -56,6 +56,10 @@
 
 /* Mobile */
 @media (max-width: 700px) {
+  .heroImage {
+    display: none;
+  }
+
   .main {
     padding: 0 1rem;
   }
@@ -75,10 +79,6 @@
 
   .firstSectionImage {
     display: none;
-  }
-
-  .firstSectionMobileImage {
-    display: block;
   }
 }
 

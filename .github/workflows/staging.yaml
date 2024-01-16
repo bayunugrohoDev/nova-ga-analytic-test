@@ -6,7 +6,7 @@ on:
         description: 'commit / branch [5eb6c5e/main]'
         required: false
 env:
-  SLACK_CHANNEL_ID: C04LVGWMDTL # builds
+  SLACK_CHANNEL_ID: C06C0138Z5W # builds
   ECR_REPO: "novacircle/novacircle-web"
   ENV_FILE_CONTENTS: ${{ secrets.ENV_FILE_CONTENTS_STG }}
 

@@ -15,7 +15,7 @@ import styles from "@/styles/Meta.module.css";
 import badgeAppleStore from "../../public/badge-apple-store-download.svg";
 import badgeGooglePlay from "../../public/badge-google-play-download.svg";
 import heroImage from "../../public/hero-meta.png";
-import firstSectionImage from "../../public/section-2-meta.png";
+import firstSectionImage from "../../public/section-1-meta.png";
 
 export default function Meta() {
   const router = useRouter();
@@ -38,8 +38,7 @@ export default function Meta() {
     },
     {
       img_src: "/icons/map.svg",
-      description:
-        "Get inspired for your next adventure by genuine recommendations",
+      description: "Get inspired by genuine recommendations",
       alt: "Discover icon",
     },
   ];
@@ -69,7 +68,10 @@ export default function Meta() {
         window.scrollY.toString()
       );
     };
-    router.events.on("routeChangeStart", handleRouteChange);
+    router.events.on(
+      "routeChangeStarAll the best spots in one place. Recommended by those you trustt",
+      handleRouteChange
+    );
     return () => {
       router.events.off("routeChangeStart", handleRouteChange);
     };
@@ -89,13 +91,16 @@ export default function Meta() {
   return (
     <>
       <Head>
-        <title>Nova Circle | Meta</title>
+        <title>Nova Circle</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content="Share once, explore together" />
+        <meta
+          name="description"
+          content="All the best spots in one place. Recommended by those you trust."
+        />
         <meta property="og:title" content="Nova Circle" />
         <meta
           property="og:description"
-          content="Share once, explore together"
+          content="All the best spots in one place. Recommended by those you trust."
         />
       </Head>
       <main className={styles.main}>
@@ -103,27 +108,17 @@ export default function Meta() {
           <Hero
             title={
               <>
-                <strong>All the best</strong> spots{" "}
-                <strong>in one place. </strong>
-                <strong> Recommended by those you </strong>trust
+                <strong>
+                  Find the best bars, hotels & activities based on
+                </strong>{" "}
+                trusted <strong>recommendations.</strong>
               </>
             }
             description={
               <>
-                <p>
-                  Nova Circle is your free single space for saving and sharing
-                  top recommendations around the world while getting inspired by
-                  likeminded people. Find out what restaurants, hotels, bar and
-                  acitivites people in your circle recommend, and forget about
-                  the hustle to ask around for recommendations when going
-                  somewhere new.
-                </p>
-                <br />
-                <p> #Eat - #Stay - #Drink - #Do</p>
-
                 <div className={styles.badges}>
                   <p className={styles.header}>
-                    <strong>Download our app. It`s free</strong>
+                    <strong>Download our app. It’s free</strong>
                   </p>
                   <a
                     href="#"
@@ -150,6 +145,17 @@ export default function Meta() {
                     />
                   </a>
                 </div>
+
+                <p>
+                  Nova Circle is your free single space for saving and sharing
+                  top recommendations around the world while getting inspired by
+                  likeminded people. Find out what restaurants, hotels, bar and
+                  activities people in your circle recommend, and forget about
+                  the hustle to ask around for recommendations when going
+                  somewhere new.
+                </p>
+                <br />
+                <p> #Eat #Stay #Drink #Do</p>
               </>
             }
           ></Hero>

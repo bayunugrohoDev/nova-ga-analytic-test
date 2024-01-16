@@ -65,7 +65,7 @@ export default function Footer() {
           </p>
           <div className={styles.badges}>
             <p className={styles.header}>
-              <strong>Download our app</strong>
+              <strong>Download our app. It’s free</strong>
             </p>
             <a
               href="#"
