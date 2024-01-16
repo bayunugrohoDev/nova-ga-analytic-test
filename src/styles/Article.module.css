@@ -1,41 +1,46 @@
 .title {
   font-family: var(--font-areainktrap);
   font-weight: 400;
-  font-size: 48px;
+  font-size: 45px;
   line-height: 1.1;
-  color: var(--text-light);
+  color: var(--color-night);
   max-width: 620px;
 }
 
 .description {
   font-family: var(--font-inter);
-  font-size: 24px;
+  font-size: 22px;
   line-height: 1.2;
-  color: var(--text-dark);
-  padding: 1em 0;
+  color: var(--text-grey-darkest);
+  padding-top: 2rem;
   max-width: 620px;
 }
 
-/* Mobile */
-@media (max-width: 700px) {
-  .title {
-    font-size: 32px;
+/* Tablet and Smaller Desktop - lg*/
+@media (min-width: 701px) and (max-width: 1120px) {
+  .title,
+  .title.meta {
+    font-size: 36px;
   }
 
   .description {
-    font-size: 16px;
+    font-size: 18px;
+    padding: 1rem 0;
+    max-width: 100%;
   }
 }
 
-/* Tablet and Smaller Desktop */
-@media (min-width: 701px) and (max-width: 1120px) {
-  .title {
-    font-size: 48px;
-    line-height: 62px;
+/* Mobile - md*/
+@media (max-width: 700px) {
+  .title,
+  .title.meta {
+    font-size: 32px;
   }
 
-  .description {
-    font-size: 20px;
-    line-height: 24px;
+  .description,
+  .description.meta {
+    font-size: 16px;
+    padding: 1rem 0;
+    max-width: 100%;
   }
 }

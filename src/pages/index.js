@@ -9,15 +9,15 @@ import { storeLink } from "@/core/constants/storeLink";
 
 import Hero from "@/components/Hero";
 import Article from "@/components/Article";
+import Testimonials from "@/components/Testimonials";
 import styles from "@/styles/Home.module.css";
 
 import badgeAppleStore from "../../public/badge-apple-store-download.svg";
 import badgeGooglePlay from "../../public/badge-google-play-download.svg";
 
-import firstSectionImage from "../../public/section1.png";
-import secondSectionImage from "../../public/section2.png";
-import thirdSectionImage from "../../public/section3.png";
-import firstSectionMobileImage from "../../public/section1.mobile.png";
+import heroImage from "../../public/hero-home.png";
+import firstSectionImage from "../../public/section-1-home.png";
+import secondSectionImage from "../../public/section-2-home.png";
 
 export default function Home() {
   const router = useRouter();
@@ -70,11 +70,14 @@ export default function Home() {
       <Head>
         <title>Nova Circle</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content="Share once, explore together" />
+        <meta
+          name="description"
+          content="All the best spots in one place. Recommended by those you trust."
+        />
         <meta property="og:title" content="Nova Circle" />
         <meta
           property="og:description"
-          content="Share once, explore together"
+          content="All the best spots in one place. Recommended by those you trust."
         />
       </Head>
       <main className={styles.main}>
@@ -82,23 +85,27 @@ export default function Home() {
           <Hero
             title={
               <>
-                <strong>Share</strong> once,
-                <strong> explore</strong> together
+                <strong>All the best</strong> spots
+                <strong> in one place. </strong>
+                <strong>Recommended by those you </strong>trust.
               </>
             }
             description={
               <>
                 <p>
-                  Nova Circle is your world of inspiration, connecting friends
-                  and like-minded individuals to uncover new experiences and
-                  hotspots. Say goodbye to endlessly searching for the perfect
-                  spot for cocktails, a romantic dinner, or yoga studio. Our
-                  feed is packed with curated content from your network,
-                  inspiring you in an effortless and enjoyable way.
+                  Nova Circle is your single space for saving and sharing top
+                  recommendations around the world while getting inspired by
+                  likeminded people. Find out which restaurants, hotels, bars
+                  and activities people in your circle recommend, and forget
+                  about the hustle to ask around for recommendations when going
+                  somewhere new.
                 </p>
+                <br />
+                <p>#Eat #Stay #Drink #Do</p>
+
                 <div className={styles.badges}>
                   <p className={styles.header}>
-                    <strong>Download our app</strong>
+                    <strong>Download our app. It’s free</strong>
                   </p>
                   <a
                     href="#"
@@ -129,23 +136,18 @@ export default function Home() {
             }
           ></Hero>
           <Image
-            src={firstSectionImage}
+            src={heroImage}
             alt="First section image"
             priority
-            className={styles.firstSectionImage}
-          />
-          <Image
-            src={firstSectionMobileImage}
-            alt="First section image"
-            className={styles.firstSectionMobileImage}
+            className={styles.heroImage}
           />
         </section>
 
         <section className={styles.section}>
           <Image
-            src={secondSectionImage}
+            src={firstSectionImage}
             alt="Nova Circle app views"
-            className={styles.secondSectionImage}
+            className={styles.firstSectionImage}
           />
           <Article
             title={
@@ -168,12 +170,13 @@ export default function Home() {
             description="Nova Circle is your social app for discovering the places to go and things to do, built on recommendations by those you trust. Connect with friends and likeminded members who share your interests, whether you’re seeking fresh horizons or looking to uncover hidden gems in your hometown. Join us today to begin your journey of friendship and inspiration."
           />
           <Image
-            src={thirdSectionImage}
+            src={secondSectionImage}
             alt="Third section image"
-            className={styles.thirdSectionImage}
+            className={styles.secondSectionImage}
           />
         </section>
       </main>
+      <Testimonials />
     </>
   );
 }
