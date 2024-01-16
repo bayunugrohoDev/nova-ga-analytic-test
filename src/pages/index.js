@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useRouter } from "next/router";
 import Head from "next/head";
 import Image from "next/image";
+import { sendGTMEvent } from '@next/third-parties/google'
 
 import googleAnalyticsService from "@/core/services/googleAnalyticsService";
 
@@ -19,17 +20,20 @@ import firstSectionImage from "../../public/section-1.png";
 import secondSectionImage from "../../public/section-2.png";
 import thirdSectionImage from "../../public/section-3.png";
 import firstSectionMobileImage from "../../public/section-1-mobile.png";
+import { googleAnalyticsTrackName } from "@/core/constants/googleAnalytics";
 
 export default function Home() {
   const router = useRouter();
 
   // handle action for click on 'Download our app' button
   const handleClickAppStore = () => {
+    sendGTMEvent({ event: 'buttonClicked', value: googleAnalyticsTrackName.appStore })
     googleAnalyticsService.trackClickAppStore();
     window.open(storeLink.appStoreLink, "_blank");
   };
 
   const handleClickGooglePlay = () => {
+    sendGTMEvent({ event: 'buttonClicked', value: googleAnalyticsTrackName.playStore })
     googleAnalyticsService.trackClickGooglePlay();
     window.open(storeLink.googleAppLink, "_blank");
   };

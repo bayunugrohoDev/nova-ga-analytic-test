@@ -12,6 +12,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@next/third-parties": "^14.0.4",
     "@react-hookz/web": "^23.0.0",
     "eslint": "8.36.0",
     "eslint-config-next": "13.2.4",
