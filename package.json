@@ -12,6 +12,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@next/third-parties": "^14.0.4",
     "@react-hookz/web": "^23.0.0",
     "eslint": "8.36.0",
     "eslint-config-next": "13.2.4",
@@ -21,7 +22,7 @@
     "react-facebook-pixel": "^1.0.4",
     "react-ga4": "^2.1.0",
     "react-hook-form": "^7.43.7",
-    "sharp": "^0.33.0",
+    "sharp": "^0.31.3",
     "swiper": "^9.1.1"
   }
 }
